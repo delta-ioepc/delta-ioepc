@@ -1,30 +1,25 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [
-    './public/**/*.{html,js}',
-  ],
+  content: ["./**/*.{html,js}"],
   theme: {
     extend: {
       colors: {
-        navbar: '#FFFFFF',
-        regBg: '#141B4E',
-        delta_traingle: '#141B4E'
+        navbar: "#FFFFFF",
+        regBg: "#141B4E",
+        delta_traingle: "#141B4E",
       },
       fontFamily: {
-        body: ['Poppins'],
-        delta: ['Montserrat']
-     },
+        body: ["Poppins"],
+        delta: ["Montserrat"],
+      },
       fontSize: {
-        nav: '1.25rem',
-        register:'0.813rem',
-       
+        nav: "1.25rem",
+        register: "0.813rem",
       },
       borderRadius: {
-        reg_bord: '2.813rem'
-      }
-        
-
+        reg_bord: "2.813rem",
+      },
     },
   },
   plugins: [],
-}
+};
