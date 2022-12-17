@@ -23,6 +23,59 @@
 
 
   <style>
+    /* main imgae animation */
+    @keyframes animate {
+      0% {
+        visibility: hidden;
+      }
+
+      50% {
+        visibility: hidden;
+      }
+
+      100% {
+        visibility: visible;
+      }
+
+    }
+
+    .animation {
+      animation-name: animate;
+      animation-timing-function: ease-in-out;
+
+
+    }
+
+    .animation-first {
+      animation-duration: 1s;
+    }
+
+    .animation-second {
+      animation-duration: 1.5s;
+
+
+    }
+
+    .animation-third {
+      animation-duration: 2s;
+
+    }
+
+    .animation-four {
+      animation-duration: 2.5s;
+
+    }
+
+    .animation-five {
+      animation-duration: 3s;
+
+    }
+
+    .animation-six {
+      animation-duration: 3.5s;
+
+    }
+
     .splide {
       margin: 0 auto;
     }
@@ -30,17 +83,12 @@
     #main-slider {
       max-width: 1120px;
 
-      height: 837px;
+      height: 300px;
       border-radius: 10px;
       overflow: hidden;
     }
 
-    @media (min-width:768px) {
-      #main-slider {
-        height: 450px;
-      }
 
-    }
 
     .thumbnails {
       display: flex;
@@ -54,7 +102,8 @@
 
     .thumbnail {
       width: 128px;
-      height: 86px;
+      height: 40px;
+      /* height: 86px; */
       border-radius: 4px;
       overflow: hidden;
       list-style: none;
@@ -77,8 +126,7 @@
     }
 
     #image-carousel {
-      padding-top: 3rem;
-      height: 500px;
+      height: 230px;
       align-items: center !important;
     }
 
@@ -124,7 +172,7 @@
     }
 
     .splide__slide {
-      height: 450px;
+      height: 300px;
     }
 
     .splide__slide img {
@@ -133,44 +181,63 @@
       object-fit: cover;
     }
 
-    @media (min-width:1280px) {
+
+
+    @media (min-width:560px) {
       #main-slider {
-        height: 700px;
+        height: 350px;
       }
 
-      #image-carousel {
-        height: 700px;
-      }
-
-      .splide__slide {
-        height: 700px;
-      }
 
     }
 
-    @media (max-width:480px) {
+    @media screen and (min-width:768px) {
       #main-slider {
-        height: 300px;
+        height: 400px;
+      }
+
+      .splide__slide {
+        height: 400px;
+      }
+
+      #image-carousel {
+        height: 400px !important;
       }
 
       .thumbnail {
-        height: 40px;
+        height: 86px;
       }
 
     }
 
-    @media screen and (max-width:768px) {
+    @media (min-width:1024px) {
       #main-slider {
-        height: 300px;
+        height: 550px;
       }
 
       .splide__slide {
-        height: 300px;
+        height: 550px;
       }
 
       #image-carousel {
-        height: 400px;
+        height: 480px !important;
       }
+    }
+
+    @media (min-width:1280px) {
+      #main-slider {
+        height: 620px;
+      }
+
+      .splide__slide {
+        height: 620px;
+      }
+
+      #image-carousel {
+        height: 700px;
+      }
+
+
 
     }
 
@@ -447,14 +514,40 @@
 
 <!-- hero page -->
 <!-- delta traingle -->
-<div class="bg-[#141B4E] text-center  text-white py-6">
+<div class="bg-[#141B4E] text-center text-white py-6 px-8">
   <h1 class="font-delta text-navbar text-[50px] sm:text-[55px] md:text-[72px] text-center font-bold">DELTA 3.0</h1>
   <p class="font-delta text-navbar  text-[16px] sm:text-[18px] md:text-[36px] text-center">TRIANGLE FOR CHANGE</p>
-
-  <div class="py-16 md:py-24 mx-auto px-3">
-    <img class="mx-auto   fill-[#ffffff]" src="./public/img/hero_img.svg" alt="">
+  <div class="hidden max-[830px]:block  my-6">
+    <img class="mx-auto" src="./public/img/hero_img.svg" alt="">
   </div>
-  <div class="font-delta font-bold text-[25px] md:text-[36px]">
+  <div class="hidden min-[830px]:block  w-[800px] h-[500px] mx-auto">
+    <div class="relative  h-full ">
+      <div class=" relative top-[47%]">
+        <img class="mx-auto" src="./public/img/main.svg" alt="">
+      </div>
+      <div class="absolute animation  animation-first bottom-[4.7rem] left-[6rem] ">
+        <img src="./public/img/first.svg" alt="">
+      </div>
+      <div class="absolute animation  animation-second  bottom-[16rem] left-[8rem] ">
+        <img src="./public/img/second.svg" alt="">
+      </div>
+      <div class="absolute animation animation-third  top-[4rem] left-[33%]">
+        <img src="./public/img/third.svg" alt="">
+      </div>
+      <div class="absolute top-[4rem] animation animation-four right-[30%]">
+        <img src="./public/img/four.svg" alt="">
+      </div>
+      <div class="absolute animation animation-five right-[6rem] bottom-[16rem]">
+        <img src="./public/img/five.svg" alt="">
+      </div>
+      <div class="absolute animation animation-six right-[2rem] bottom-[4.7rem]">
+        <img src="./public/img/six.svg" alt="">
+      </div>
+
+    </div>
+  </div>
+
+  <div class="font-delta font-bold text-[25px] py-4 md:text-[36px]">
     <p class="text-center">SUSTAINABLE MODERN</p>
     <P class="text-center">AGRICULTRE</P>
   </div>
@@ -521,7 +614,7 @@
 <!-- people supporting us -->
 
 <div class="bg-[#EDEDED] py-14 my-8  ">
-  <div class="max-w-[90%] mx-auto text-center">
+  <div class="max-w-[90%] md:max-w-[80%] mx-auto text-center">
     <h1 class="w-full font-delta text-delta_traingle font-bold text-center py-2 text-[40px] md:text-[50px]">People
       Supporting Us
     </h1>
@@ -562,86 +655,79 @@
 </div>
 
 <!-- slider  -->
-<div class="md:max-w-[90%] max-w-[90%]  mx-auto">
-  <section id="image-carousel" class="splide " aria-label="Beautiful Images">
+<div class="md:max-w-[90%] max-w-[90%]  mx-auto py-12">
+  <section id="image-carousel" class="splide min-[640px]:!h-[300px]" aria-label="Beautiful Images">
     <!-- custom arrows -->
     <div class="splide__arrows">
       <button class="splide__arrow splide__arrow--prev">
-        <svg width="19" height="32" viewBox="0 0 19 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M17.5 1.97461L3 16.0177L17.5 30.0607" stroke="#141B4E" stroke-width="4" />
-        </svg>
-
+        <img src="./public/img/left-arrow-back-svgrepo-com.svg" alt="">
 
       </button>
       <button class="splide__arrow splide__arrow--next ">
-        <svg width="20" height="33" viewBox="0 0 20 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M2 2L16.5 16.5L2 31" stroke="#141B4E" stroke-width="4" />
-        </svg>
-
-
+        <img src="./public/img/right-arrow-svgrepo-com.svg" alt="">
       </button>
     </div>
     <div class="splide__track">
       <ul class="splide__list">
         <li class="splide__slide">
           <div
-            class="flex 2xl:!max-w-[60%]  lg:!max-w-[70%] md:!max-w-[77%] sm:max-w-[90%] max-w-[96%] gap-3 md:gap-5 lg:gap-8 2xl:gap-10 justify-center mx-auto flex-wrap">
+            class="flex xl:!max-w-[55%]  lg:!max-w-[70%] md:!max-w-[76%] sm:max-w-[74%] max-w-[85%] min-[460px]:max-w-[81%] min-[500px]:max-w-[60%] gap-3 md:gap-5 lg:gap-8 2xl:gap-10 justify-center mx-auto flex-wrap">
             <img
-              class="rounded-full !w-[130px] !h-[130px] sm:!w-[148px] sm:!h-[148px]  xl:!w-[245px] xl:!h-[245px] lg:!w-[190px] lg:!h-[190px] md:!w-[160px] md:!h-[160px]"
+              class="rounded-full !w-[80px] !h-[80px] sm:!w-[120px] sm:!h-[120px]   lg:!w-[190px] lg:!h-[190px] md:!w-[160px] md:!h-[160px]"
               src="./public/img/beautiful.jpg" alt="">
             <img
-              class="rounded-full !w-[130px] !h-[130px] sm:!w-[148px] sm:!h-[148px]  xl:!w-[245px] xl:!h-[245px] lg:!w-[190px] lg:!h-[190px] md:!w-[160px] md:!h-[160px]"
+              class="rounded-full !w-[80px] !h-[80px] sm:!w-[120px] sm:!h-[120px]   lg:!w-[190px] lg:!h-[190px] md:!w-[160px] md:!h-[160px]"
               src="./public/img/beautiful.jpg" alt="">
             <img
-              class="rounded-full !w-[130px] !h-[130px] sm:!w-[148px] sm:!h-[148px]  xl:!w-[245px] xl:!h-[245px] lg:!w-[190px] lg:!h-[190px] md:!w-[160px] md:!h-[160px]"
+              class="rounded-full !w-[80px] !h-[80px] sm:!w-[120px] sm:!h-[120px]   lg:!w-[190px] lg:!h-[190px] md:!w-[160px] md:!h-[160px]"
               src="./public/img/beautiful.jpg" alt="">
             <img
-              class="rounded-full !w-[130px] !h-[130px] sm:!w-[148px] sm:!h-[148px]  xl:!w-[245px] xl:!h-[245px] lg:!w-[190px] lg:!h-[190px] md:!w-[160px] md:!h-[160px]"
+              class="rounded-full !w-[80px] !h-[80px] sm:!w-[120px] sm:!h-[120px]   lg:!w-[190px] lg:!h-[190px] md:!w-[160px] md:!h-[160px]"
               src="./public/img/beautiful.jpg" alt="">
             <img
-              class="rounded-full !w-[130px] !h-[130px] sm:!w-[148px] sm:!h-[148px]  xl:!w-[245px] xl:!h-[245px] lg:!w-[190px] lg:!h-[190px] md:!w-[160px] md:!h-[160px]"
-              src="./public/img/beautiful.jpg" alt="">
-          </div>
-
-        </li>
-        <li class="splide__slide">
-          <div
-            class="flex 2xl:!max-w-[60%]  lg:!max-w-[70%] md:!max-w-[77%] sm:max-w-[90%] max-w-[96%] gap-3 md:gap-5 lg:gap-8 2xl:gap-10 justify-center mx-auto flex-wrap">
-            <img
-              class="rounded-full !w-[130px] !h-[130px] sm:!w-[148px] sm:!h-[148px]  xl:!w-[245px] xl:!h-[245px] lg:!w-[190px] lg:!h-[190px] md:!w-[160px] md:!h-[160px]"
-              src="./public/img/beautiful.jpg" alt="">
-            <img
-              class="rounded-full !w-[130px] !h-[130px] sm:!w-[148px] sm:!h-[148px]  xl:!w-[245px] xl:!h-[245px] lg:!w-[190px] lg:!h-[190px] md:!w-[160px] md:!h-[160px]"
-              src="./public/img/beautiful.jpg" alt="">
-            <img
-              class="rounded-full !w-[130px] !h-[130px] sm:!w-[148px] sm:!h-[148px]  xl:!w-[245px] xl:!h-[245px] lg:!w-[190px] lg:!h-[190px] md:!w-[160px] md:!h-[160px]"
-              src="./public/img/beautiful.jpg" alt="">
-            <img
-              class="rounded-full !w-[130px] !h-[130px] sm:!w-[148px] sm:!h-[148px]  xl:!w-[245px] xl:!h-[245px] lg:!w-[190px] lg:!h-[190px] md:!w-[160px] md:!h-[160px]"
-              src="./public/img/beautiful.jpg" alt="">
-            <img
-              class="rounded-full !w-[130px] !h-[130px] sm:!w-[148px] sm:!h-[148px]  xl:!w-[245px] xl:!h-[245px] lg:!w-[190px] lg:!h-[190px] md:!w-[160px] md:!h-[160px]"
+              class="rounded-full !w-[80px] !h-[80px] sm:!w-[120px] sm:!h-[120px]   lg:!w-[190px] lg:!h-[190px] md:!w-[160px] md:!h-[160px]"
               src="./public/img/beautiful.jpg" alt="">
           </div>
 
         </li>
         <li class="splide__slide">
           <div
-            class="flex 2xl:!max-w-[60%]  lg:!max-w-[70%] md:!max-w-[77%] sm:max-w-[90%] max-w-[90%] gap-3 md:gap-5 lg:gap-8 2xl:gap-10 justify-center mx-auto flex-wrap">
+            class="flex xl:!max-w-[55%]  lg:!max-w-[70%] md:!max-w-[76%] sm:max-w-[74%] max-w-[85%] min-[460px]:max-w-[81%] min-[500px]:max-w-[60%] gap-3 md:gap-5 lg:gap-8 2xl:gap-10 justify-center mx-auto flex-wrap">
             <img
-              class="rounded-full !w-[130px] !h-[130px] sm:!w-[148px] sm:!h-[148px]  xl:!w-[245px] xl:!h-[245px] lg:!w-[190px] lg:!h-[190px] md:!w-[160px] md:!h-[160px]"
+              class="rounded-full !w-[80px] !h-[80px] sm:!w-[120px] sm:!h-[120px]   lg:!w-[190px] lg:!h-[190px] md:!w-[160px] md:!h-[160px]"
               src="./public/img/beautiful.jpg" alt="">
             <img
-              class="rounded-full !w-[130px] !h-[130px] sm:!w-[148px] sm:!h-[148px]  xl:!w-[245px] xl:!h-[245px] lg:!w-[190px] lg:!h-[190px] md:!w-[160px] md:!h-[160px]"
+              class="rounded-full !w-[80px] !h-[80px] sm:!w-[120px] sm:!h-[120px]   lg:!w-[190px] lg:!h-[190px] md:!w-[160px] md:!h-[160px]"
               src="./public/img/beautiful.jpg" alt="">
             <img
-              class="rounded-full !w-[130px] !h-[130px] sm:!w-[148px] sm:!h-[148px]  xl:!w-[245px] xl:!h-[245px] lg:!w-[190px] lg:!h-[190px] md:!w-[160px] md:!h-[160px]"
+              class="rounded-full !w-[80px] !h-[80px] sm:!w-[120px] sm:!h-[120px]   lg:!w-[190px] lg:!h-[190px] md:!w-[160px] md:!h-[160px]"
               src="./public/img/beautiful.jpg" alt="">
             <img
-              class="rounded-full !w-[130px] !h-[130px] sm:!w-[148px] sm:!h-[148px]  xl:!w-[245px] xl:!h-[245px] lg:!w-[190px] lg:!h-[190px] md:!w-[160px] md:!h-[160px]"
+              class="rounded-full !w-[80px] !h-[80px] sm:!w-[120px] sm:!h-[120px]   lg:!w-[190px] lg:!h-[190px] md:!w-[160px] md:!h-[160px]"
               src="./public/img/beautiful.jpg" alt="">
             <img
-              class="rounded-full !w-[130px] !h-[130px] sm:!w-[148px] sm:!h-[148px]  xl:!w-[245px] xl:!h-[245px] lg:!w-[190px] lg:!h-[190px] md:!w-[160px] md:!h-[160px]"
+              class="rounded-full !w-[80px] !h-[80px] sm:!w-[120px] sm:!h-[120px]   lg:!w-[190px] lg:!h-[190px] md:!w-[160px] md:!h-[160px]"
+              src="./public/img/beautiful.jpg" alt="">
+          </div>
+
+        </li>
+        <li class="splide__slide">
+          <div
+            class="flex xl:!max-w-[55%]  lg:!max-w-[70%] md:!max-w-[76%] sm:max-w-[74%] max-w-[85%] min-[460px]:max-w-[81%] min-[500px]:max-w-[60%] gap-3 md:gap-5 lg:gap-8 2xl:gap-10 justify-center mx-auto flex-wrap">
+            <img
+              class="rounded-full !w-[80px] !h-[80px] sm:!w-[120px] sm:!h-[120px]   lg:!w-[190px] lg:!h-[190px] md:!w-[160px] md:!h-[160px]"
+              src="./public/img/beautiful.jpg" alt="">
+            <img
+              class="rounded-full !w-[80px] !h-[80px] sm:!w-[120px] sm:!h-[120px]   lg:!w-[190px] lg:!h-[190px] md:!w-[160px] md:!h-[160px]"
+              src="./public/img/beautiful.jpg" alt="">
+            <img
+              class="rounded-full !w-[80px] !h-[80px] sm:!w-[120px] sm:!h-[120px]   lg:!w-[190px] lg:!h-[190px] md:!w-[160px] md:!h-[160px]"
+              src="./public/img/beautiful.jpg" alt="">
+            <img
+              class="rounded-full !w-[80px] !h-[80px] sm:!w-[120px] sm:!h-[120px]   lg:!w-[190px] lg:!h-[190px] md:!w-[160px] md:!h-[160px]"
+              src="./public/img/beautiful.jpg" alt="">
+            <img
+              class="rounded-full !w-[80px] !h-[80px] sm:!w-[120px] sm:!h-[120px]   lg:!w-[190px] lg:!h-[190px] md:!w-[160px] md:!h-[160px]"
               src="./public/img/beautiful.jpg" alt="">
           </div>
 
@@ -720,7 +806,7 @@
 
 
 <!-- logos of supporting faculties -->
-<div class="py-6 max-w-[1440px] mx-auto px-4">
+<div class="py-6 max-w-[1440px] mx-auto px-4 pb-12">
   <h1 class="text-[#141B4E] font-delta text-[40px] md:text-[50px] font-bold text-center  px-4 my-6">People
     making it
     happen
