@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- fonts  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./dist/output.css">
+  <title>Hackathon</title>
+</head>
+<style>
+  .line_after::before {
+    content: ' ';
+    position: absolute;
+    bottom: 0;
+    left: -5px;
+    width: 180%;
+    height: 2px;
+    transform: rotate(-20deg);
+    background-color: aquamarine;
+  }
+
+  .hover-animation {
+    position: relative;
+
+  }
+
+  .hover-animation::after {
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    z-index: -1;
+    bottom: 0;
+    right: 0;
+    background-color: white;
+    transition: width 0.25s ease-out;
+  }
+
+  .active::after {
+    left: 0;
+    width: 100%;
+    right: auto;
+  }
+
+  .hover-animation:hover::after {
+    left: 0;
+    width: 100%;
+    right: auto;
+  }
+
+  @keyframes sponsor-animate {
+    0% {
+      transform: translate(100vw, 0px);
+    }
+
+
+    100% {
+      transform: translate(-100%, 0px);
+    }
+  }
+
+  .animate-sponsor {
+    animation: 20s linear 0s infinite normal none running sponsor-animate;
+    /* animation-timing-function:linear ;
+    animation-duration:20s ;
+    animation-name:sponsor-animate ;
+    animation-delay:0s ;
+    animation-iteration-count:infinite ;
+    animation-fill-mode:none ;
+    animation-direction: normal;
+    
+    animation-play-state:running ; */
+
+  }
+</style>
+
+<body class="relative font-['Montserrat']">
+  <header id="header" class=" transition-top duration-300 ease-out fixed py-3 bg-[#02577a]  z-10  top-0  w-full ">
+
+    <!-- wrapper -->
+    <div class=" max-w-[90%] mx-auto items-center flex flex-col md:flex-row justify-between ">
+      <!-- logo -->
+      <div class="cursor-pointer flex max-md:w-full  justify-between items-center">
+        <svg class="fill-white" width="69" height="70" viewBox="0 0 69 70" fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <g clip-path="url(#clip0_269_889)">
+            <path
+              d="M0.253113 70V59.6915H10.228C10.3556 59.6914 10.482 59.7165 10.5997 59.7652C10.7174 59.8138 10.8241 59.8851 10.9136 59.9749C11.003 60.0647 11.0735 60.1712 11.1209 60.2881C11.1682 60.405 11.1915 60.5301 11.1894 60.656L11.052 69.0665C11.0479 69.3155 10.9448 69.5529 10.7648 69.7275C10.5849 69.9022 10.3426 70 10.0903 70H3.28607V69.0027H10.0256V60.6892H1.43255V70H0.253113Z" />
+            <path
+              d="M31.7617 0L2.94861 47.2208L3.4544 50.2137L31.7617 3.82413L51.4759 49.715L63.4395 51.0454L31.7617 0Z" />
+            <path
+              d="M31.172 7.56543L0 57.9452H60.3221L57.8789 56.1994L3.45438 56.0334L35.3004 17.7912L31.172 7.56543Z" />
+            <path
+              d="M14.0697 46.2235L6.8244 54.3704L68.9996 54.703L39.3441 5.98572L38.67 8.47993L65.7983 52.874L14.0697 46.2235Z" />
+            <path d="M18.5249 37.9357L31.088 7.48218L35.3004 17.7912L18.5249 37.9357Z" />
+            <path d="M41.1765 25.2964L63.4394 50.6025L51.4759 49.2722L41.1765 25.2964Z" />
+            <path d="M40.3279 49.5995L6.8244 54.3704L14.0698 46.2235L40.3279 49.5995Z" />
+            <path
+              d="M27.2127 59.6915H18.7879C18.7215 59.6914 18.6557 59.7043 18.5944 59.7293C18.533 59.7543 18.4772 59.7911 18.4303 59.8374C18.3833 59.8837 18.346 59.9387 18.3206 59.9992C18.2952 60.0597 18.2821 60.1246 18.2821 60.1901V69.5013C18.2821 69.5669 18.2952 69.6318 18.3206 69.6923C18.346 69.7528 18.3833 69.8078 18.4303 69.8541C18.4772 69.9004 18.533 69.9371 18.5944 69.9622C18.6557 69.9872 18.7215 70.0001 18.7879 70H26.8756C27.0097 70 27.1382 69.9475 27.233 69.854C27.3277 69.7604 27.381 69.6336 27.381 69.5013V69.0027H19.7986C19.7322 69.0027 19.6664 68.9898 19.6051 68.9647C19.5438 68.9396 19.488 68.9028 19.4411 68.8565C19.3942 68.8101 19.3569 68.7551 19.3316 68.6945C19.3062 68.634 19.2932 68.5691 19.2932 68.5036V61.1879C19.2932 61.0556 19.3465 60.9288 19.4413 60.8353C19.536 60.7418 19.6646 60.6892 19.7986 60.6892H26.8756C27.0097 60.6891 27.1382 60.6365 27.233 60.5429C27.3277 60.4493 27.381 60.3224 27.381 60.1901V59.6915H27.2127Z" />
+            <path
+              d="M25.5274 64.1808H21.6516C21.3726 64.1808 21.1463 64.404 21.1463 64.6795V64.6799C21.1463 64.9553 21.3726 65.1786 21.6516 65.1786H25.5274C25.8065 65.1786 26.0328 64.9553 26.0328 64.6799V64.6795C26.0328 64.404 25.8065 64.1808 25.5274 64.1808Z" />
+            <path
+              d="M33.9527 60.1901V69.5013C33.9527 69.6336 34.0059 69.7604 34.1007 69.854C34.1955 69.9475 34.324 70 34.458 70H42.2069C42.341 70 42.4696 69.9475 42.5644 69.854C42.6593 69.7605 42.7126 69.6336 42.7127 69.5013V69.0027H35.6375C35.5711 69.0027 35.5053 68.9898 35.444 68.9647C35.3826 68.9396 35.3269 68.9028 35.28 68.8565C35.2331 68.8101 35.1958 68.7551 35.1705 68.6945C35.1451 68.634 35.1321 68.5691 35.1321 68.5036V60.1901C35.132 60.0578 35.0787 59.931 34.9838 59.8375C34.889 59.744 34.7604 59.6915 34.6263 59.6915H34.458C34.324 59.6915 34.1955 59.744 34.1007 59.8375C34.0059 59.931 33.9527 60.0579 33.9527 60.1901Z" />
+            <path
+              d="M54.3406 59.6915H45.073C44.7939 59.6915 44.5676 59.9147 44.5676 60.1901V60.1906C44.5676 60.466 44.7939 60.6892 45.073 60.6892H54.3406C54.6197 60.6892 54.8459 60.466 54.8459 60.1906V60.1901C54.8459 59.9147 54.6197 59.6915 54.3406 59.6915Z" />
+            <path
+              d="M49.7916 62.3517H49.7911C49.512 62.3517 49.2858 62.575 49.2858 62.8504V69.5013C49.2858 69.7767 49.512 70 49.7911 70H49.7916C50.0706 70 50.2969 69.7767 50.2969 69.5013V62.8504C50.2969 62.575 50.0706 62.3517 49.7916 62.3517Z" />
+            <path
+              d="M57.5638 69.2813L62.2896 59.804C62.3313 59.7203 62.3959 59.6498 62.4761 59.6005C62.5563 59.5512 62.6488 59.525 62.7433 59.525H63.4614C63.5559 59.525 63.6485 59.5512 63.7287 59.6005C63.8089 59.6498 63.8735 59.7203 63.9151 59.804L68.641 69.2813C68.6789 69.3573 68.6965 69.4416 68.6922 69.5263C68.6879 69.6109 68.6618 69.6931 68.6164 69.765C68.571 69.837 68.5078 69.8963 68.4327 69.9374C68.3576 69.9785 68.2731 70.0001 68.1872 70H68.1423C68.0462 70 67.952 69.973 67.8709 69.922C67.7898 69.871 67.7252 69.7982 67.6846 69.7122L66.7771 67.7941C66.7364 67.7081 66.6717 67.6353 66.5905 67.5843C66.5094 67.5333 66.4151 67.5062 66.3189 67.5063H62.4027C62.3166 67.5062 62.2318 67.4845 62.1566 67.4431C62.0814 67.4017 62.0181 67.342 61.9728 67.2697C61.9274 67.1974 61.9016 67.1148 61.8977 67.0299C61.8937 66.945 61.9119 66.8605 61.9503 66.7844C61.9923 66.7015 62.0569 66.6318 62.1368 66.583C62.2167 66.5343 62.3088 66.5085 62.4027 66.5085H65.306C65.3925 66.5084 65.4776 66.4863 65.5531 66.4445C65.6286 66.4026 65.6918 66.3423 65.7369 66.2693C65.782 66.1964 65.8073 66.1132 65.8104 66.0278C65.8135 65.9425 65.7944 65.8577 65.7548 65.7817L63.5557 61.5639C63.513 61.4819 63.4481 61.4132 63.3683 61.3654C63.2885 61.3175 63.1967 61.2925 63.1033 61.293C63.0099 61.2935 62.9185 61.3195 62.8392 61.3682C62.7599 61.4169 62.6958 61.4863 62.654 61.5688L58.5215 69.7246C58.4796 69.8074 58.4151 69.877 58.3352 69.9257C58.2554 69.9743 58.1634 70.0001 58.0696 70H58.0144C57.9288 69.9995 57.8447 69.9776 57.77 69.9363C57.6953 69.8949 57.6325 69.8356 57.5875 69.7637C57.5424 69.6919 57.5166 69.6099 57.5125 69.5255C57.5084 69.4411 57.526 69.3571 57.5638 69.2813Z" />
+          </g>
+          <defs>
+            <clipPath id="clip0_269_889">
+              <rect width="69" height="70" />
+            </clipPath>
+          </defs>
+        </svg>
+        <div id="navButton" class="bg-gray-400 md:hidden px-3 py-2 cursor-pointer  ">
+          <p class="w-[30px] bg-slate-700 h-1 my-[5px]"></p>
+          <p class="w-[30px] bg-slate-700 h-1 "></p>
+          <p class="w-[30px] bg-slate-700 h-1 my-[5px]"></p>
+        </div>
+
+      </div>
+
+      <!-- nav links -->
+      <nav id="navLinks"
+        class="max-md:w-full max-md:hidden text-center fixed md:static bg-gray-500 md:bg-transparent   top-[6rem]">
+        <ul class=" flex flex-col items-center md:flex-row md:space-x-8   ">
+          <li class="active w-full border-b border-t  md:border-none  py-2 hover-animation"><a
+              class="text-[20px] p-1  text-white  font-semibold relative " href="#home">Home</a></li>
+          <li class="w-full hover-animation   md:border-none border-b py-2"><a
+              class="text-[20px] p-1  text-white font-semibold " href="#about">About</a></li>
+          <li class="w-full   hover-animation md:border-none  border-b py-2"><a
+              class="text-[20px] p-1 text-white  font-semibold" href="#event">Event</a></li>
+          <li class="w-full hover-animation md:border-none  border-b py-2"><a
+              class="text-[20px] p-1 text-white  font-semibold relative " href="#sponsors">Sponsors</a>
+          </li>
+          <li class="w-full hover-animation  md:border-none border-b py-2"><a
+              class="text-[20px] p-1  text-white  font-semibold " href="#contact">Contact</a></li>
+        </ul>
+
+
+      </nav>
+
+    </div>
+
+  </header>
+  <main class="overflow-x-hidden">
+    <div class="relative">
+      <!-- sound control -->
+      <p class="absolute top-[6rem]  text-white z-[1] right-2 text-[18px]">Sound <span id="sound"
+          class="text-teal-700 cursor-pointer w-[15px]">OFF</span></p>
+      <!-- video -->
+      <div id="home" class="h-[70vh] sm:h-[90vh] md:h-screen  bg-[#64646b]  ">
+        <video id="video" loop autoplay muted="true" class="bg-gray-200 mix-blend-multiply  w-full h-full object-cover"
+          src="./src/assets/Project Name (3).mp4"></video>
+      </div>
+
+      <!-- wrapper -->
+      <div class="absolute top-[40%] left-[50%] w-full text-center translate-x-[-50%] translate-y-[-40%]">
+        <h1
+          class="text-[35px] sm:text-[55px] md:text-[70px] w-full  lg:text-[90px]  text-white font-extrabold tracking-wider ">
+          Deltathon 2023
+        </h1>
+        <p class="text-[20px] sm:text-[30px] md:text-[35px] lg:text-[40px] text-center text-teal-500 font-medium">
+          Biggest Hack in East</p>
+        <div class="text-center">
+          <button
+            class=" bg-[#02577a] hover:bg-[#02577fc4] px-14 mt-8 rounded-md py-2 text-white font-medium">Register</button>
+        </div>
+
+      </div>
+      <!-- sponsors slider -->
+      <div class="absolute bottom-0 bg-[#17171d]     h-[120px] w-full  ">
+        <div
+          class="animate-sponsor flex whitespace-nowrap gap-6 justify-between flex-nowrap items-center h-full w-full max-w-[90%]  mx-auto">
+          <div class="min-w-[110px]  w-[120px] h-[80px] ">
+            <img class="w-full h-full" src="./src/assets/first.svg" alt="">
+          </div>
+          <div class="min-w-[110px] w-[120px] h-[80px] max-h-[110px]">
+            <img class="w-full h-full object-contain" src="./src/assets/second.svg" alt="">
+          </div>
+          <div class=" min-w-[110px] w-[120px] h-[80px] max-h-[110px]">
+            <img class="w-full h-full object-contain" src="./src/assets/third.svg" alt="">
+          </div>
+          <div class=" min-w-[110px] w-[120px] h-[80px] max-h-[110px]">
+            <img class="w-full h-full object-contain" src="./src/assets/four.svg" alt="">
+          </div>
+          <div class="min-w-[110px] w-[120px] h-[80px] max-h-[110px]">
+            <img class="w-full h-full object-contain" src="./src/assets/five.svg" alt="">
+          </div>
+          <div class=" min-w-[110px] w-[120px] h-[80px] max-h-[110px]">
+            <img class="w-full h-full object-contain" src="./src/assets/six.svg" alt="">
+          </div>
+        </div>
+
+
+
+      </div>
+
+    </div>
+    <!-- about  -->
+    <div class="bg-[#141B4E] text-white   py-12 ">
+      <div class="flex flex-col md:flex-row max-w-[90%] mx-auto items-center">
+        <div class="flex-1 order-2 md:order-1">
+          <h1 class="font-[600] text-[28px] sm:text-[35px] md:text-[45px] border-b-2 my-4  border-white">About
+            Deltathon 2023</h1>
+          <p class="text-[14px] sm:text-[16px] text-[#fff]/90 md:text-[18px] tracking-wide max-w-[600px]">Lorem ipsum
+            dolor sit amet
+            consectetur
+            adipisicing elit.
+            Enim quos
+            dignissimos, unde
+            sit eius facere,
+            commodi
+            consectetur porro culpa deleniti error? Consectetur beatae culpa illo velit consequuntur labore totam
+            mollitia.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit tempore fugit pariatur eveniet
+            incidunt nobis et, blanditiis facilis deserunt commodi sequi iure excepturi assumenda possimus est, dolor ut
+            quidem culpa.
+          </p>
+
+        </div>
+        <div class="flex-1 order-1 md:order-2">
+          <img class="mx-auto" src="./src/assets/main.svg" alt="">
+        </div>
+      </div>
+
+    </div>
+    <!-- Event -->
+    <div class="bg-[#17171d] text-white py-8 bg-[url('../src/assets/bg_pattern.png')]">
+      <div class="max-w-[85%] mx-auto py-6 ">
+        <!-- event timer -->
+        <div class="max-w-[90%] sm:max-w-[80%] md:max-w-[70%] mx-auto">
+          <h1 class="text-[25px] sm:text-[30px] w-full md:text-[40px] text-center font-semibold">Up Coming Event:</h1>
+          <p class="text-center text-[18px] sm:text-[20px] md:text-[24px] font-light">Deltathon 2023</p>
+          <p id="date" class="text-center bg-[#0ba5e7] w-[120px] mx-auto my-3 py-1 font-medium"></p>
+          <div class="flex justify-center gap-4 md:gap-14 lg:gap-16 my-16">
+            <p
+              class=" font-[800] flex flex-col items-center justify-center min-w-[80px] min-h-[80px] sm:min-h-[120px] sm:min-w-[120px] md:min-h-[140px] md:min-w-[140px]  lg:min-w-[160px]  lg:min-h-[160px] rounded-full border border-[#0c23d5]">
+              <span id="day" class="text-[30px] sm:text-[50px] md:text-[60px] font-normal text-[#0ba5e7]">20</span>
+              <span class="text-[10px] sm:text-[14px] md:text-[18px] text-[#0471a0]">Days</span>
+            </p>
+            <p
+              class=" font-[800] flex flex-col items-center justify-center min-w-[80px] min-h-[80px] sm:min-h-[120px] sm:min-w-[120px] md:min-h-[140px] md:min-w-[140px]  lg:min-w-[160px]  lg:min-h-[160px] rounded-full border border-[#0c23d5]">
+              <span id="hours" class="text-[30px] sm:text-[50px] md:text-[60px] font-normal text-[#0ba5e7]">20</span>
+              <span class="text-[10px] sm:text-[14px] md:text-[18px] text-[#0471a0]">Hours</span>
+            </p>
+            <p
+              class=" font-[800] flex flex-col items-center justify-center min-w-[80px] min-h-[80px] sm:min-h-[120px] sm:min-w-[120px] md:min-h-[140px] md:min-w-[140px]  lg:min-w-[160px]  lg:min-h-[160px] rounded-full border border-[#0c23d5]">
+              <span id="minute" class="text-[30px] sm:text-[50px] md:text-[60px] font-normal text-[#0ba5e7]">20</span>
+              <span class="text-[10px] sm:text-[14px] md:text-[18px] text-[#0471a0]">Minutes</span>
+            </p>
+            <p
+              class=" font-[800] flex flex-col items-center justify-center min-w-[80px] min-h-[80px] sm:min-h-[120px] sm:min-w-[120px] md:min-h-[140px] md:min-w-[140px]  lg:min-w-[160px]  lg:min-h-[160px] rounded-full border border-[#0c23d5]">
+              <span id="second" class="text-[30px] sm:text-[50px] md:text-[60px] font-normal text-[#0ba5e7]">20</span>
+              <span class="text-[10px] sm:text-[14px] md:text-[18px] text-[#0471a0]">Seconds</span>
+            </p>
+          </div>
+        </div>
+        <!-- event schedule -->
+        <div class="w-full ">
+          <h1 class="text-[40px] tracking-widest  font-light text-[#ffffff5f]">Agenda</h1>
+          <div class="flex flex-col lg:flex-row justify-between max-md:gap-10 items-start w-full ">
+            <div class=" w-full lg:w-[50%] flex  gap-6">
+              <div class="relative">
+                <p class="text-[25px] font-normal tracking-wider mb-2 relative pb-1 line_after">03</p>
+                <p
+                  class="uppercase absolute top-28 -left-12 rotate-90 transform origin-center tracking-[0.2em] leading-10 text-[20px]">
+                  SATURDAY
+                </p>
+              </div>
+              <ul class="mt-10 ml-4 space-y-3">
+                <li class="text-[20px]    items-start flex  w-full">
+                  <p class="font-normal tracking-[0.105em]  w-[35%] ">11:00 - 12:00
+                  </p>
+                  <p class="font-thin text-[18px] w-[70%]">Final Registration</p>
+
+                </li>
+                <li class="text-[20px]   items-start flex w-full">
+                  <p class="font-normal w-[35%] tracking-[0.095em] ">13:30 - 14:30
+                  </p>
+                  <p class="font-thin text-[18px] w-[70%]">Opening
+                    Event of
+                    DELTATHON</p>
+
+                </li>
+                <li class="text-[20px]    items-start flex w-full">
+                  <p class="font-normal w-[35%] tracking-[0.09em] ">14:30 - 15:00
+                  </p>
+                  <p class="font-thin text-[18px]  w-[70%]">Team
+                    management
+                    and ..</p>
+                </li>
+                <li class="text-[20px]    items-start flex w-full">
+                  <p class="font-normal w-[35%] tracking-[0.065em] ">15:00 - 20:00
+                  </p>
+                  <p class="font-thin text-[18px]  w-[70%]">Working on
+                    Project</p>
+                </li>
+                <li class="text-[20px]    items-start flex w-full">
+                  <p class="font-normal w-[35%] tracking-[0.05em] ">20:00 - 20:30
+                  </p>
+                  <p class="font-thin text-[18px]  w-[70%]">Lunch
+                    Break</p>
+                </li>
+                <li class="text-[20px]    items-start flex w-full">
+                  <p class="font-normal w-[35%] tracking-wider ">20:30 -
+                  </p>
+                  <p class="font-thin text-[18px]  w-[70%]">Working on project (Coffee and tea will be available</p>
+                </li>
+              </ul>
+
+
+
+            </div>
+            <div class=" w-full lg:w-[50%] flex lg:justify-end gap-6 ">
+              <div class="relative">
+                <p class="text-[25px] font-normal tracking-wider mb-2 relative pb-1 line_after">04</p>
+                <p
+                  class="uppercase absolute top-24 -left-8 rotate-90 transform origin-center tracking-[0.2em] leading-10 text-[20px]">
+                  SUNDAY
+                </p>
+              </div>
+              <ul class="mt-10 ml-4 space-y-3">
+                <li class="text-[20px]    items-start flex  w-full">
+                  <p class="font-normal tracking-[0.04em]  w-[35%] ">08:00 - 09:00
+                  </p>
+                  <p class="font-thin text-[18px] w-[70%]">BreakFast</p>
+
+                </li>
+                <li class="text-[20px]   items-start flex w-full">
+                  <p class="font-normal w-[35%] tracking-[0.075em] ">09:00 - 12:00
+                  </p>
+                  <p class="font-thin text-[18px] w-[70%]">Working on
+                    project</p>
+
+                </li>
+                <li class="text-[20px]    items-start flex w-full">
+                  <p class="font-normal w-[35%] tracking-[0.12em] ">12:30 - 12:30
+                  </p>
+                  <p class="font-thin text-[18px]  w-[70%]">luck
+                    break</p>
+                </li>
+                <li class="text-[20px]    items-start flex w-full">
+                  <p class="font-normal w-[35%] tracking-[0.12em] ">12:30 - 15:00
+                  </p>
+                  <p class="font-thin text-[18px]  w-[70%]">Working on
+                    Project (final cuts)</p>
+                </li>
+                <li class="text-[20px]    items-start flex w-full">
+                  <p class="font-normal w-[35%] tracking-[0.11em] ">15:00 - 16:30
+                  </p>
+                  <p class="font-thin text-[18px]  w-[70%]">Project
+                    Judgement</p>
+                </li>
+                <li class="text-[20px]    items-start flex w-full">
+                  <p class="font-normal w-[35%]  ">16:30 -
+                  </p>
+                  <p class="font-thin text-[18px]  w-[70%]">Working on project (Coffee and tea will be available</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+    <!-- sponsors -->
+    <div class="bg-[#17171d] text-white py-10">
+      <div class="max-w-[90%] md:max-w-[80%] mx-auto">
+        <div class="w-full mx-auto">
+          <h1 class="text-[45px] max-w-[90%] sm:max-w-[80%] md:max-w-[70%] mx-auto font-medium">Our Sponsors</h1>
+          <p class="max-w-[90%] sm:max-w-[80%] md:max-w-[70%] mx-auto  text-[#fff]/50">On behalf of team DELTATHON, we
+            would like to
+            publicly thank
+            the
+            generous
+            sponsors
+            without whom this event
+            could not be
+            held so smoothly. Our sponsors are an extension of our event, we make their presence obvious by integrating
+            them
+            in
+            natural ways which promote their vision and brand. Till date our sponsors are very happy and eager to keep
+            in
+            business
+            with us by supporting our vision with whole heart.</p>
+        </div>
+
+        <div class="max-w-[70%] mx-auto">
+          <!-- vip sponsors -->
+          <div class="border-[4px]  border-[#ebb722] relative my-8  p-6">
+            <h2 class="absolute -top-[0.9rem]  bg-[#17171d] left-[45%] translate-x-[-45%] text-[18px] px-8 ">VIP
+              Sponsors
+            </h2>
+            <div style="grid-template-columns: repeat(auto-fill,minmax(150px,1fr));" class="grid  gap-8 ">
+              <div class="">
+                <img src="./src/assets/first.svg" alt="">
+              </div>
+              <div class="">
+                <img src="./src/assets/second.svg" alt="">
+              </div>
+              <div class="">
+                <img src="./src/assets/six.svg" alt="">
+              </div>
+              <div class="">
+                <img src="./src/assets/four.svg" alt="">
+              </div>
+            </div>
+          </div>
+          <!-- gold sponsor -->
+          <div class="border-[4px] mt-16 border-[#71a0ce] relative mb-8  p-6">
+            <h2 class="absolute -top-[0.9rem]  bg-[#17171d] left-[45%] translate-x-[-45%] text-[18px] px-8 ">GOLD
+              Sponsors
+            </h2>
+            <div style="grid-template-columns: repeat(auto-fill,minmax(150px,1fr));" class="grid  gap-8 ">
+              <div class="">
+                <img src="./src/assets/first.svg" alt="">
+              </div>
+              <div class="">
+                <img src="./src/assets/second.svg" alt="">
+              </div>
+              <div class="">
+                <img src="./src/assets/six.svg" alt="">
+              </div>
+              <div class="">
+                <img src="./src/assets/four.svg" alt="">
+              </div>
+              <div class="">
+                <img src="./src/assets/four.svg" alt="">
+              </div>
+              <div class="">
+                <img src="./src/assets/four.svg" alt="">
+              </div>
+              <div class="">
+                <img src="./src/assets/second.svg" alt="">
+              </div>
+            </div>
+          </div>
+          <!-- sliver sponsors -->
+          <div class="border-[4px] mt-16 border-[#C0C0C0] relative mb-8  p-6">
+            <h2 class="absolute -top-[0.9rem]  bg-[#17171d] left-[45%] translate-x-[-45%] text-[18px] px-8 ">SILVER
+              Sponsors
+            </h2>
+            <div style="grid-template-columns: repeat(auto-fill,minmax(150px,1fr));" class="grid  gap-8 ">
+              <div class="">
+                <img src="./src/assets/first.svg" alt="">
+              </div>
+              <div class="">
+                <img src="./src/assets/second.svg" alt="">
+              </div>
+              <div class="">
+                <img src="./src/assets/six.svg" alt="">
+              </div>
+              <div class="">
+                <img src="./src/assets/four.svg" alt="">
+              </div>
+              <div class="">
+                <img src="./src/assets/four.svg" alt="">
+              </div>
+              <div class="">
+                <img src="./src/assets/four.svg" alt="">
+              </div>
+              <div class="">
+                <img src="./src/assets/second.svg" alt="">
+              </div>
+            </div>
+          </div>
+          <!-- normal sponsors -->
+          <div class="border-[4px] mt-16 border-[#8fa963] relative mb-8  p-6">
+            <h2 class="absolute -top-[0.9rem]  bg-[#17171d] left-[45%] translate-x-[-45%] text-[18px] px-8 ">SILVER
+              Sponsors
+            </h2>
+            <div style="grid-template-columns: repeat(auto-fill,minmax(150px,1fr));" class="grid  gap-8 ">
+              <div class="">
+                <img src="./src/assets/first.svg" alt="">
+              </div>
+              <div class="">
+                <img src="./src/assets/second.svg" alt="">
+              </div>
+              <div class="">
+                <img src="./src/assets/six.svg" alt="">
+              </div>
+              <div class="">
+                <img src="./src/assets/four.svg" alt="">
+              </div>
+              <div class="">
+                <img src="./src/assets/four.svg" alt="">
+              </div>
+              <div class="">
+                <img src="./src/assets/four.svg" alt="">
+              </div>
+              <div class="">
+                <img src="./src/assets/second.svg" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- interested in sponsoring -->
+        <div class="max-w-[70%] mx-auto">
+          <h3 class="text-[25px] capitalize text-center ">interested in Sponsoring?</h3>
+          <p class="capitalize text-center py-2">email us at
+          </p>
+          <p class="flex gap-2 items-center justify-center">
+            <img class="w-6 h-6" src="./src/assets/email.png" alt="">
+            <a class="text-[#179bd3]" href="gmail.com"> dummy4@gmail.com</a>
+
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- contact -->
+    <div class="py-12 bg-[#141B4E] text-white">
+      <div class="max-w-[90%] md:max-w-[95%] lg:max-w-[80%] mx-auto flex flex-col md:flex-row justify-between">
+        <div class="bg-[#272a34] flex-1 text-center py-8">
+          <h1 class="text-[26px] my-6">Write Us</h1>
+          <form class="max-w-[80%] md:max-w-[60%] mx-auto" action="">
+            <input autocomplete="off" class="block bg-inherit border-b outline-none w-full  mx-auto py-2  my-6"
+              type="text" placeholder="Name">
+            <input autocomplete="off" class="block bg-inherit  border-b outline-none w-full  mx-auto py-2  my-6"
+              type="email" name="email" id="email" placeholder="Email">
+            <textarea class="block bg-inherit  outline-none w-full  mx-auto py-2 border-b my-6" name="message"
+              id="message" cols="30" rows="5" placeholder="Message"></textarea>
+            <input class="block py-3 px-5 bg-[#fe9422] hover:bg-[#d2791a]  cursor-pointer" type="submit"
+              value="Send Message">
+          </form>
+        </div>
+        <div class="bg-[#1c1e25] flex-1 flex  flex-col justify-center items-center text-center py-8">
+          <h1 class="text-[26px] mt-6">Contact Information</h1>
+          <p class="text-[#fff]/50 max-w-[250px] mx-auto py-1">We're open for any suggestion or just to have a chat</p>
+          <div class="  ml-16 md:ml-10 lg:ml-16  my-6 space-y-8 text-center ">
+            <p class="flex gap-1 md:gap-2 text-[12px] sm:text-[16px] text-[#fff]/50 justify-start items-center  my-2">
+              <img class="w-6 h-6" src="./src/assets/icons8-location-50.png" alt=""> <span
+                class="text-[#fff] mr-2">Address:</span> Dharan,Nepal
+            </p>
+            <p class="flex gap-2 sm:gap-3 text-[12px] sm:text-[16px] text-[#fff]/50 justify-start items-center my-4">
+              <img class="w-5 h-5" src="./src/assets/icons8-phone-call-32.png" alt=""> <span
+                class="text-[#fff] mr-2">Phone:</span> 9848833383
+            </p>
+            <p class="flex gap-2 sm:gap-3 text-[12px] sm:text-[16px] text-[#fff]/50 justify-start items-center my-4">
+              <img class="w-5 h-5" src="./src/assets/email.png" alt=""> <span class="text-[#fff] mr-2">Email:</span>
+              delta@gmail.com
+            </p>
+            <p class="flex gap-2 sm:gap-3 text-[12px] sm:text-[16px] text-[#fff]/50 justify-start items-center my-4">
+              <img class="w-5 h-5" src="./src/assets/icons8-earth-globe-30.png" alt=""> <span
+                class="text-[#fff] mr-2">Website:</span>
+              https://delta.ioepc.edu.np/
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+</body>
+<script>
+  const header = document.getElementById( 'header' );
+  const navLinks = document.getElementById( 'navLinks' );
+  const navButton = document.getElementById( 'navButton' )
+  const video = document.getElementById( 'video' );
+  const day = document.getElementById( 'day' );
+  const hour = document.getElementById( 'hours' );
+  const minute = document.getElementById( 'minute' );
+  const second = document.getElementById( 'second' );
+  const date = document.getElementById( 'date' );
+  const sound = document.getElementById( 'sound' )
+  video.currentTime = 5;
+  sound.addEventListener( 'click', () =>
+  {
+    if ( video.muted === true )
+    {
+      sound.innerHTML = "ON"
+      video.muted = false;
+
+    } else
+    {
+      sound.innerHTML = "OFF"
+      video.muted = true;
+    }
+  } )
+  navButton.addEventListener( 'click', () =>
+  {
+    navLinks.classList.toggle( 'max-md:hidden' )
+  } )
+  window.onscroll = function () { scrollHander() }
+  function scrollHander ()
+  {
+
+    if ( window.pageYOffset > 20 )
+    {
+      header.classList.add( "bg-[#02577a]" )
+      navLinks.style.top = "5.5rem"
+    }
+    else
+    {
+
+      navLinks.style.top = "7rem"
+    }
+
+  }
+  // timer code
+  const countDownTime = new Date( "Jan 25, 2023 15: 37: 25 " ).getTime();
+  const eventDate = new Date( "Jan 25, 2023 15: 37: 25 " )
+  date.innerHTML = ( eventDate.getMonth() + 1 ) + ' / ' + eventDate.getDate() + ' / ' + eventDate.getFullYear()
+
+  const interval = setInterval( () =>
+  {
+    // now time
+    const nowTime = new Date().getTime();
+    // difference between times
+    const difference = countDownTime - nowTime;
+    // time calculation for days hours minutes and second
+    const days = Math.floor( difference / ( 1000 * 60 * 60 * 24 ) )
+    const hours = Math.floor( ( difference % ( 1000 * 60 * 60 * 24 ) ) / ( 1000 * 60 * 60 ) );
+    const minutes = Math.floor( ( difference % ( 1000 * 60 * 60 ) ) / ( 1000 * 60 ) );
+    const seconds = Math.floor( ( difference % ( 1000 * 60 ) ) / 1000 );
+    // setting to dom
+    day.innerHTML = days;
+    hour.innerHTML = hours;
+    minute.innerHTML = minutes;
+    second.innerHTML = seconds;
+    if ( difference < 0 )
+    {
+      clearInterval( interval );
+      // Time out next time
+    }
+  }, 1000 );
+</script>
+
+</html>
