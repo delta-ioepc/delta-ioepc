@@ -1,0 +1,13 @@
+.rule, .coc{
+    margin-top: 8vh;
+    margin-bottom: 2vh;
+    
+}
+.rulelist, .coclist{
+    list-style-type: decimal;
+    margin-left: 19vw;
+}
+
+.coclast{
+    margin-bottom: 70px;
+}
