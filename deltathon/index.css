@@ -23,3 +23,7 @@
     align-items: center;
     
 }
+.card{
+    background-color: rgb(23,23,29);
+    border: 2px solid yellow;
+}
