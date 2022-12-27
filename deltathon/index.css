@@ -25,5 +25,9 @@
 }
 .card{
     background-color: rgb(23,23,29);
-    border: 2px solid yellow;
+    border: 4px solid rgb(235,183,34);
+}
+
+.mentor{
+    display: flex;
 }
