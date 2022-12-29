@@ -24,10 +24,12 @@
     content="A grand national level 24 hours long software hackathon with attractive prizes, valuable mentorship, and must-have learning experiences. Deltathon aims to inspire programmers, developers, and tech-enthusiast to collaborate and pitch their ideas on projects. " />
   <meta property="og:image" content="https://delta.ioepc.edu.np/public/img/delta_logo.png" />
 
-
-
 </head>
 <style>
+  html {
+    scroll-behavior: smooth;
+  }
+
   .line_after::before {
     content: ' ';
     position: absolute;
@@ -177,10 +179,26 @@
           class="text-[35px] sm:text-[55px] md:text-[70px] w-full  lg:text-[90px]  text-white font-extrabold tracking-wider ">
           Deltathon 2023
         </h1>
-        <p class="text-[20px] sm:text-[30px] md:text-[35px] lg:text-[40px] text-center text-teal-500 font-medium">
-          Biggest Hackathon in East</p>
-        <p class="text-[20px] prizestext text-center ">
-          Prizes Worth More Than 2 Lakh!!</p>
+        <p id="subtext"
+          class="text-[20px] sm:text-[30px] md:text-[35px] lg:text-[40px] text-center text-teal-500 font-medium">
+        </p>
+
+        <script>
+          var i = 0;
+          var txt = 'Biggest Hackathon in East!'; /* The text */
+          var speed = 50; /* The speed/duration of the effect in milliseconds */
+
+          function typeWriter() {
+            if (i < txt.length) {
+              document.getElementById("subtext").innerHTML += txt.charAt(i);
+              i++;
+              setTimeout(typeWriter, speed);
+            }
+          }
+          typeWriter()
+        </script>
+        <p class="text-[20px] text-center text-white font-[Poppins] font-bold bg-blue-900">
+          [With prize pool of more than 2 Lakhs.]</p>
         <!-- <div class="text-center">
           <button
             class=" bg-[#02577a] hover:bg-[#02577fc4] px-14 mt-8 rounded-md py-2 text-white font-medium "><a href="https://docs.google.com/forms/d/e/1FAIpQLSc6Y7HFxKBdP6kFVWMdEDROrFTbh-TJV0SlfXjF0EfmAemaew/viewform?usp=sf_link" target="_blank"> Register </a></button>
