@@ -244,41 +244,46 @@
 
     }
 
+
     /* text hover effect */
-    .text_effect {
-      background-image: linear-gradient(to right,
-          #54b3d6,
-          #54b3d6 50%,
-          #000 50%);
-      background-size: 200% 100%;
-      background-position: -100%;
-      display: inline-block;
-      padding: 5px 0;
-      position: relative;
-      -webkit-background-clip: text;
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
-      transition: all 0.3s ease-in-out;
-    }
+    @media (min-width:900px) {
+      .text_effect {
+        background-image: linear-gradient(to right,
+            #54b3d6,
+            #54b3d6 50%,
+            #000 50%);
+        background-size: 200% 100%;
+        background-position: -100%;
+        display: inline-block;
+        padding: 5px 0;
+        position: relative;
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        transition: all 0.3s ease-in-out;
+      }
 
-    .text_effect:before {
-      content: '';
-      background: #54b3d6;
-      display: block;
-      position: absolute;
-      bottom: -3px;
-      left: 0;
-      width: 0;
-      height: 3px;
-      transition: all 0.3s ease-in-out;
-    }
+      .text_effect:before {
+        content: '';
+        background: #54b3d6;
+        display: block;
+        position: absolute;
+        bottom: -3px;
+        left: 0;
+        width: 0;
+        height: 3px;
+        transition: all 0.3s ease-in-out;
+      }
 
-    .text_effect:hover {
-      background-position: 0;
-    }
+      .text_effect:hover {
+        background-position: 0;
+      }
 
-    .text_effect:hover::before {
-      width: 100%;
+      .text_effect:hover::before {
+        width: 100%;
+      }
+
+
     }
 
     .line_clamp {
@@ -287,6 +292,21 @@
       -webkit-box-orient: vertical;
       overflow: hidden;
     }
+
+    @media (max-width:900px) {
+
+      #navContent {
+        transition: transform 0.5s linear;
+      }
+
+      .translate_out {
+        transform: translateX(100vw);
+      }
+
+      .translate {
+        transform: translateX(0vw);
+      }
+    }
   </style>
 
 </head>
@@ -294,7 +314,7 @@
 <div class="max-w-[1440px] mx-auto ">
   <!-- header -->
   <div
-    class="flex  justify-between max-w-[95%]  xl:max-w-[90%] mx-auto relative   border-navbar items-center py-3 px-4 xl:px-6  h-[100px] ">
+    class="flex  justify-between max-w-[95%] max-[900px]:max-w-[100%]  xl:max-w-[90%] mx-auto relative   border-navbar items-center py-3 px-4 xl:px-6  h-[100px] ">
     <div class="w-[20%] lg:w-[25%]">
       <svg width="65" height="68" viewBox="0 0 69 70" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g clip-path="url(#clip0_253_884)">
@@ -341,7 +361,7 @@
       </svg>
 
     </div>
-    <div id="toggleButton" class=" w-[80%] min-[900px]:hidden">
+    <div id="toggleButton" class=" w-[80%] min-[900px]:hidden cursor-pointer">
       <div class="w-[58px] p-3  bg-gray-200  text-white mr-0 ml-auto">
         <p class="w-[35px] h-[3px] bg-slate-600"></p>
         <p class="w-[35px] h-[3px] bg-slate-600 my-2"></p>
@@ -351,19 +371,34 @@
     </div>
 
     <div id="navContent"
-      class="min-[900px]:flex  hidden   justify-center min-[900px]:gap-[3.5rem] min-[970px]:gap-[6rem]    items-center w-full">
+      class="min-[900px]:flex translate_out  fixed top-[6.25rem] max-[900px]:bg-gray-400  right-0 min-[900px]:static max-[900px]:py-6     justify-center min-[900px]:gap-[3.5rem] min-[970px]:gap-[5.5rem] text-center    items-center max-[900px]:w-full ">
 
       <ul
-        class="flex items-center gap-6  xl:gap-12 relative  after:content-[' '] after:block after:h-[35px] after:absolute after:-right-10 after:w-[2px] after:bg-slate-800    font-body">
-        <li class="cursor-pointer text-[18px] font-semibold text_effect"><a href="./index.html">Home</a> </li>
-        <li class="cursor-pointer text-[18px] font-semibold text_effect"><a href="#events">Events</a> </li>
-        <li class="cursor-pointer text-[18px] font-semibold text_effect"><a href="#sponser"> Sponser</a></li>
-        <li class="cursor-pointer text-[18px] font-semibold text_effect"><a href="#gallery"> Gallery</a></li>
-        <li class="cursor-pointer text-[18px] font-semibold text_effect"><a href="#contact_us">Contacts US</a> </li>
+        class="flex flex-col  min-[900px]:flex-row items-center gap-6  xl:gap-12 relative  after:content-[' '] after:block after:h-[35px] after:absolute after:-right-10 after:w-[2px] after:bg-slate-800    font-body">
+        <li
+          class="cursor-pointer text-[18px] font-semibold text_effect max-[900px]:py-2 max-[900px]:border-b max-[900px]:w-full">
+          <a href="./index.html">Home</a>
+        </li>
+        <li
+          class="cursor-pointer text-[18px] font-semibold text_effect  max-[900px]:border-b max-[900px]:py-2 max-[900px]:w-full">
+          <a href="#events">Events</a>
+        </li>
+        <li
+          class="cursor-pointer text-[18px] font-semibold text_effect max-[900px]:border-b max-[900px]:py-2 max-[900px]:w-full">
+          <a href="#sponser"> Sponser</a>
+        </li>
+        <li
+          class="cursor-pointer text-[18px] font-semibold text_effect max-[900px]:border-b max-[900px]:py-2 max-[900px]:w-full">
+          <a href="#gallery"> Gallery</a>
+        </li>
+        <li
+          class="cursor-pointer text-[18px] font-semibold text_effect max-[900px]:border-b max-[900px]:py-2 max-[900px]:w-full">
+          <a href="#contact_us">Contacts US</a>
+        </li>
 
       </ul>
       <button
-        class=" w-[180px] h-[50px] hover:opacity-80 font-body font-semibold text-[16px]  text-navbar bg-regBg rounded-[45px] ">
+        class=" w-[180px] mx-auto h-[50px] hover:opacity-90 font-body font-semibold text-[16px] max-[900px]:mt-6 hover:scale-[1.02]  text-navbar bg-regBg rounded-[45px] ">
         Register Project
       </button>
 
@@ -736,63 +771,351 @@
           <li class="splide__slide">
             <div
               class="flex xl:!max-w-[55%]  lg:!max-w-[70%] md:!max-w-[76%] sm:max-w-[74%] max-w-[85%] min-[460px]:max-w-[81%] min-[500px]:max-w-[60%] gap-3 md:gap-5 lg:gap-8 2xl:gap-10 justify-center mx-auto flex-wrap">
-              <img
-                class="rounded-full !w-[80px] !h-[80px] sm:!w-[120px] sm:!h-[120px]   lg:!w-[190px] lg:!h-[190px] md:!w-[160px] md:!h-[160px]"
-                src="./public/img/beautiful.jpg" alt="">
-              <img
-                class="rounded-full !w-[80px] !h-[80px] sm:!w-[120px] sm:!h-[120px]   lg:!w-[190px] lg:!h-[190px] md:!w-[160px] md:!h-[160px]"
-                src="./public/img/beautiful.jpg" alt="">
-              <img
-                class="rounded-full !w-[80px] !h-[80px] sm:!w-[120px] sm:!h-[120px]   lg:!w-[190px] lg:!h-[190px] md:!w-[160px] md:!h-[160px]"
-                src="./public/img/beautiful.jpg" alt="">
-              <img
-                class="rounded-full !w-[80px] !h-[80px] sm:!w-[120px] sm:!h-[120px]   lg:!w-[190px] lg:!h-[190px] md:!w-[160px] md:!h-[160px]"
-                src="./public/img/beautiful.jpg" alt="">
-              <img
-                class="rounded-full !w-[80px] !h-[80px] sm:!w-[120px] sm:!h-[120px]   lg:!w-[190px] lg:!h-[190px] md:!w-[160px] md:!h-[160px]"
-                src="./public/img/beautiful.jpg" alt="">
+              <div class="relative rounded-full overflow-hidden group cursor-pointer">
+
+                <img
+                  class="rounded-full   !w-[80px] !h-[80px] sm:!w-[120px] sm:!h-[120px]   lg:!w-[190px] lg:!h-[190px] md:!w-[160px] md:!h-[160px]"
+                  src="./public/img/beautiful.jpg" alt="">
+                <div
+                  class="absolute h-0 w-0 opacity-0 group-hover:opacity-100  text-white  rounded-full bottom-0 bg-[#0000007a] backdrop:blur-2xl group-hover:!w-[80px] group-hover:!h-[80px] group-hover:sm:!w-[120px] group-hover:sm:!h-[120px]   group-hover:lg:!w-[190px] group-hover:lg:!h-[190px] group-hover:md:!w-[160px] group-hover:md:!h-[160px] flex flex-col justify-center items-center">
+                  <p class="text-[20px] font-bold">Shiva Raj Badu</p>
+                  <p class="text-[16px] font-semibold">External</p>
+                  <ul class="flex gap-2 my-2">
+                    <li><a href="https://www.facebook.com/" target="_blank">
+                        <img class="hover:scale-[1.08]" src="./public/img/fb.svg" alt="">
+                      </a></li>
+                    <li><a href="https://linkedin.com">
+                        <img class="hover:scale-[1.08]" src="./public/img/linkedin.svg" alt="">
+                      </a></li>
+                    <li><a href="https://instagram.com">
+                        <img class="hover:scale-[1.08]" src="./public/img/instagram.svg" alt="">
+                      </a></li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="relative rounded-full overflow-hidden group cursor-pointer">
+
+                <img
+                  class="rounded-full   !w-[80px] !h-[80px] sm:!w-[120px] sm:!h-[120px]   lg:!w-[190px] lg:!h-[190px] md:!w-[160px] md:!h-[160px]"
+                  src="./public/img/beautiful.jpg" alt="">
+                <div
+                  class="absolute h-0 w-0 opacity-0 group-hover:opacity-100  text-white  rounded-full bottom-0 bg-[#0000007a] backdrop:blur-2xl group-hover:!w-[80px] group-hover:!h-[80px] group-hover:sm:!w-[120px] group-hover:sm:!h-[120px]   group-hover:lg:!w-[190px] group-hover:lg:!h-[190px] group-hover:md:!w-[160px] group-hover:md:!h-[160px] flex flex-col justify-center items-center">
+                  <p class="text-[20px] font-bold max-w-[140px] text-center">Shiva Raj Badu</p>
+                  <p class="text-[16px] font-normal">External</p>
+                  <ul class="flex gap-2 my-2">
+                    <li><a href="https://www.facebook.com/" target="_blank">
+                        <img class="hover:scale-[1.08]" src="./public/img/fb.svg" alt="">
+                      </a></li>
+                    <li><a href="https://linkedin.com">
+                        <img class="hover:scale-[1.08]" src="./public/img/linkedin.svg" alt="">
+                      </a></li>
+                    <li><a href="https://instagram.com">
+                        <img class="hover:scale-[1.08]" src="./public/img/instagram.svg" alt="">
+                      </a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="relative rounded-full overflow-hidden group cursor-pointer">
+
+                <img
+                  class="rounded-full   !w-[80px] !h-[80px] sm:!w-[120px] sm:!h-[120px]   lg:!w-[190px] lg:!h-[190px] md:!w-[160px] md:!h-[160px]"
+                  src="./public/img/beautiful.jpg" alt="">
+                <div
+                  class="absolute h-0 w-0 opacity-0 group-hover:opacity-100  text-white  rounded-full bottom-0 bg-[#0000007a] backdrop:blur-2xl group-hover:!w-[80px] group-hover:!h-[80px] group-hover:sm:!w-[120px] group-hover:sm:!h-[120px]   group-hover:lg:!w-[190px] group-hover:lg:!h-[190px] group-hover:md:!w-[160px] group-hover:md:!h-[160px] flex flex-col justify-center items-center">
+                  <p class="text-[20px] font-bold">Shiva Raj Badu</p>
+                  <p class="text-[16px] font-semibold">External</p>
+                  <ul class="flex gap-2 my-2">
+                    <li><a href="https://www.facebook.com/" target="_blank">
+                        <img class="hover:scale-[1.08]" src="./public/img/fb.svg" alt="">
+                      </a></li>
+                    <li><a href="https://linkedin.com">
+                        <img class="hover:scale-[1.08]" src="./public/img/linkedin.svg" alt="">
+                      </a></li>
+                    <li><a href="https://instagram.com">
+                        <img class="hover:scale-[1.08]" src="./public/img/instagram.svg" alt="">
+                      </a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="relative rounded-full overflow-hidden group cursor-pointer">
+
+                <img
+                  class="rounded-full   !w-[80px] !h-[80px] sm:!w-[120px] sm:!h-[120px]   lg:!w-[190px] lg:!h-[190px] md:!w-[160px] md:!h-[160px]"
+                  src="./public/img/beautiful.jpg" alt="">
+                <div
+                  class="absolute h-0 w-0 opacity-0 group-hover:opacity-100  text-white  rounded-full bottom-0 bg-[#0000007a] backdrop:blur-2xl group-hover:!w-[80px] group-hover:!h-[80px] group-hover:sm:!w-[120px] group-hover:sm:!h-[120px]   group-hover:lg:!w-[190px] group-hover:lg:!h-[190px] group-hover:md:!w-[160px] group-hover:md:!h-[160px] flex flex-col justify-center items-center">
+                  <p class="text-[20px] font-bold">Shiva Raj Badu</p>
+                  <p class="text-[16px] font-semibold">External</p>
+                  <ul class="flex gap-2 my-2">
+                    <li><a href="https://www.facebook.com/" target="_blank">
+                        <img class="hover:scale-[1.08]" src="./public/img/fb.svg" alt="">
+                      </a></li>
+                    <li><a href="https://linkedin.com">
+                        <img class="hover:scale-[1.08]" src="./public/img/linkedin.svg" alt="">
+                      </a></li>
+                    <li><a href="https://instagram.com">
+                        <img class="hover:scale-[1.08]" src="./public/img/instagram.svg" alt="">
+                      </a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="relative rounded-full overflow-hidden group cursor-pointer">
+
+                <img
+                  class="rounded-full   !w-[80px] !h-[80px] sm:!w-[120px] sm:!h-[120px]   lg:!w-[190px] lg:!h-[190px] md:!w-[160px] md:!h-[160px]"
+                  src="./public/img/beautiful.jpg" alt="">
+                <div
+                  class="absolute h-0 w-0 opacity-0 group-hover:opacity-100  text-white  rounded-full bottom-0 bg-[#0000007a] backdrop:blur-2xl group-hover:!w-[80px] group-hover:!h-[80px] group-hover:sm:!w-[120px] group-hover:sm:!h-[120px]   group-hover:lg:!w-[190px] group-hover:lg:!h-[190px] group-hover:md:!w-[160px] group-hover:md:!h-[160px] flex flex-col justify-center items-center">
+                  <p class="text-[20px] font-bold">Shiva Raj Badu</p>
+                  <p class="text-[16px] font-semibold">External</p>
+                  <ul class="flex gap-2 my-2">
+                    <li><a href="https://www.facebook.com/" target="_blank">
+                        <img class="hover:scale-[1.08]" src="./public/img/fb.svg" alt="">
+                      </a></li>
+                    <li><a href="https://linkedin.com">
+                        <img class="hover:scale-[1.08]" src="./public/img/linkedin.svg" alt="">
+                      </a></li>
+                    <li><a href="https://instagram.com">
+                        <img class="hover:scale-[1.08]" src="./public/img/instagram.svg" alt="">
+                      </a></li>
+                  </ul>
+                </div>
+              </div>
             </div>
 
           </li>
           <li class="splide__slide">
             <div
               class="flex xl:!max-w-[55%]  lg:!max-w-[70%] md:!max-w-[76%] sm:max-w-[74%] max-w-[85%] min-[460px]:max-w-[81%] min-[500px]:max-w-[60%] gap-3 md:gap-5 lg:gap-8 2xl:gap-10 justify-center mx-auto flex-wrap">
-              <img
-                class="rounded-full !w-[80px] !h-[80px] sm:!w-[120px] sm:!h-[120px]   lg:!w-[190px] lg:!h-[190px] md:!w-[160px] md:!h-[160px]"
-                src="./public/img/beautiful.jpg" alt="">
-              <img
-                class="rounded-full !w-[80px] !h-[80px] sm:!w-[120px] sm:!h-[120px]   lg:!w-[190px] lg:!h-[190px] md:!w-[160px] md:!h-[160px]"
-                src="./public/img/beautiful.jpg" alt="">
-              <img
-                class="rounded-full !w-[80px] !h-[80px] sm:!w-[120px] sm:!h-[120px]   lg:!w-[190px] lg:!h-[190px] md:!w-[160px] md:!h-[160px]"
-                src="./public/img/beautiful.jpg" alt="">
-              <img
-                class="rounded-full !w-[80px] !h-[80px] sm:!w-[120px] sm:!h-[120px]   lg:!w-[190px] lg:!h-[190px] md:!w-[160px] md:!h-[160px]"
-                src="./public/img/beautiful.jpg" alt="">
-              <img
-                class="rounded-full !w-[80px] !h-[80px] sm:!w-[120px] sm:!h-[120px]   lg:!w-[190px] lg:!h-[190px] md:!w-[160px] md:!h-[160px]"
-                src="./public/img/beautiful.jpg" alt="">
+              <div class="relative rounded-full overflow-hidden group cursor-pointer">
+
+                <img
+                  class="rounded-full   !w-[80px] !h-[80px] sm:!w-[120px] sm:!h-[120px]   lg:!w-[190px] lg:!h-[190px] md:!w-[160px] md:!h-[160px]"
+                  src="./public/img/beautiful.jpg" alt="">
+                <div
+                  class="absolute h-0 w-0 opacity-0 group-hover:opacity-100  text-white  rounded-full bottom-0 bg-[#0000007a] backdrop:blur-2xl group-hover:!w-[80px] group-hover:!h-[80px] group-hover:sm:!w-[120px] group-hover:sm:!h-[120px]   group-hover:lg:!w-[190px] group-hover:lg:!h-[190px] group-hover:md:!w-[160px] group-hover:md:!h-[160px] flex flex-col justify-center items-center">
+                  <p class="text-[20px] font-bold">Shiva Raj Badu</p>
+                  <p class="text-[16px] font-semibold">External</p>
+                  <ul class="flex gap-2 my-2">
+                    <li><a href="https://www.facebook.com/" target="_blank">
+                        <img class="hover:scale-[1.08]" src="./public/img/fb.svg" alt="">
+                      </a></li>
+                    <li><a href="https://linkedin.com">
+                        <img class="hover:scale-[1.08]" src="./public/img/linkedin.svg" alt="">
+                      </a></li>
+                    <li><a href="https://instagram.com">
+                        <img class="hover:scale-[1.08]" src="./public/img/instagram.svg" alt="">
+                      </a></li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="relative rounded-full overflow-hidden group cursor-pointer">
+
+                <img
+                  class="rounded-full   !w-[80px] !h-[80px] sm:!w-[120px] sm:!h-[120px]   lg:!w-[190px] lg:!h-[190px] md:!w-[160px] md:!h-[160px]"
+                  src="./public/img/beautiful.jpg" alt="">
+                <div
+                  class="absolute h-0 w-0 opacity-0 group-hover:opacity-100  text-white  rounded-full bottom-0 bg-[#0000007a] backdrop:blur-2xl group-hover:!w-[80px] group-hover:!h-[80px] group-hover:sm:!w-[120px] group-hover:sm:!h-[120px]   group-hover:lg:!w-[190px] group-hover:lg:!h-[190px] group-hover:md:!w-[160px] group-hover:md:!h-[160px] flex flex-col justify-center items-center">
+                  <p class="text-[20px] font-bold">Shiva Raj Badu</p>
+                  <p class="text-[16px] font-semibold">External</p>
+                  <ul class="flex gap-2 my-2">
+                    <li><a href="https://www.facebook.com/" target="_blank">
+                        <img class="hover:scale-[1.08]" src="./public/img/fb.svg" alt="">
+                      </a></li>
+                    <li><a href="https://linkedin.com">
+                        <img class="hover:scale-[1.08]" src="./public/img/linkedin.svg" alt="">
+                      </a></li>
+                    <li><a href="https://instagram.com">
+                        <img class="hover:scale-[1.08]" src="./public/img/instagram.svg" alt="">
+                      </a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="relative rounded-full overflow-hidden group cursor-pointer">
+
+                <img
+                  class="rounded-full   !w-[80px] !h-[80px] sm:!w-[120px] sm:!h-[120px]   lg:!w-[190px] lg:!h-[190px] md:!w-[160px] md:!h-[160px]"
+                  src="./public/img/beautiful.jpg" alt="">
+                <div
+                  class="absolute h-0 w-0 opacity-0 group-hover:opacity-100  text-white  rounded-full bottom-0 bg-[#0000007a] backdrop:blur-2xl group-hover:!w-[80px] group-hover:!h-[80px] group-hover:sm:!w-[120px] group-hover:sm:!h-[120px]   group-hover:lg:!w-[190px] group-hover:lg:!h-[190px] group-hover:md:!w-[160px] group-hover:md:!h-[160px] flex flex-col justify-center items-center">
+                  <p class="text-[20px] font-bold">Shiva Raj Badu</p>
+                  <p class="text-[16px] font-semibold">External</p>
+                  <ul class="flex gap-2 my-2">
+                    <li><a href="https://www.facebook.com/" target="_blank">
+                        <img class="hover:scale-[1.08]" src="./public/img/fb.svg" alt="">
+                      </a></li>
+                    <li><a href="https://linkedin.com">
+                        <img class="hover:scale-[1.08]" src="./public/img/linkedin.svg" alt="">
+                      </a></li>
+                    <li><a href="https://instagram.com">
+                        <img class="hover:scale-[1.08]" src="./public/img/instagram.svg" alt="">
+                      </a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="relative rounded-full overflow-hidden group cursor-pointer">
+
+                <img
+                  class="rounded-full   !w-[80px] !h-[80px] sm:!w-[120px] sm:!h-[120px]   lg:!w-[190px] lg:!h-[190px] md:!w-[160px] md:!h-[160px]"
+                  src="./public/img/beautiful.jpg" alt="">
+                <div
+                  class="absolute h-0 w-0 opacity-0 group-hover:opacity-100  text-white  rounded-full bottom-0 bg-[#0000007a] backdrop:blur-2xl group-hover:!w-[80px] group-hover:!h-[80px] group-hover:sm:!w-[120px] group-hover:sm:!h-[120px]   group-hover:lg:!w-[190px] group-hover:lg:!h-[190px] group-hover:md:!w-[160px] group-hover:md:!h-[160px] flex flex-col justify-center items-center">
+                  <p class="text-[20px] font-bold">Shiva Raj Badu</p>
+                  <p class="text-[16px] font-semibold">External</p>
+                  <ul class="flex gap-2 my-2">
+                    <li><a href="https://www.facebook.com/" target="_blank">
+                        <img class="hover:scale-[1.08]" src="./public/img/fb.svg" alt="">
+                      </a></li>
+                    <li><a href="https://linkedin.com">
+                        <img class="hover:scale-[1.08]" src="./public/img/linkedin.svg" alt="">
+                      </a></li>
+                    <li><a href="https://instagram.com">
+                        <img class="hover:scale-[1.08]" src="./public/img/instagram.svg" alt="">
+                      </a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="relative rounded-full overflow-hidden group cursor-pointer">
+
+                <img
+                  class="rounded-full   !w-[80px] !h-[80px] sm:!w-[120px] sm:!h-[120px]   lg:!w-[190px] lg:!h-[190px] md:!w-[160px] md:!h-[160px]"
+                  src="./public/img/beautiful.jpg" alt="">
+                <div
+                  class="absolute h-0 w-0 opacity-0 group-hover:opacity-100  text-white  rounded-full bottom-0 bg-[#0000007a] backdrop:blur-2xl group-hover:!w-[80px] group-hover:!h-[80px] group-hover:sm:!w-[120px] group-hover:sm:!h-[120px]   group-hover:lg:!w-[190px] group-hover:lg:!h-[190px] group-hover:md:!w-[160px] group-hover:md:!h-[160px] flex flex-col justify-center items-center">
+                  <p class="text-[20px] font-bold">Shiva Raj Badu</p>
+                  <p class="text-[16px] font-semibold">External</p>
+                  <ul class="flex gap-2 my-2">
+                    <li><a href="https://www.facebook.com/" target="_blank">
+                        <img class="hover:scale-[1.08]" src="./public/img/fb.svg" alt="">
+                      </a></li>
+                    <li><a href="https://linkedin.com">
+                        <img class="hover:scale-[1.08]" src="./public/img/linkedin.svg" alt="">
+                      </a></li>
+                    <li><a href="https://instagram.com">
+                        <img class="hover:scale-[1.08]" src="./public/img/instagram.svg" alt="">
+                      </a></li>
+                  </ul>
+                </div>
+              </div>
             </div>
 
           </li>
           <li class="splide__slide">
             <div
               class="flex xl:!max-w-[55%]  lg:!max-w-[70%] md:!max-w-[76%] sm:max-w-[74%] max-w-[85%] min-[460px]:max-w-[81%] min-[500px]:max-w-[60%] gap-3 md:gap-5 lg:gap-8 2xl:gap-10 justify-center mx-auto flex-wrap">
-              <img
-                class="rounded-full !w-[80px] !h-[80px] sm:!w-[120px] sm:!h-[120px]   lg:!w-[190px] lg:!h-[190px] md:!w-[160px] md:!h-[160px]"
-                src="./public/img/beautiful.jpg" alt="">
-              <img
-                class="rounded-full !w-[80px] !h-[80px] sm:!w-[120px] sm:!h-[120px]   lg:!w-[190px] lg:!h-[190px] md:!w-[160px] md:!h-[160px]"
-                src="./public/img/beautiful.jpg" alt="">
-              <img
-                class="rounded-full !w-[80px] !h-[80px] sm:!w-[120px] sm:!h-[120px]   lg:!w-[190px] lg:!h-[190px] md:!w-[160px] md:!h-[160px]"
-                src="./public/img/beautiful.jpg" alt="">
-              <img
-                class="rounded-full !w-[80px] !h-[80px] sm:!w-[120px] sm:!h-[120px]   lg:!w-[190px] lg:!h-[190px] md:!w-[160px] md:!h-[160px]"
-                src="./public/img/beautiful.jpg" alt="">
-              <img
-                class="rounded-full !w-[80px] !h-[80px] sm:!w-[120px] sm:!h-[120px]   lg:!w-[190px] lg:!h-[190px] md:!w-[160px] md:!h-[160px]"
-                src="./public/img/beautiful.jpg" alt="">
+              <div class="relative rounded-full overflow-hidden group cursor-pointer">
+
+                <img
+                  class="rounded-full   !w-[80px] !h-[80px] sm:!w-[120px] sm:!h-[120px]   lg:!w-[190px] lg:!h-[190px] md:!w-[160px] md:!h-[160px]"
+                  src="./public/img/beautiful.jpg" alt="">
+                <div
+                  class="absolute h-0 w-0 opacity-0 group-hover:opacity-100  text-white  rounded-full bottom-0 bg-[#0000007a] backdrop:blur-2xl group-hover:!w-[80px] group-hover:!h-[80px] group-hover:sm:!w-[120px] group-hover:sm:!h-[120px]   group-hover:lg:!w-[190px] group-hover:lg:!h-[190px] group-hover:md:!w-[160px] group-hover:md:!h-[160px] flex flex-col justify-center items-center">
+                  <p class="text-[20px] font-bold">Shiva Raj Badu</p>
+                  <p class="text-[16px] font-semibold">External</p>
+                  <ul class="flex gap-2 my-2">
+                    <li><a href="https://www.facebook.com/" target="_blank">
+                        <img class="hover:scale-[1.08]" src="./public/img/fb.svg" alt="">
+                      </a></li>
+                    <li><a href="https://linkedin.com">
+                        <img class="hover:scale-[1.08]" src="./public/img/linkedin.svg" alt="">
+                      </a></li>
+                    <li><a href="https://instagram.com">
+                        <img class="hover:scale-[1.08]" src="./public/img/instagram.svg" alt="">
+                      </a></li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="relative rounded-full overflow-hidden group cursor-pointer">
+
+                <img
+                  class="rounded-full   !w-[80px] !h-[80px] sm:!w-[120px] sm:!h-[120px]   lg:!w-[190px] lg:!h-[190px] md:!w-[160px] md:!h-[160px]"
+                  src="./public/img/beautiful.jpg" alt="">
+                <div
+                  class="absolute h-0 w-0 opacity-0 group-hover:opacity-100  text-white  rounded-full bottom-0 bg-[#0000007a] backdrop:blur-2xl group-hover:!w-[80px] group-hover:!h-[80px] group-hover:sm:!w-[120px] group-hover:sm:!h-[120px]   group-hover:lg:!w-[190px] group-hover:lg:!h-[190px] group-hover:md:!w-[160px] group-hover:md:!h-[160px] flex flex-col justify-center items-center">
+                  <p class="text-[20px] font-bold">Shiva Raj Badu</p>
+                  <p class="text-[16px] font-semibold">External</p>
+                  <ul class="flex gap-2 my-2">
+                    <li><a href="https://www.facebook.com/" target="_blank">
+                        <img class="hover:scale-[1.08]" src="./public/img/fb.svg" alt="">
+                      </a></li>
+                    <li><a href="https://linkedin.com">
+                        <img class="hover:scale-[1.08]" src="./public/img/linkedin.svg" alt="">
+                      </a></li>
+                    <li><a href="https://instagram.com">
+                        <img class="hover:scale-[1.08]" src="./public/img/instagram.svg" alt="">
+                      </a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="relative rounded-full overflow-hidden group cursor-pointer">
+
+                <img
+                  class="rounded-full   !w-[80px] !h-[80px] sm:!w-[120px] sm:!h-[120px]   lg:!w-[190px] lg:!h-[190px] md:!w-[160px] md:!h-[160px]"
+                  src="./public/img/beautiful.jpg" alt="">
+                <div
+                  class="absolute h-0 w-0 opacity-0 group-hover:opacity-100  text-white  rounded-full bottom-0 bg-[#0000007a] backdrop:blur-2xl group-hover:!w-[80px] group-hover:!h-[80px] group-hover:sm:!w-[120px] group-hover:sm:!h-[120px]   group-hover:lg:!w-[190px] group-hover:lg:!h-[190px] group-hover:md:!w-[160px] group-hover:md:!h-[160px] flex flex-col justify-center items-center">
+                  <p class="text-[20px] font-bold">Shiva Raj Badu</p>
+                  <p class="text-[16px] font-semibold">External</p>
+                  <ul class="flex gap-2 my-2">
+                    <li><a href="https://www.facebook.com/" target="_blank">
+                        <img class="hover:scale-[1.08]" src="./public/img/fb.svg" alt="">
+                      </a></li>
+                    <li><a href="https://linkedin.com">
+                        <img class="hover:scale-[1.08]" src="./public/img/linkedin.svg" alt="">
+                      </a></li>
+                    <li><a href="https://instagram.com">
+                        <img class="hover:scale-[1.08]" src="./public/img/instagram.svg" alt="">
+                      </a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="relative rounded-full overflow-hidden group cursor-pointer">
+
+                <img
+                  class="rounded-full   !w-[80px] !h-[80px] sm:!w-[120px] sm:!h-[120px]   lg:!w-[190px] lg:!h-[190px] md:!w-[160px] md:!h-[160px]"
+                  src="./public/img/beautiful.jpg" alt="">
+                <div
+                  class="absolute h-0 w-0 opacity-0 group-hover:opacity-100  text-white  rounded-full bottom-0 bg-[#0000007a] backdrop:blur-2xl group-hover:!w-[80px] group-hover:!h-[80px] group-hover:sm:!w-[120px] group-hover:sm:!h-[120px]   group-hover:lg:!w-[190px] group-hover:lg:!h-[190px] group-hover:md:!w-[160px] group-hover:md:!h-[160px] flex flex-col justify-center items-center">
+                  <p class="text-[20px] font-bold">Shiva Raj Badu</p>
+                  <p class="text-[16px] font-semibold">External</p>
+                  <ul class="flex gap-2 my-2">
+                    <li><a href="https://www.facebook.com/" target="_blank">
+                        <img class="hover:scale-[1.08]" src="./public/img/fb.svg" alt="">
+                      </a></li>
+                    <li><a href="https://linkedin.com">
+                        <img class="hover:scale-[1.08]" src="./public/img/linkedin.svg" alt="">
+                      </a></li>
+                    <li><a href="https://instagram.com">
+                        <img class="hover:scale-[1.08]" src="./public/img/instagram.svg" alt="">
+                      </a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="relative rounded-full overflow-hidden group cursor-pointer">
+
+                <img
+                  class="rounded-full   !w-[80px] !h-[80px] sm:!w-[120px] sm:!h-[120px]   lg:!w-[190px] lg:!h-[190px] md:!w-[160px] md:!h-[160px]"
+                  src="./public/img/beautiful.jpg" alt="">
+                <div
+                  class="absolute h-0 w-0 opacity-0 group-hover:opacity-100  text-white  rounded-full bottom-0 bg-[#0000007a] backdrop:blur-2xl group-hover:!w-[80px] group-hover:!h-[80px] group-hover:sm:!w-[120px] group-hover:sm:!h-[120px]   group-hover:lg:!w-[190px] group-hover:lg:!h-[190px] group-hover:md:!w-[160px] group-hover:md:!h-[160px] flex flex-col justify-center items-center">
+                  <p class="text-[20px] font-bold">Shiva Raj kumar Badu</p>
+                  <p class="text-[16px] font-semibold">External</p>
+                  <ul class="flex gap-2 my-2">
+                    <li><a href="https://www.facebook.com/" target="_blank">
+                        <img class="hover:scale-[1.08]" src="./public/img/fb.svg" alt="">
+                      </a></li>
+                    <li><a href="https://linkedin.com">
+                        <img class="hover:scale-[1.08]" src="./public/img/linkedin.svg" alt="">
+                      </a></li>
+                    <li><a href="https://instagram.com">
+                        <img class="hover:scale-[1.08]" src="./public/img/instagram.svg" alt="">
+                      </a></li>
+                  </ul>
+                </div>
+              </div>
             </div>
 
           </li>
@@ -910,13 +1233,13 @@
   <div class="max-w-[1440px] mx-auto">
     <div class="max-w-[90%] mx-auto">
       <h1
-        class="max-w-[330px] mx-auto text-[35px] font-semibold relative before:content-[' '] before:absolute before:w-[90%]  before:h-1 before:bg-green-400 before:bottom-2 before:left-0 py-4 ">
+        class="max-w-[380px] mx-auto text-[45px] font-semibold relative before:content-[' '] before:absolute before:w-[90%]  before:h-1 before:bg-green-400 before:bottom-2 before:left-0 py-4 ">
         Our Sponsers <span class="
         text-[25px] font-medium">2023</span>
       </h1>
       <div class="text-center mx-auto my-6 mt-[4rem]">
         <h2
-          class="text-[25px] py-6 my-6 font-semibold tracking-wider underline underline-offset-8 decoration-[#ffd700] decoration-dashed">
+          class="text-[33px] py-6 my-6 font-semibold tracking-wider underline underline-offset-8 decoration-[#ffd700] decoration-dashed">
           Title Sponsor</h2>
         <div
           class="h-[250px] w-[350px] mx-auto border-[6px] flex justify-center items-center border-t-[#ceb10a] rounded-2xl border-r-[#ffd700] border-l-[#ffd700] border-b-[#e3c208] shadow-2xl">
@@ -926,7 +1249,7 @@
       <!-- co-sponsors -->
       <div class="my-5 !mt-[6rem]">
         <h2
-          class="text-[28px] py-4 my-6 font-semibold tracking-wider text-center underline underline-offset-8 decoration-[#E5E4E2] decoration-dashed">
+          class="text-[30px] py-4 my-6 font-semibold tracking-wider text-center underline underline-offset-8 decoration-[#E5E4E2] decoration-dashed">
           Co-Sponsors</h2>
         <div style="grid-template-columns: repeat(auto-fill,minmax(300px,1fr));" class=" grid gap-6">
           <div
@@ -953,7 +1276,7 @@
       </div>
       <div class="my-5">
         <h2
-          class="text-[28px] my-6 py-6 font-semibold tracking-wider text-center underline underline-offset-8 decoration-[#bc742c] decoration-dashed">
+          class="text-[30px] my-6 py-6 font-semibold tracking-wider text-center underline underline-offset-8 decoration-[#bc742c] decoration-dashed">
           Partners
         </h2>
         <div style="grid-template-columns: repeat(auto-fill,minmax(300px,1fr));" class=" grid gap-6">
@@ -1108,31 +1431,31 @@
   {
     img_load.forEach( img =>
     {
-      console.log( 'done' );
+
       img.classList.add( 'animation' )
     } )
   } )
   // timer
 
   const countDownTime = new Date( "Jan 19, 2023 9: 00: 00 " ).getTime();
-  //  img_load.forEach( img =>
-  //   {
-  //     img.addEventListener( 'onload', () =>
-  //     {
-  //       console.log( 'done' );
-  //       img.classList.add( 'animation' )
 
-  //     } )
-
-
-  //   } )
 
   const toggleButton = document.getElementById( 'toggleButton' )
 
   const navContent = document.getElementById( 'navContent' )
   toggleButton.addEventListener( 'click', () =>
   {
-    navContent.classList.toggle( 'hidden' )
+    if ( !navContent.classList.contains( 'translate' ) )
+    {
+
+      window.onscroll = function () { window.scrollTo( 0, 0 ) }
+    }
+    else
+    {
+      window.onscroll = function () { }
+
+    }
+    navContent.classList.toggle( 'translate' )
   } )
 
   var map = L.map( 'map' ).setView( [ 26.791704, 87.292446 ], 17 );
