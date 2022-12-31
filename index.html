@@ -265,7 +265,7 @@
 
       .text_effect:before {
         content: '';
-        background: #54b3d6;
+        background: #205295;
         display: block;
         position: absolute;
         bottom: -3px;
@@ -296,7 +296,7 @@
     @media (max-width:900px) {
 
       #navContent {
-        transition: transform 0.5s linear;
+        transition: transform 0.3s ease-in-out;
       }
 
       .translate_out {
@@ -307,1213 +307,1365 @@
         transform: translateX(0vw);
       }
     }
+
+    #myBtn {
+      display: none;
+      position: fixed;
+      bottom: 20px;
+      right: 30px;
+      z-index: 99;
+      font-size: 18px;
+      border: none;
+      outline: none;
+      background-color: red;
+      color: white;
+      cursor: pointer;
+      padding: 15px;
+      border-radius: 4px;
+    }
   </style>
 
 </head>
-<!-- for header -->
-<div class="max-w-[1440px] mx-auto ">
-  <!-- header -->
-  <div
-    class="flex  justify-between max-w-[95%] max-[900px]:max-w-[100%]  xl:max-w-[90%] mx-auto relative   border-navbar items-center py-3 px-4 xl:px-6  h-[100px] ">
-    <div class="w-[20%] lg:w-[25%]">
-      <svg width="65" height="68" viewBox="0 0 69 70" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <g clip-path="url(#clip0_253_884)">
-          <path
-            d="M0.253113 70V59.6915H10.228C10.3556 59.6914 10.482 59.7165 10.5997 59.7652C10.7174 59.8138 10.8241 59.8851 10.9136 59.9749C11.003 60.0647 11.0735 60.1712 11.1209 60.2881C11.1682 60.405 11.1915 60.5301 11.1894 60.656L11.052 69.0665C11.0479 69.3155 10.9448 69.5529 10.7648 69.7275C10.5849 69.9022 10.3426 70 10.0903 70H3.28607V69.0027H10.0256V60.6892H1.43255V70H0.253113Z"
-            fill="#1F1A4E" class="svg-elem-1"></path>
-          <path d="M31.7617 0L2.94861 47.2208L3.4544 50.2137L31.7617 3.82413L51.4759 49.715L63.4395 51.0454L31.7617 0Z"
-            fill="#1F1A4E" class="svg-elem-2"></path>
-          <path d="M31.172 7.56543L0 57.9452H60.3221L57.8789 56.1994L3.45438 56.0334L35.3004 17.7912L31.172 7.56543Z"
-            fill="#1F1A4E" class="svg-elem-3"></path>
-          <path
-            d="M14.0697 46.2235L6.8244 54.3704L68.9996 54.703L39.3441 5.98572L38.67 8.47993L65.7983 52.874L14.0697 46.2235Z"
-            fill="#1F1A4E" class="svg-elem-4"></path>
-          <path d="M18.5249 37.9357L31.088 7.48218L35.3004 17.7912L18.5249 37.9357Z" fill="#0F133A" class="svg-elem-5">
-          </path>
-          <path d="M41.1765 25.2964L63.4394 50.6025L51.4759 49.2722L41.1765 25.2964Z" fill="#0F133A" class="svg-elem-6">
-          </path>
-          <path d="M40.3279 49.5995L6.8244 54.3704L14.0698 46.2235L40.3279 49.5995Z" fill="#0F133A" class="svg-elem-7">
-          </path>
-          <path
-            d="M27.2127 59.6915H18.7879C18.7215 59.6914 18.6557 59.7043 18.5944 59.7293C18.533 59.7543 18.4772 59.7911 18.4303 59.8374C18.3833 59.8837 18.346 59.9387 18.3206 59.9992C18.2952 60.0597 18.2821 60.1246 18.2821 60.1901V69.5013C18.2821 69.5669 18.2952 69.6318 18.3206 69.6923C18.346 69.7528 18.3833 69.8078 18.4303 69.8541C18.4772 69.9004 18.533 69.9371 18.5944 69.9622C18.6557 69.9872 18.7215 70.0001 18.7879 70H26.8756C27.0097 70 27.1382 69.9475 27.233 69.854C27.3277 69.7604 27.381 69.6336 27.381 69.5013V69.0027H19.7986C19.7322 69.0027 19.6664 68.9898 19.6051 68.9647C19.5438 68.9396 19.488 68.9028 19.4411 68.8565C19.3942 68.8101 19.3569 68.7551 19.3316 68.6945C19.3062 68.634 19.2932 68.5691 19.2932 68.5036V61.1879C19.2932 61.0556 19.3465 60.9288 19.4413 60.8353C19.536 60.7418 19.6646 60.6892 19.7986 60.6892H26.8756C27.0097 60.6891 27.1382 60.6365 27.233 60.5429C27.3277 60.4493 27.381 60.3224 27.381 60.1901V59.6915H27.2127Z"
-            fill="#1F1A4E" class="svg-elem-8"></path>
-          <path
-            d="M25.5274 64.1808H21.6516C21.3726 64.1808 21.1463 64.404 21.1463 64.6795V64.6799C21.1463 64.9553 21.3726 65.1786 21.6516 65.1786H25.5274C25.8065 65.1786 26.0328 64.9553 26.0328 64.6799V64.6795C26.0328 64.404 25.8065 64.1808 25.5274 64.1808Z"
-            fill="#1F1A4E" class="svg-elem-9"></path>
-          <path
-            d="M33.9527 60.1901V69.5013C33.9527 69.6336 34.0059 69.7604 34.1007 69.854C34.1955 69.9475 34.324 70 34.458 70H42.2069C42.341 70 42.4696 69.9475 42.5644 69.854C42.6593 69.7605 42.7126 69.6336 42.7127 69.5013V69.0027H35.6375C35.5711 69.0027 35.5053 68.9898 35.444 68.9647C35.3826 68.9396 35.3269 68.9028 35.28 68.8565C35.2331 68.8101 35.1958 68.7551 35.1705 68.6945C35.1451 68.634 35.1321 68.5691 35.1321 68.5036V60.1901C35.132 60.0578 35.0787 59.931 34.9838 59.8375C34.889 59.744 34.7604 59.6915 34.6263 59.6915H34.458C34.324 59.6915 34.1955 59.744 34.1007 59.8375C34.0059 59.931 33.9527 60.0579 33.9527 60.1901Z"
-            fill="#1F1A4E" class="svg-elem-10"></path>
-          <path
-            d="M54.3406 59.6915H45.073C44.7939 59.6915 44.5676 59.9147 44.5676 60.1901V60.1906C44.5676 60.466 44.7939 60.6892 45.073 60.6892H54.3406C54.6197 60.6892 54.8459 60.466 54.8459 60.1906V60.1901C54.8459 59.9147 54.6197 59.6915 54.3406 59.6915Z"
-            fill="#1F1A4E" class="svg-elem-11"></path>
-          <path
-            d="M49.7916 62.3517H49.7911C49.512 62.3517 49.2858 62.575 49.2858 62.8504V69.5013C49.2858 69.7767 49.512 70 49.7911 70H49.7916C50.0706 70 50.2969 69.7767 50.2969 69.5013V62.8504C50.2969 62.575 50.0706 62.3517 49.7916 62.3517Z"
-            fill="#1F1A4E" class="svg-elem-12"></path>
-          <path
-            d="M57.5638 69.2813L62.2896 59.804C62.3313 59.7203 62.3959 59.6498 62.4761 59.6005C62.5563 59.5512 62.6488 59.525 62.7433 59.525H63.4614C63.5559 59.525 63.6485 59.5512 63.7287 59.6005C63.8089 59.6498 63.8735 59.7203 63.9151 59.804L68.641 69.2813C68.6789 69.3573 68.6965 69.4416 68.6922 69.5263C68.6879 69.6109 68.6618 69.6931 68.6164 69.765C68.571 69.837 68.5078 69.8963 68.4327 69.9374C68.3576 69.9785 68.2731 70.0001 68.1872 70H68.1423C68.0462 70 67.952 69.973 67.8709 69.922C67.7898 69.871 67.7252 69.7982 67.6846 69.7122L66.7771 67.7941C66.7364 67.7081 66.6717 67.6353 66.5905 67.5843C66.5094 67.5333 66.4151 67.5062 66.3189 67.5063H62.4027C62.3166 67.5062 62.2318 67.4845 62.1566 67.4431C62.0814 67.4017 62.0181 67.342 61.9728 67.2697C61.9274 67.1974 61.9016 67.1148 61.8977 67.0299C61.8937 66.945 61.9119 66.8605 61.9503 66.7844C61.9923 66.7015 62.0569 66.6318 62.1368 66.583C62.2167 66.5343 62.3088 66.5085 62.4027 66.5085H65.306C65.3925 66.5084 65.4776 66.4863 65.5531 66.4445C65.6286 66.4026 65.6918 66.3423 65.7369 66.2693C65.782 66.1964 65.8073 66.1132 65.8104 66.0278C65.8135 65.9425 65.7944 65.8577 65.7548 65.7817L63.5557 61.5639C63.513 61.4819 63.4481 61.4132 63.3683 61.3654C63.2885 61.3175 63.1967 61.2925 63.1033 61.293C63.0099 61.2935 62.9185 61.3195 62.8392 61.3682C62.7599 61.4169 62.6958 61.4863 62.654 61.5688L58.5215 69.7246C58.4796 69.8074 58.4151 69.877 58.3352 69.9257C58.2554 69.9743 58.1634 70.0001 58.0696 70H58.0144C57.9288 69.9995 57.8447 69.9776 57.77 69.9363C57.6953 69.8949 57.6325 69.8356 57.5875 69.7637C57.5424 69.6919 57.5166 69.6099 57.5125 69.5255C57.5084 69.4411 57.526 69.3571 57.5638 69.2813Z"
-            fill="#1F1A4E" class="svg-elem-13"></path>
-        </g>
-        <defs>
-          <clipPath id="clip0_253_884">
-            <rect width="69" height="70" fill="white" class="svg-elem-14"></rect>
-          </clipPath>
-        </defs>
-      </svg>
 
-    </div>
-    <div id="toggleButton" class=" w-[80%] min-[900px]:hidden cursor-pointer">
-      <div class="w-[58px] p-3  bg-gray-200  text-white mr-0 ml-auto">
-        <p class="w-[35px] h-[3px] bg-slate-600"></p>
-        <p class="w-[35px] h-[3px] bg-slate-600 my-2"></p>
-        <p class="w-[35px] h-[3px] bg-slate-600"></p>
+<body>
+  <!-- to the top button -->
+  <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+  <!-- for header -->
+  <div class="max-w-[1440px] mx-auto ">
+    <!-- header -->
+    <div
+      class="flex  justify-between max-w-[95%] max-[900px]:max-w-[100%]  xl:max-w-[90%] mx-auto relative   border-navbar items-center py-3 px-4 xl:px-6  h-[100px] ">
+      <div class="w-[20%] lg:w-[25%]">
+        <svg width="65" height="68" viewBox="0 0 69 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g clip-path="url(#clip0_253_884)">
+            <path
+              d="M0.253113 70V59.6915H10.228C10.3556 59.6914 10.482 59.7165 10.5997 59.7652C10.7174 59.8138 10.8241 59.8851 10.9136 59.9749C11.003 60.0647 11.0735 60.1712 11.1209 60.2881C11.1682 60.405 11.1915 60.5301 11.1894 60.656L11.052 69.0665C11.0479 69.3155 10.9448 69.5529 10.7648 69.7275C10.5849 69.9022 10.3426 70 10.0903 70H3.28607V69.0027H10.0256V60.6892H1.43255V70H0.253113Z"
+              fill="#1F1A4E" class="svg-elem-1"></path>
+            <path
+              d="M31.7617 0L2.94861 47.2208L3.4544 50.2137L31.7617 3.82413L51.4759 49.715L63.4395 51.0454L31.7617 0Z"
+              fill="#1F1A4E" class="svg-elem-2"></path>
+            <path d="M31.172 7.56543L0 57.9452H60.3221L57.8789 56.1994L3.45438 56.0334L35.3004 17.7912L31.172 7.56543Z"
+              fill="#1F1A4E" class="svg-elem-3"></path>
+            <path
+              d="M14.0697 46.2235L6.8244 54.3704L68.9996 54.703L39.3441 5.98572L38.67 8.47993L65.7983 52.874L14.0697 46.2235Z"
+              fill="#1F1A4E" class="svg-elem-4"></path>
+            <path d="M18.5249 37.9357L31.088 7.48218L35.3004 17.7912L18.5249 37.9357Z" fill="#0F133A"
+              class="svg-elem-5">
+            </path>
+            <path d="M41.1765 25.2964L63.4394 50.6025L51.4759 49.2722L41.1765 25.2964Z" fill="#0F133A"
+              class="svg-elem-6">
+            </path>
+            <path d="M40.3279 49.5995L6.8244 54.3704L14.0698 46.2235L40.3279 49.5995Z" fill="#0F133A"
+              class="svg-elem-7">
+            </path>
+            <path
+              d="M27.2127 59.6915H18.7879C18.7215 59.6914 18.6557 59.7043 18.5944 59.7293C18.533 59.7543 18.4772 59.7911 18.4303 59.8374C18.3833 59.8837 18.346 59.9387 18.3206 59.9992C18.2952 60.0597 18.2821 60.1246 18.2821 60.1901V69.5013C18.2821 69.5669 18.2952 69.6318 18.3206 69.6923C18.346 69.7528 18.3833 69.8078 18.4303 69.8541C18.4772 69.9004 18.533 69.9371 18.5944 69.9622C18.6557 69.9872 18.7215 70.0001 18.7879 70H26.8756C27.0097 70 27.1382 69.9475 27.233 69.854C27.3277 69.7604 27.381 69.6336 27.381 69.5013V69.0027H19.7986C19.7322 69.0027 19.6664 68.9898 19.6051 68.9647C19.5438 68.9396 19.488 68.9028 19.4411 68.8565C19.3942 68.8101 19.3569 68.7551 19.3316 68.6945C19.3062 68.634 19.2932 68.5691 19.2932 68.5036V61.1879C19.2932 61.0556 19.3465 60.9288 19.4413 60.8353C19.536 60.7418 19.6646 60.6892 19.7986 60.6892H26.8756C27.0097 60.6891 27.1382 60.6365 27.233 60.5429C27.3277 60.4493 27.381 60.3224 27.381 60.1901V59.6915H27.2127Z"
+              fill="#1F1A4E" class="svg-elem-8"></path>
+            <path
+              d="M25.5274 64.1808H21.6516C21.3726 64.1808 21.1463 64.404 21.1463 64.6795V64.6799C21.1463 64.9553 21.3726 65.1786 21.6516 65.1786H25.5274C25.8065 65.1786 26.0328 64.9553 26.0328 64.6799V64.6795C26.0328 64.404 25.8065 64.1808 25.5274 64.1808Z"
+              fill="#1F1A4E" class="svg-elem-9"></path>
+            <path
+              d="M33.9527 60.1901V69.5013C33.9527 69.6336 34.0059 69.7604 34.1007 69.854C34.1955 69.9475 34.324 70 34.458 70H42.2069C42.341 70 42.4696 69.9475 42.5644 69.854C42.6593 69.7605 42.7126 69.6336 42.7127 69.5013V69.0027H35.6375C35.5711 69.0027 35.5053 68.9898 35.444 68.9647C35.3826 68.9396 35.3269 68.9028 35.28 68.8565C35.2331 68.8101 35.1958 68.7551 35.1705 68.6945C35.1451 68.634 35.1321 68.5691 35.1321 68.5036V60.1901C35.132 60.0578 35.0787 59.931 34.9838 59.8375C34.889 59.744 34.7604 59.6915 34.6263 59.6915H34.458C34.324 59.6915 34.1955 59.744 34.1007 59.8375C34.0059 59.931 33.9527 60.0579 33.9527 60.1901Z"
+              fill="#1F1A4E" class="svg-elem-10"></path>
+            <path
+              d="M54.3406 59.6915H45.073C44.7939 59.6915 44.5676 59.9147 44.5676 60.1901V60.1906C44.5676 60.466 44.7939 60.6892 45.073 60.6892H54.3406C54.6197 60.6892 54.8459 60.466 54.8459 60.1906V60.1901C54.8459 59.9147 54.6197 59.6915 54.3406 59.6915Z"
+              fill="#1F1A4E" class="svg-elem-11"></path>
+            <path
+              d="M49.7916 62.3517H49.7911C49.512 62.3517 49.2858 62.575 49.2858 62.8504V69.5013C49.2858 69.7767 49.512 70 49.7911 70H49.7916C50.0706 70 50.2969 69.7767 50.2969 69.5013V62.8504C50.2969 62.575 50.0706 62.3517 49.7916 62.3517Z"
+              fill="#1F1A4E" class="svg-elem-12"></path>
+            <path
+              d="M57.5638 69.2813L62.2896 59.804C62.3313 59.7203 62.3959 59.6498 62.4761 59.6005C62.5563 59.5512 62.6488 59.525 62.7433 59.525H63.4614C63.5559 59.525 63.6485 59.5512 63.7287 59.6005C63.8089 59.6498 63.8735 59.7203 63.9151 59.804L68.641 69.2813C68.6789 69.3573 68.6965 69.4416 68.6922 69.5263C68.6879 69.6109 68.6618 69.6931 68.6164 69.765C68.571 69.837 68.5078 69.8963 68.4327 69.9374C68.3576 69.9785 68.2731 70.0001 68.1872 70H68.1423C68.0462 70 67.952 69.973 67.8709 69.922C67.7898 69.871 67.7252 69.7982 67.6846 69.7122L66.7771 67.7941C66.7364 67.7081 66.6717 67.6353 66.5905 67.5843C66.5094 67.5333 66.4151 67.5062 66.3189 67.5063H62.4027C62.3166 67.5062 62.2318 67.4845 62.1566 67.4431C62.0814 67.4017 62.0181 67.342 61.9728 67.2697C61.9274 67.1974 61.9016 67.1148 61.8977 67.0299C61.8937 66.945 61.9119 66.8605 61.9503 66.7844C61.9923 66.7015 62.0569 66.6318 62.1368 66.583C62.2167 66.5343 62.3088 66.5085 62.4027 66.5085H65.306C65.3925 66.5084 65.4776 66.4863 65.5531 66.4445C65.6286 66.4026 65.6918 66.3423 65.7369 66.2693C65.782 66.1964 65.8073 66.1132 65.8104 66.0278C65.8135 65.9425 65.7944 65.8577 65.7548 65.7817L63.5557 61.5639C63.513 61.4819 63.4481 61.4132 63.3683 61.3654C63.2885 61.3175 63.1967 61.2925 63.1033 61.293C63.0099 61.2935 62.9185 61.3195 62.8392 61.3682C62.7599 61.4169 62.6958 61.4863 62.654 61.5688L58.5215 69.7246C58.4796 69.8074 58.4151 69.877 58.3352 69.9257C58.2554 69.9743 58.1634 70.0001 58.0696 70H58.0144C57.9288 69.9995 57.8447 69.9776 57.77 69.9363C57.6953 69.8949 57.6325 69.8356 57.5875 69.7637C57.5424 69.6919 57.5166 69.6099 57.5125 69.5255C57.5084 69.4411 57.526 69.3571 57.5638 69.2813Z"
+              fill="#1F1A4E" class="svg-elem-13"></path>
+          </g>
+          <defs>
+            <clipPath id="clip0_253_884">
+              <rect width="69" height="70" fill="white" class="svg-elem-14"></rect>
+            </clipPath>
+          </defs>
+        </svg>
+
+      </div>
+      <div id="toggleButton" class=" w-[80%] min-[900px]:hidden cursor-pointer">
+        <div class="w-[58px] p-3  bg-gray-200  text-white mr-0 ml-auto">
+          <p class="w-[35px] h-[3px] bg-slate-600"></p>
+          <p class="w-[35px] h-[3px] bg-slate-600 my-2"></p>
+          <p class="w-[35px] h-[3px] bg-slate-600"></p>
+        </div>
+
       </div>
 
+      <div id="navContent"
+        class="min-[900px]:flex translate_out  fixed top-[6.25rem] max-[900px]:bg-gray-400  right-0 min-[900px]:static max-[900px]:py-6     justify-center min-[900px]:gap-[3.5rem] min-[970px]:gap-[5.5rem] text-center    items-center max-[900px]:w-full ">
+
+        <ul
+          class="flex flex-col  min-[900px]:flex-row items-center gap-6  xl:gap-12 relative  after:content-[' '] after:block after:h-[35px] after:absolute after:-right-10 after:w-[2px] after:bg-slate-800    font-body">
+          <li
+            class="cursor-pointer text-[18px] font-semibold text_effect max-[900px]:py-2 max-[900px]:border-b max-[900px]:w-full">
+            <a onClick="refreshPage('#')" href="./index.html">Home</a>
+          </li>
+          <li
+            class="cursor-pointer text-[18px] font-semibold text_effect  max-[900px]:border-b max-[900px]:py-2 max-[900px]:w-full">
+            <a onClick="refreshPage('#events')" href="#events">Events</a>
+          </li>
+          <li
+            class="cursor-pointer text-[18px] font-semibold text_effect max-[900px]:border-b max-[900px]:py-2 max-[900px]:w-full">
+            <a onClick="refreshPage('#sponser')" href="#sponsors"> Sponsors</a>
+          </li>
+          <li
+            class="cursor-pointer text-[18px] font-semibold text_effect max-[900px]:border-b max-[900px]:py-2 max-[900px]:w-full">
+            <a onClick="refreshPage('#gallery')" href="#gallery"> Gallery</a>
+          </li>
+          <li
+            class="cursor-pointer text-[18px] font-semibold text_effect max-[900px]:border-b max-[900px]:py-2 max-[900px]:w-full">
+            <a onClick="refreshPage('#contact_us')" href="#contact_us">Contacts US</a>
+          </li>
+
+        </ul>
+        <button
+          class=" w-[180px] mx-auto h-[50px] hover:opacity-90 font-body font-semibold text-[16px] max-[900px]:mt-6 hover:scale-[1.02]  text-navbar bg-regBg rounded-[45px] ">
+          Register Project
+        </button>
+
+      </div>
+
+
+
+
+    </div>
+  </div>
+
+  <!-- hero page -->
+  <!-- delta traingle -->
+  <div id="home" class=" bg-[#141B4E] font-['Montserrat'] pb-4 sm:pb-10">
+    <div class=" max-w-[1440px]  mx-auto  text-center text-white py-6 px-8">
+      <div
+        class=" max-w-[100%]  xl:max-w-[90%]  mx-auto flex flex-col min-[1080px]:flex-row  items-center justify-between">
+        <div class="min-[1080px]:text-start text-center w-full min-[1080px]:w-[35%]">
+          <h1 class="font-delta text-navbar text-[50px] sm:text-[45px] md:text-[60px]  font-bold">DELTA 3.0
+          </h1>
+          <p class="font-delta text-navbar  text-[16px] font-semibold sm:text-[18px] md:text-[30px] ">TRIANGLE FOR
+            CHANGE
+          </p>
+          <p class="text-[16px] md:text-[24px] max-w-[362px] font-normal text-[#fff]/80 max-[1080px]:mx-auto">Delta is a
+            3
+            day
+            technical event
+            held on
+            Purwanchal Campus,
+            Dharan.</p>
+        </div>
+
+        <div class="min-[1080px]:w-[65%] w-[80%] overflow-hidden max-[930px]:mt-4 ">
+          <div class="hidden max-[930px]:block   my-6">
+            <img class="mx-auto w-[100%] h-full  object-cover " src="./public/img/hero_img.svg" alt="">
+          </div>
+          <div class="hidden min-[930px]:block  w-full  h-[500px] mx-auto">
+            <div class="relative  h-full ">
+              <div class=" w-[240px] h-[224px] xl:w-[286px] xl:h-[264px] mx-auto relative top-[47%]">
+                <img class="mx-auto w-full h-full" src="./public/img/main.svg" alt="">
+              </div>
+              <div
+                class="img_load absolute w-[100px] h-[110px] xl:w-[119px] xl:h-[131px]   animation-first bottom-[4.7rem]  left-[5rem] xl:left-[3.5rem] ">
+                <img class="mx-auto w-full h-full" src="./public/img/first.svg" alt="">
+              </div>
+              <div
+                class=" img_load absolute w-[95px] h-[75px]  xl:w-[106px] xl:h-[82px]  animation-second  bottom-[16rem]   left-[7rem] ">
+                <img class="mx-auto w-full h-full" src="./public/img/second.svg" alt="">
+              </div>
+              <div
+                class=" img_load w-[60px] h-[80px] xl:w-[80px] xl:h-[96px] absolute animation-third  top-[5.5rem] xl:top-[5rem] left-[35%] xl:left-[30%]">
+                <img class="mx-auto w-full h-full" src="./public/img/third.svg" alt="">
+              </div>
+              <div
+                class="img_load absolute h-[95px] w-[80px] xl:h-[115px] xl:w-[101px] top-[5rem] xl:top-[4.5rem]  animation-four   right-[36%] xl:right-[35%]">
+                <img class="mx-auto w-full h-full" src="./public/img/four.svg" alt="">
+              </div>
+              <div
+                class="img_load absolute w-[80px] h-[80px] xl:w-[99px] xl:h-[101px] animation-five right-[8rem] xl:right-[7rem] bottom-[16rem]">
+                <img class="mx-auto w-full h-full" src="./public/img/five.svg" alt="">
+              </div>
+              <div
+                class="img_load absolute w-[120px] h-[100px] xl:w-[150px] xl:h-[127px]  animation-six right-[5rem] xl:right-[1rem] bottom-[4.7rem]">
+                <img class="mx-auto w-full h-full" src="./public/img/six.svg" alt="">
+              </div>
+
+            </div>
+          </div>
+
+          <div class="font-delta font-bold text-[18px] sm:text-[25px] py-4 md:text-[36px] text-center ">
+            <p class="text-center "><span class="text-teal-600">"</span> SUSTAINABLE MODERN <span
+                class="block">AGRICULTRE
+                <span class="text-teal-600">"</span></span></p>
+
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+    <div class="max-w-[1440px] mx-auto mt-[5rem] mb-14">
+      <div class="max-w-[95%] md:max-w-[90%] lg:max-w-[80%] xl:max-w-[70%] mx-auto">
+        <h1 class="text-[18px] sm:text-[25px] md:text-[32px] font-semibold tracking-[0.5em] text-white text-center ">
+          LAUNCHING SOON</h1>
+        <div class="my-10 sm:my-16 flex sm:gap-6   justify-between items-center">
+          <p
+            class="text-[45px] sm:text-[70px] md:text-[80px] lg:text-[100px] font-[800] min-w-[80px] sm:min-w-[120px] overflow-hidden leading-[40px] sm:leading-[50px] md:leading-[70px] text-white text-center">
+            <span id="day">16</span>
+
+            <span class="block text-[14px] sm:text-[25px] md:text-[30px] lg:text-[36px] font-[500]">DAYS </span>
+          </p>
+          <p
+            class="text-[45px] sm:text-[70px] md:text-[80px] lg:text-[100px] font-[800] min-w-[80px] sm:min-w-[120px] overflow-hidden leading-[40px] sm:leading-[50px] md:leading-[70px] text-white text-center">
+            <span id="hours"></span>
+            <span class="block text-[14px] sm:text-[25px] md:text-[30px] lg:text-[36px] font-[500]">HOURS </span>
+          </p>
+          <p
+            class="text-[45px] sm:text-[70px] md:text-[80px] lg:text-[100px] font-[800] min-w-[80px] sm:min-w-[120px] overflow-hidden leading-[40px] sm:leading-[50px] md:leading-[70px] text-white text-center">
+            <span id="minute"></span>
+            <span class="block text-[14px] sm:text-[25px] md:text-[30px] lg:text-[36px] font-[500]">MINUTES </span>
+          </p>
+          <p
+            class="text-[45px] sm:text-[70px] md:text-[80px] lg:text-[100px] font-[800] min-w-[80px] sm:min-w-[120px] overflow-hidden leading-[40px] sm:leading-[50px] md:leading-[70px] text-white text-center">
+            <span id="second"></span>
+            <span class="block text-[14px] sm:text-[25px] md:text-[30px] lg:text-[36px] font-[500]">SECONDS </span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- event section -->
+  <section id="events" class="bg-[#17171d] py-16 text-white">
+    <div class=" max-w-[1400px]  mx-auto">
+      <h1
+        class="max-w-[200px] mx-auto text-[34px] font-semibold relative before:content-[' '] before:absolute before:w-[90%]  before:h-1 before:bg-green-400 before:bottom-2 before:left-0 py-4">
+        Our Events</h1>
+      <div style="grid-template-columns:  repeat(auto-fill,minmax(320px,1fr));"
+        class="my-10 grid gap-10 justify-items-center   h-[390px] overflow-hidden ">
+
+        <div class="w-[320px] bg-slate-800 rounded-xl  py-4 px-4">
+          <div class="h-[150px] w-[150px] rounded-full   mx-auto">
+            <img class="w-full h-full object-cover rounded-full" src="./public/img/ideathon.jpg" alt="">
+          </div>
+
+          <h2 class="text-center text-[21px] tracking-widest py-1 font-bold min-h-[70px]"> DESIGN-A-THON “सुधारिएको गोठ”
+          </h2>
+          <p class="text-center my-2 max-w-[300px] min-h-[75px]  line_clamp overflow-hidden text-[#fff]/70">
+            "Design-A-Thon" is one of
+            the main events of the national-level technical festival hosted by DELTA 3.0 of Purwanchal
+            Engineering Campus, Dharan.
+
+            The theme of this national event is “सुधारिएको गोठ” Cattle Farm Design Competition. Open to all-year
+            students of BE,
+            B.Arch., B.Sc. Ag, BVSc & A.H. from all over Nepal, this event aims to find innovative designs and promote
+            sustainability.
+
+            The registration fee is only Rs. 100 for individuals and only Rs. 200 per team with the registration
+            deadline of the
+            20th of Poush (Midnight) and Submission deadline of the 30th of Poush (Midnight). All participant will be
+            live
+            demonstrating their designs on DELTA 3.0 5,6 and 7th of Magh.
+            Registration link:https://forms.gle/wvKeH1fXo1dqQhBfA</p>
+          <div class="flex justify-between px-2 mt-6">
+            <button
+              class="bg-[#1d2779] px-6 py-1 rounded-sm text-sm font-medium tracking-wider hover:bg-[#1d2879b1] duration-150 hover:opacity-80">Register</button>
+            <a href="./src/event.html"
+              class="text-sm underline underline-offset-4 decoration-dotted hover:scale-[1.02] hover:text-green-400">View
+              More</a>
+          </div>
+        </div>
+        <div class="w-[320px] bg-slate-800 rounded-xl    py-4 px-4">
+          <div class="h-[150px] w-[150px] rounded-full   mx-auto">
+            <img class="w-full h-full object-cover rounded-full" src="../public/img/grading_machine.jpg" alt="">
+          </div>
+
+          <h2 class="text-center text-[19px] tracking-widest py-1 font-bold min-h-[70px]"> GRADING MACHINE INNOVATION
+            CHALLENGE</h2>
+          <p class="text-center my-2 max-w-[320px] min-h-[75px]  line_clamp overflow-hidden text-[#fff]/70">Honouring
+            the theme of
+            DELTA 3.0 "Sustainable Modern Agriculture '', we present our main event "Grading machine
+            Innovation Challenge" in collaboration with Swisscontact/ Sahaj-Nepal Agricultural Market Development
+            Programme (NAMDP).
+            Providing you with all the resources and materials, we encourage you all to seize this opportunity and
+            challenge
+            yourself. With the motive of uplifting our agriculture sector through mechanization, we welcome you all to
+            show your
+            creativity. Through the art of your design and innovation, we request you all to grab this once in lifetime
+            opportunity
+            thoroughly based on ERCians.</p>
+          <div class="flex justify-between px-2 mt-6">
+            <button
+              class="bg-[#1d2779] px-6 py-1 rounded-sm text-sm font-medium tracking-wider hover:bg-[#1d2879b1] duration-150 hover:opacity-80">Register</button>
+            <a href="./src/event.html"
+              class="text-sm underline underline-offset-4 decoration-dotted hover:scale-[1.02] hover:text-green-400">View
+              More</a>
+          </div>
+        </div>
+        <div class="w-[320px] bg-slate-800 rounded-xl  py-4 px-4">
+          <div class="h-[150px] w-[150px] rounded-full   mx-auto">
+            <img class="block w-full h-full  rounded-full  object-cover" src="./public/img/hackathon.jpeg" alt="">
+          </div>
+
+          <h2 class="text-center text-[26px] tracking-widest py-1 font-bold min-h-[70px]"> Deltathon 2023</h2>
+          <p class="text-center my-2 max-w-[300px]  line_clamp overflow-hidden text-[#fff]/70 min-h-[75px]">Biggest
+            Hacking Happing
+            in East of Nepal </p>
+          <div class="flex justify-between px-2 mt-6">
+            <button
+              class="bg-[#1d2779] px-6 py-1 rounded-sm text-sm font-medium tracking-wider hover:bg-[#1d2879b1] duration-150 hover:opacity-80">Register</button>
+            <a target="_blank" href="https://delta.ioepc.edu.np/deltathon/"
+              class="text-sm underline underline-offset-4 decoration-dotted hover:scale-[1.02] hover:text-green-400">View
+              More</a>
+          </div>
+        </div>
+        <!-- add more from here -->
+        <div class="w-[320px] bg-slate-800 rounded-xl  py-4 px-4">
+          <div class="h-[150px] w-[150px] rounded-full   mx-auto">
+            <img class="block w-full h-full  rounded-full  object-cover" src="./public/img/hackathon.jpeg" alt="">
+          </div>
+
+          <h2 class="text-center text-[26px] tracking-widest py-1 font-bold min-h-[70px]"> Deltathon 2023</h2>
+          <p class="text-center my-2 max-w-[300px]  line_clamp overflow-hidden text-[#fff]/70 min-h-[75px]">Biggest
+            Hacking Happing
+            in East of Nepal </p>
+          <div class="flex justify-between px-2 mt-6">
+            <button
+              class="bg-[#1d2779] px-6 py-1 rounded-sm text-sm font-medium tracking-wider hover:bg-[#1d2879b1] duration-150 hover:opacity-80">Register</button>
+            <a target="_blank" href="https://delta.ioepc.edu.np/deltathon/"
+              class="text-sm underline underline-offset-4 decoration-dotted hover:scale-[1.02] hover:text-green-400">View
+              More</a>
+          </div>
+        </div>
+        <div class="w-[320px] bg-slate-800 rounded-xl  py-4 px-4">
+          <div class="h-[150px] w-[150px] rounded-full   mx-auto">
+            <img class="block w-full h-full  rounded-full  object-cover" src="./public/img/hackathon.jpeg" alt="">
+          </div>
+
+          <h2 class="text-center text-[26px] tracking-widest py-1 font-bold min-h-[70px]"> Deltathon 2023</h2>
+          <p class="text-center my-2 max-w-[300px]  line_clamp overflow-hidden text-[#fff]/70 min-h-[75px]">Biggest
+            Hacking Happing
+            in East of Nepal </p>
+          <div class="flex justify-between px-2 mt-6">
+            <button
+              class="bg-[#1d2779] px-6 py-1 rounded-sm text-sm font-medium tracking-wider hover:bg-[#1d2879b1] duration-150 hover:opacity-80">Register</button>
+            <a target="_blank" href="https://delta.ioepc.edu.np/deltathon/"
+              class="text-sm underline underline-offset-4 decoration-dotted hover:scale-[1.02] hover:text-green-400">View
+              More</a>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+    <div class="text-center">
+      <a href="/src/events.html"
+        class="text-center text-green-400 underline underline-offset-8 decoration-dashed hover:decoration-solid duration-200 hover:scale-[1.015] p-2">View
+        All
+        Events</a>
     </div>
 
-    <div id="navContent"
-      class="min-[900px]:flex translate_out  fixed top-[6.25rem] max-[900px]:bg-gray-400  right-0 min-[900px]:static max-[900px]:py-6     justify-center min-[900px]:gap-[3.5rem] min-[970px]:gap-[5.5rem] text-center    items-center max-[900px]:w-full ">
+  </section>
 
-      <ul
-        class="flex flex-col  min-[900px]:flex-row items-center gap-6  xl:gap-12 relative  after:content-[' '] after:block after:h-[35px] after:absolute after:-right-10 after:w-[2px] after:bg-slate-800    font-body">
-        <li
-          class="cursor-pointer text-[18px] font-semibold text_effect max-[900px]:py-2 max-[900px]:border-b max-[900px]:w-full">
-          <a href="./index.html">Home</a>
+  <!-- core functionalities starts here -->
+  <div class="max-w-[90%] mx-auto">
+
+    <h1 class="text-[#141B4E] font-delta text-[40px] md:text-[50px] font-bold text-center my-12 md:my-20 ">Core
+      Functionalities</h1>
+    <div
+      class="flex gap-16 2xl:max-w-[70%] xl:max-w-[90%] max-w-[100%] mx-auto items-center justify-center   flex-wrap">
+      <!-- first item -->
+      <div class=" text-center">
+        <img class="fill-[#141B4E]  mx-auto" src="./public/img/Urban Agriculture.svg" alt=""></img>
+        <h1 class="text-[22px] font-semibold text-center my-3">Urban Agriculture</h1>
+        <p class="text-[16px] font-normal text-center mx-auto w-[265px] ">DELTA 3.0 urges you to tackle the
+          difficulties of urban
+          agriculture
+          and progress it in the country. It aims to modernize agriculture by carrying it to urban areas while
+          advocating
+          sustainability.</p>
+      </div>
+      <div class=" text-center">
+        <img class="fill-[#141B4E]  mx-auto" src="./public/img/Vector.svg" alt=""></img>
+        <h1 class="text-[22px] font-semibold text-center my-3">Energy in Agriculture</h1>
+        <p class="text-[16px] font-normal text-center mx-auto w-[265px] ">DELTA 3.0 urges you to tackle the
+          difficulties of urban
+          agriculture
+          and progress it in the country. It aims to modernize agriculture by carrying it to urban areas while
+          advocating
+          sustainability.</p>
+      </div>
+      <div class=" text-center">
+        <img class="fill-[#141B4E]  mx-auto" src="./public/img/Modern Agriculture.svg" alt=""></img>
+        <h1 class="text-[22px] font-semibold text-center my-3">Mechanization in Agriculture</h1>
+        <p class="text-[16px] font-normal text-center mx-auto w-[265px] ">DELTA 3.0 urges you to tackle the
+          difficulties of urban
+          agriculture
+          and progress it in the country. It aims to modernize agriculture by carrying it to urban areas while
+          advocating
+          sustainability.</p>
+      </div>
+      <div class=" text-center">
+        <img class="fill-[#141B4E]  mx-auto" src="./public/img/Food Production & Processing 1.svg" alt=""></img>
+        <h1 class="text-[22px] font-semibold text-center my-3">Food Production & Processing</h1>
+        <p class="text-[16px] font-normal text-center mx-auto w-[265px] ">DELTA 3.0 urges you to tackle the
+          difficulties of urban
+          agriculture
+          and progress it in the country. It aims to modernize agriculture by carrying it to urban areas while
+          advocating
+          sustainability.</p>
+      </div>
+      <div class=" text-center">
+        <img class="fill-[#141B4E]  mx-auto" src="./public/img/IOT.svg" alt=""></img>
+        <h1 class="text-[22px] font-semibold text-center my-3">IOT & Automation</h1>
+        <p class="text-[16px] font-normal text-center mx-auto w-[265px] ">DELTA 3.0 urges you to tackle the
+          difficulties of urban
+          agriculture
+          and progress it in the country. It aims to modernize agriculture by carrying it to urban areas while
+          advocating
+          sustainability.</p>
+      </div>
+
+
+
+    </div>
+  </div>
+
+  <!-- people supporting us -->
+
+  <div class="bg-[#EDEDED] py-14 my-8  ">
+    <div class="max-w-[90%] md:max-w-[80%] mx-auto text-center">
+      <h1 class="w-full font-delta text-delta_traingle font-bold text-center py-2 text-[40px] md:text-[50px]">People
+        Supporting Us
+      </h1>
+
+      <div class=" flex gap-6 py-6 justify-center flex-wrap">
+
+        <div class="">
+          <img class="rounded-full border border-gray-100 shadow-sm h-32 w-32" src="./public/img/beautiful.jpg" alt="">
+        </div>
+        <div>
+          <img class="rounded-full border border-gray-100 shadow-sm h-32 w-32" src="./public/img/happy.jpg" alt="">
+        </div>
+
+        <div>
+          <img class="rounded-full border border-gray-100 shadow-sm h-32 w-32" src="./public/img/john.jpg" alt="">
+        </div>
+
+        <div>
+          <img class="rounded-full border border-gray-100 shadow-sm h-32 w-32" src="./public/img/kalu.jpg" alt="">
+        </div>
+
+        <div>
+          <img class="rounded-full border border-gray-100 shadow-sm h-32 w-32" src="./public/img/smith.jpg" alt="">
+        </div>
+        <div class="rounded-full border border-gray-100 shadow-sm h-32 w-32 bg-gray-800">
+        </div>
+        <div class="rounded-full border border-gray-100 shadow-sm h-32 w-32 bg-gray-800">
+        </div>
+        <div class="rounded-full border border-gray-100 shadow-sm h-32 w-32 bg-gray-800">
+        </div>
+        <div class="rounded-full border border-gray-100 shadow-sm h-32 w-32 bg-gray-800">
+        </div>
+
+      </div>
+    </div>
+
+
+  </div>
+
+  <!-- slider  -->
+  <div class="max-w-[1440px] mx-auto">
+    <div class="md:max-w-[90%] max-w-[90%]  mx-auto py-12">
+      <section id="image-carousel" class="splide min-[640px]:!h-[300px]" aria-label="Beautiful Images">
+        <!-- custom arrows -->
+        <div class="splide__arrows">
+          <button class="splide__arrow splide__arrow--prev">
+            <img class="h-4 w-4 sm:h-5 sm:w-5 md:w-8 md:h-8 lg:w-10 lg:h-10"
+              src="./public/img/left-arrow-back-svgrepo-com.svg" alt="">
+
+          </button>
+          <button class="splide__arrow splide__arrow--next ">
+            <img class="h-4 w-4 sm:h-6 sm:w-6 md:w-8 md:h-8 lg:w-10 lg:h-10"
+              src="./public/img/right-arrow-svgrepo-com.svg" alt="">
+          </button>
+        </div>
+        <div class="splide__track">
+          <ul class="splide__list">
+            <li class="splide__slide">
+              <div
+                class="flex xl:!max-w-[55%]  lg:!max-w-[70%] md:!max-w-[76%] sm:max-w-[74%] max-w-[85%] min-[460px]:max-w-[81%] min-[500px]:max-w-[60%] gap-3 md:gap-5 lg:gap-8 2xl:gap-10 justify-center mx-auto flex-wrap">
+                <div class="relative rounded-full overflow-hidden group cursor-pointer">
+
+                  <img
+                    class="rounded-full   !w-[80px] !h-[80px] sm:!w-[120px] sm:!h-[120px]   lg:!w-[190px] lg:!h-[190px] md:!w-[160px] md:!h-[160px]"
+                    src="./public/img/beautiful.jpg" alt="">
+                  <div
+                    class="absolute h-0 w-0 opacity-0 group-hover:opacity-100  text-white  rounded-full bottom-0 bg-[#0000007a] backdrop:blur-2xl group-hover:!w-[80px] group-hover:!h-[80px] group-hover:sm:!w-[120px] group-hover:sm:!h-[120px]   group-hover:lg:!w-[190px] group-hover:lg:!h-[190px] group-hover:md:!w-[160px] group-hover:md:!h-[160px] flex flex-col justify-center items-center">
+                    <p class="text-[9px] sm:text-[14px] md:text-[16px] lg:text-[20px] font-bold">Shiva Raj Badu</p>
+                    <p class="text-[9px] sm:text-[10px] md:text-[12px] lg:text-[16px] font-normal py-1">External</p>
+                    <ul class="flex gap-2 md:my-2">
+                      <li><a href="https://www.facebook.com/" target="_blank">
+                          <img
+                            class="hover:scale-[1.08] !w-[14px] !h-[14px]  sm:!w-[20px] sm:!h-[20px] md:!w-[30px] md:!h-[30px]"
+                            src="./public/img/fb.svg" alt="">
+                        </a></li>
+                      <li><a href="https://linkedin.com">
+                          <img
+                            class="hover:scale-[1.08] !w-[14px] !h-[14px]  sm:!w-[20px] sm:!h-[20px] md:!w-[30px] md:!h-[30px]"
+                            src="./public/img/linkedin.svg" alt="">
+                        </a></li>
+                      <li><a href="https://instagram.com">
+                          <img
+                            class="hover:scale-[1.08] !w-[14px] !h-[14px]  sm:!w-[20px] sm:!h-[20px] md:!w-[30px] md:!h-[30px]"
+                            src="./public/img/instagram.svg" alt="">
+                        </a></li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="relative rounded-full overflow-hidden group cursor-pointer">
+
+                  <img
+                    class="rounded-full   !w-[80px] !h-[80px] sm:!w-[120px] sm:!h-[120px]   lg:!w-[190px] lg:!h-[190px] md:!w-[160px] md:!h-[160px]"
+                    src="./public/img/beautiful.jpg" alt="">
+                  <div
+                    class="absolute h-0 w-0 opacity-0 group-hover:opacity-100  text-white  rounded-full bottom-0 bg-[#0000007a] backdrop:blur-2xl group-hover:!w-[80px] group-hover:!h-[80px] group-hover:sm:!w-[120px] group-hover:sm:!h-[120px]   group-hover:lg:!w-[190px] group-hover:lg:!h-[190px] group-hover:md:!w-[160px] group-hover:md:!h-[160px] flex flex-col justify-center items-center">
+                    <p class="text-[9px] sm:text-[14px] md:text-[16px] lg:text-[20px] font-bold">Shiva Raj Badu</p>
+                    <p class="text-[9px] sm:text-[10px] md:text-[12px] lg:text-[16px] font-normal py-1">External</p>
+                    <ul class="flex gap-2 md:my-2">
+                      <li><a href="https://www.facebook.com/" target="_blank">
+                          <img
+                            class="hover:scale-[1.08] !w-[14px] !h-[14px]  sm:!w-[20px] sm:!h-[20px] md:!w-[30px] md:!h-[30px]"
+                            src="./public/img/fb.svg" alt="">
+                        </a></li>
+                      <li><a href="https://linkedin.com">
+                          <img
+                            class="hover:scale-[1.08] !w-[14px] !h-[14px]  sm:!w-[20px] sm:!h-[20px] md:!w-[30px] md:!h-[30px]"
+                            src="./public/img/linkedin.svg" alt="">
+                        </a></li>
+                      <li><a href="https://instagram.com">
+                          <img
+                            class="hover:scale-[1.08] !w-[14px] !h-[14px]  sm:!w-[20px] sm:!h-[20px] md:!w-[30px] md:!h-[30px]"
+                            src="./public/img/instagram.svg" alt="">
+                        </a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="relative rounded-full overflow-hidden group cursor-pointer">
+
+                  <img
+                    class="rounded-full   !w-[80px] !h-[80px] sm:!w-[120px] sm:!h-[120px]   lg:!w-[190px] lg:!h-[190px] md:!w-[160px] md:!h-[160px]"
+                    src="./public/img/beautiful.jpg" alt="">
+                  <div
+                    class="absolute h-0 w-0 opacity-0 group-hover:opacity-100  text-white  rounded-full bottom-0 bg-[#0000007a] backdrop:blur-2xl group-hover:!w-[80px] group-hover:!h-[80px] group-hover:sm:!w-[120px] group-hover:sm:!h-[120px]   group-hover:lg:!w-[190px] group-hover:lg:!h-[190px] group-hover:md:!w-[160px] group-hover:md:!h-[160px] flex flex-col justify-center items-center">
+                    <p class="text-[9px] sm:text-[14px] md:text-[16px] lg:text-[20px] font-bold">Shiva Raj Badu</p>
+                    <p class="text-[9px] sm:text-[10px] md:text-[12px] lg:text-[16px] font-normal py-1">External</p>
+                    <ul class="flex gap-2 md:my-2">
+                      <li><a href="https://www.facebook.com/" target="_blank">
+                          <img
+                            class="hover:scale-[1.08] !w-[14px] !h-[14px]  sm:!w-[20px] sm:!h-[20px] md:!w-[30px] md:!h-[30px]"
+                            src="./public/img/fb.svg" alt="">
+                        </a></li>
+                      <li><a href="https://linkedin.com">
+                          <img
+                            class="hover:scale-[1.08] !w-[14px] !h-[14px]  sm:!w-[20px] sm:!h-[20px] md:!w-[30px] md:!h-[30px]"
+                            src="./public/img/linkedin.svg" alt="">
+                        </a></li>
+                      <li><a href="https://instagram.com">
+                          <img
+                            class="hover:scale-[1.08] !w-[14px] !h-[14px]  sm:!w-[20px] sm:!h-[20px] md:!w-[30px] md:!h-[30px]"
+                            src="./public/img/instagram.svg" alt="">
+                        </a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="relative rounded-full overflow-hidden group cursor-pointer">
+
+                  <img
+                    class="rounded-full   !w-[80px] !h-[80px] sm:!w-[120px] sm:!h-[120px]   lg:!w-[190px] lg:!h-[190px] md:!w-[160px] md:!h-[160px]"
+                    src="./public/img/beautiful.jpg" alt="">
+                  <div
+                    class="absolute h-0 w-0 opacity-0 group-hover:opacity-100  text-white  rounded-full bottom-0 bg-[#0000007a] backdrop:blur-2xl group-hover:!w-[80px] group-hover:!h-[80px] group-hover:sm:!w-[120px] group-hover:sm:!h-[120px]   group-hover:lg:!w-[190px] group-hover:lg:!h-[190px] group-hover:md:!w-[160px] group-hover:md:!h-[160px] flex flex-col justify-center items-center">
+                    <p class="text-[9px] sm:text-[14px] md:text-[16px] lg:text-[20px] font-bold">Shiva Raj Badu</p>
+                    <p class="text-[9px] sm:text-[10px] md:text-[12px] lg:text-[16px] font-normal py-1">External</p>
+                    <ul class="flex gap-2 md:my-2">
+                      <li><a href="https://www.facebook.com/" target="_blank">
+                          <img
+                            class="hover:scale-[1.08] !w-[14px] !h-[14px]  sm:!w-[20px] sm:!h-[20px] md:!w-[30px] md:!h-[30px]"
+                            src="./public/img/fb.svg" alt="">
+                        </a></li>
+                      <li><a href="https://linkedin.com">
+                          <img
+                            class="hover:scale-[1.08] !w-[14px] !h-[14px]  sm:!w-[20px] sm:!h-[20px] md:!w-[30px] md:!h-[30px]"
+                            src="./public/img/linkedin.svg" alt="">
+                        </a></li>
+                      <li><a href="https://instagram.com">
+                          <img
+                            class="hover:scale-[1.08] !w-[14px] !h-[14px]  sm:!w-[20px] sm:!h-[20px] md:!w-[30px] md:!h-[30px]"
+                            src="./public/img/instagram.svg" alt="">
+                        </a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="relative rounded-full overflow-hidden group cursor-pointer">
+
+                  <img
+                    class="rounded-full   !w-[80px] !h-[80px] sm:!w-[120px] sm:!h-[120px]   lg:!w-[190px] lg:!h-[190px] md:!w-[160px] md:!h-[160px]"
+                    src="./public/img/beautiful.jpg" alt="">
+                  <div
+                    class="absolute h-0 w-0 opacity-0 group-hover:opacity-100  text-white  rounded-full bottom-0 bg-[#0000007a] backdrop:blur-2xl group-hover:!w-[80px] group-hover:!h-[80px] group-hover:sm:!w-[120px] group-hover:sm:!h-[120px]   group-hover:lg:!w-[190px] group-hover:lg:!h-[190px] group-hover:md:!w-[160px] group-hover:md:!h-[160px] flex flex-col justify-center items-center">
+                    <p class="text-[9px] sm:text-[14px] md:text-[16px] lg:text-[20px] font-bold">Shiva Raj Badu</p>
+                    <p class="text-[9px] sm:text-[10px] md:text-[12px] lg:text-[16px] font-normal py-1">External</p>
+                    <ul class="flex gap-2 md:my-2">
+                      <li><a href="https://www.facebook.com/" target="_blank">
+                          <img
+                            class="hover:scale-[1.08] !w-[14px] !h-[14px]  sm:!w-[20px] sm:!h-[20px] md:!w-[30px] md:!h-[30px]"
+                            src="./public/img/fb.svg" alt="">
+                        </a></li>
+                      <li><a href="https://linkedin.com">
+                          <img
+                            class="hover:scale-[1.08] !w-[14px] !h-[14px]  sm:!w-[20px] sm:!h-[20px] md:!w-[30px] md:!h-[30px]"
+                            src="./public/img/linkedin.svg" alt="">
+                        </a></li>
+                      <li><a href="https://instagram.com">
+                          <img
+                            class="hover:scale-[1.08] !w-[14px] !h-[14px]  sm:!w-[20px] sm:!h-[20px] md:!w-[30px] md:!h-[30px]"
+                            src="./public/img/instagram.svg" alt="">
+                        </a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+            </li>
+            <li class="splide__slide">
+              <div
+                class="flex xl:!max-w-[55%]  lg:!max-w-[70%] md:!max-w-[76%] sm:max-w-[74%] max-w-[85%] min-[460px]:max-w-[81%] min-[500px]:max-w-[60%] gap-3 md:gap-5 lg:gap-8 2xl:gap-10 justify-center mx-auto flex-wrap">
+                <div class="relative rounded-full overflow-hidden group cursor-pointer">
+
+                  <img
+                    class="rounded-full   !w-[80px] !h-[80px] sm:!w-[120px] sm:!h-[120px]   lg:!w-[190px] lg:!h-[190px] md:!w-[160px] md:!h-[160px]"
+                    src="./public/img/beautiful.jpg" alt="">
+                  <div
+                    class="absolute h-0 w-0 opacity-0 group-hover:opacity-100  text-white  rounded-full bottom-0 bg-[#0000007a] backdrop:blur-2xl group-hover:!w-[80px] group-hover:!h-[80px] group-hover:sm:!w-[120px] group-hover:sm:!h-[120px]   group-hover:lg:!w-[190px] group-hover:lg:!h-[190px] group-hover:md:!w-[160px] group-hover:md:!h-[160px] flex flex-col justify-center items-center">
+                    <p class="text-[9px] sm:text-[14px] md:text-[16px] lg:text-[20px] font-bold">Shiva Raj Badu</p>
+                    <p class="text-[9px] sm:text-[10px] md:text-[12px] lg:text-[16px] font-normal py-1">External</p>
+                    <ul class="flex gap-2 md:my-2">
+                      <li><a href="https://www.facebook.com/" target="_blank">
+                          <img
+                            class="hover:scale-[1.08] !w-[14px] !h-[14px]  sm:!w-[20px] sm:!h-[20px] md:!w-[30px] md:!h-[30px]"
+                            src="./public/img/fb.svg" alt="">
+                        </a></li>
+                      <li><a href="https://linkedin.com">
+                          <img
+                            class="hover:scale-[1.08] !w-[14px] !h-[14px]  sm:!w-[20px] sm:!h-[20px] md:!w-[30px] md:!h-[30px]"
+                            src="./public/img/linkedin.svg" alt="">
+                        </a></li>
+                      <li><a href="https://instagram.com">
+                          <img
+                            class="hover:scale-[1.08] !w-[14px] !h-[14px]  sm:!w-[20px] sm:!h-[20px] md:!w-[30px] md:!h-[30px]"
+                            src="./public/img/instagram.svg" alt="">
+                        </a></li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="relative rounded-full overflow-hidden group cursor-pointer">
+
+                  <img
+                    class="rounded-full   !w-[80px] !h-[80px] sm:!w-[120px] sm:!h-[120px]   lg:!w-[190px] lg:!h-[190px] md:!w-[160px] md:!h-[160px]"
+                    src="./public/img/beautiful.jpg" alt="">
+                  <div
+                    class="absolute h-0 w-0 opacity-0 group-hover:opacity-100  text-white  rounded-full bottom-0 bg-[#0000007a] backdrop:blur-2xl group-hover:!w-[80px] group-hover:!h-[80px] group-hover:sm:!w-[120px] group-hover:sm:!h-[120px]   group-hover:lg:!w-[190px] group-hover:lg:!h-[190px] group-hover:md:!w-[160px] group-hover:md:!h-[160px] flex flex-col justify-center items-center">
+                    <p class="text-[9px] sm:text-[14px] md:text-[16px] lg:text-[20px] font-bold">Shiva Raj Badu</p>
+                    <p class="text-[9px] sm:text-[10px] md:text-[12px] lg:text-[16px] font-normal py-1">External</p>
+                    <ul class="flex gap-2 md:my-2">
+                      <li><a href="https://www.facebook.com/" target="_blank">
+                          <img
+                            class="hover:scale-[1.08] !w-[14px] !h-[14px]  sm:!w-[20px] sm:!h-[20px] md:!w-[30px] md:!h-[30px]"
+                            src="./public/img/fb.svg" alt="">
+                        </a></li>
+                      <li><a href="https://linkedin.com">
+                          <img
+                            class="hover:scale-[1.08] !w-[14px] !h-[14px]  sm:!w-[20px] sm:!h-[20px] md:!w-[30px] md:!h-[30px]"
+                            src="./public/img/linkedin.svg" alt="">
+                        </a></li>
+                      <li><a href="https://instagram.com">
+                          <img
+                            class="hover:scale-[1.08] !w-[14px] !h-[14px]  sm:!w-[20px] sm:!h-[20px] md:!w-[30px] md:!h-[30px]"
+                            src="./public/img/instagram.svg" alt="">
+                        </a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="relative rounded-full overflow-hidden group cursor-pointer">
+
+                  <img
+                    class="rounded-full   !w-[80px] !h-[80px] sm:!w-[120px] sm:!h-[120px]   lg:!w-[190px] lg:!h-[190px] md:!w-[160px] md:!h-[160px]"
+                    src="./public/img/beautiful.jpg" alt="">
+                  <div
+                    class="absolute h-0 w-0 opacity-0 group-hover:opacity-100  text-white  rounded-full bottom-0 bg-[#0000007a] backdrop:blur-2xl group-hover:!w-[80px] group-hover:!h-[80px] group-hover:sm:!w-[120px] group-hover:sm:!h-[120px]   group-hover:lg:!w-[190px] group-hover:lg:!h-[190px] group-hover:md:!w-[160px] group-hover:md:!h-[160px] flex flex-col justify-center items-center">
+                    <p class="text-[9px] sm:text-[14px] md:text-[16px] lg:text-[20px] font-bold">Shiva Raj Badu</p>
+                    <p class="text-[9px] sm:text-[10px] md:text-[12px] lg:text-[16px] font-normal py-1">External</p>
+                    <ul class="flex gap-2 md:my-2">
+                      <li><a href="https://www.facebook.com/" target="_blank">
+                          <img
+                            class="hover:scale-[1.08] !w-[14px] !h-[14px]  sm:!w-[20px] sm:!h-[20px] md:!w-[30px] md:!h-[30px]"
+                            src="./public/img/fb.svg" alt="">
+                        </a></li>
+                      <li><a href="https://linkedin.com">
+                          <img
+                            class="hover:scale-[1.08] !w-[14px] !h-[14px]  sm:!w-[20px] sm:!h-[20px] md:!w-[30px] md:!h-[30px]"
+                            src="./public/img/linkedin.svg" alt="">
+                        </a></li>
+                      <li><a href="https://instagram.com">
+                          <img
+                            class="hover:scale-[1.08] !w-[14px] !h-[14px]  sm:!w-[20px] sm:!h-[20px] md:!w-[30px] md:!h-[30px]"
+                            src="./public/img/instagram.svg" alt="">
+                        </a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="relative rounded-full overflow-hidden group cursor-pointer">
+
+                  <img
+                    class="rounded-full   !w-[80px] !h-[80px] sm:!w-[120px] sm:!h-[120px]   lg:!w-[190px] lg:!h-[190px] md:!w-[160px] md:!h-[160px]"
+                    src="./public/img/beautiful.jpg" alt="">
+                  <div
+                    class="absolute h-0 w-0 opacity-0 group-hover:opacity-100  text-white  rounded-full bottom-0 bg-[#0000007a] backdrop:blur-2xl group-hover:!w-[80px] group-hover:!h-[80px] group-hover:sm:!w-[120px] group-hover:sm:!h-[120px]   group-hover:lg:!w-[190px] group-hover:lg:!h-[190px] group-hover:md:!w-[160px] group-hover:md:!h-[160px] flex flex-col justify-center items-center">
+                    <p class="text-[9px] sm:text-[14px] md:text-[16px] lg:text-[20px] font-bold">Shiva Raj Badu</p>
+                    <p class="text-[9px] sm:text-[10px] md:text-[12px] lg:text-[16px] font-normal py-1">External</p>
+                    <ul class="flex gap-2 md:my-2">
+                      <li><a href="https://www.facebook.com/" target="_blank">
+                          <img
+                            class="hover:scale-[1.08] !w-[14px] !h-[14px]  sm:!w-[20px] sm:!h-[20px] md:!w-[30px] md:!h-[30px]"
+                            src="./public/img/fb.svg" alt="">
+                        </a></li>
+                      <li><a href="https://linkedin.com">
+                          <img
+                            class="hover:scale-[1.08] !w-[14px] !h-[14px]  sm:!w-[20px] sm:!h-[20px] md:!w-[30px] md:!h-[30px]"
+                            src="./public/img/linkedin.svg" alt="">
+                        </a></li>
+                      <li><a href="https://instagram.com">
+                          <img
+                            class="hover:scale-[1.08] !w-[14px] !h-[14px]  sm:!w-[20px] sm:!h-[20px] md:!w-[30px] md:!h-[30px]"
+                            src="./public/img/instagram.svg" alt="">
+                        </a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="relative rounded-full overflow-hidden group cursor-pointer">
+
+                  <img
+                    class="rounded-full   !w-[80px] !h-[80px] sm:!w-[120px] sm:!h-[120px]   lg:!w-[190px] lg:!h-[190px] md:!w-[160px] md:!h-[160px]"
+                    src="./public/img/beautiful.jpg" alt="">
+                  <div
+                    class="absolute h-0 w-0 opacity-0 group-hover:opacity-100  text-white  rounded-full bottom-0 bg-[#0000007a] backdrop:blur-2xl group-hover:!w-[80px] group-hover:!h-[80px] group-hover:sm:!w-[120px] group-hover:sm:!h-[120px]   group-hover:lg:!w-[190px] group-hover:lg:!h-[190px] group-hover:md:!w-[160px] group-hover:md:!h-[160px] flex flex-col justify-center items-center">
+                    <p class="text-[9px] sm:text-[14px] md:text-[16px] lg:text-[20px] font-bold">Shiva Raj Badu</p>
+                    <p class="text-[9px] sm:text-[10px] md:text-[12px] lg:text-[16px] font-normal py-1">External</p>
+                    <ul class="flex gap-2 md:my-2">
+                      <li><a href="https://www.facebook.com/" target="_blank">
+                          <img
+                            class="hover:scale-[1.08] !w-[14px] !h-[14px]  sm:!w-[20px] sm:!h-[20px] md:!w-[30px] md:!h-[30px]"
+                            src="./public/img/fb.svg" alt="">
+                        </a></li>
+                      <li><a href="https://linkedin.com">
+                          <img
+                            class="hover:scale-[1.08] !w-[14px] !h-[14px]  sm:!w-[20px] sm:!h-[20px] md:!w-[30px] md:!h-[30px]"
+                            src="./public/img/linkedin.svg" alt="">
+                        </a></li>
+                      <li><a href="https://instagram.com">
+                          <img
+                            class="hover:scale-[1.08] !w-[14px] !h-[14px]  sm:!w-[20px] sm:!h-[20px] md:!w-[30px] md:!h-[30px]"
+                            src="./public/img/instagram.svg" alt="">
+                        </a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+            </li>
+            <li class="splide__slide">
+              <div
+                class="flex xl:!max-w-[55%]  lg:!max-w-[70%] md:!max-w-[76%] sm:max-w-[74%] max-w-[85%] min-[460px]:max-w-[81%] min-[500px]:max-w-[60%] gap-3 md:gap-5 lg:gap-8 2xl:gap-10 justify-center mx-auto flex-wrap">
+                <div class="relative rounded-full overflow-hidden group cursor-pointer">
+
+                  <img
+                    class="rounded-full   !w-[80px] !h-[80px] sm:!w-[120px] sm:!h-[120px]   lg:!w-[190px] lg:!h-[190px] md:!w-[160px] md:!h-[160px]"
+                    src="./public/img/beautiful.jpg" alt="">
+                  <div
+                    class="absolute h-0 w-0 opacity-0 group-hover:opacity-100  text-white  rounded-full bottom-0 bg-[#0000007a] backdrop:blur-2xl group-hover:!w-[80px] group-hover:!h-[80px] group-hover:sm:!w-[120px] group-hover:sm:!h-[120px]   group-hover:lg:!w-[190px] group-hover:lg:!h-[190px] group-hover:md:!w-[160px] group-hover:md:!h-[160px] flex flex-col justify-center items-center">
+                    <p class="text-[9px] sm:text-[14px] md:text-[16px] lg:text-[20px] font-bold">Shiva Raj Badu</p>
+                    <p class="text-[9px] sm:text-[10px] md:text-[12px] lg:text-[16px] font-normal py-1">External</p>
+                    <ul class="flex gap-2 md:my-2">
+                      <li><a href="https://www.facebook.com/" target="_blank">
+                          <img
+                            class="hover:scale-[1.08] !w-[14px] !h-[14px]  sm:!w-[20px] sm:!h-[20px] md:!w-[30px] md:!h-[30px]"
+                            src="./public/img/fb.svg" alt="">
+                        </a></li>
+                      <li><a href="https://linkedin.com">
+                          <img
+                            class="hover:scale-[1.08] !w-[14px] !h-[14px]  sm:!w-[20px] sm:!h-[20px] md:!w-[30px] md:!h-[30px]"
+                            src="./public/img/linkedin.svg" alt="">
+                        </a></li>
+                      <li><a href="https://instagram.com">
+                          <img
+                            class="hover:scale-[1.08] !w-[14px] !h-[14px]  sm:!w-[20px] sm:!h-[20px] md:!w-[30px] md:!h-[30px]"
+                            src="./public/img/instagram.svg" alt="">
+                        </a></li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="relative rounded-full overflow-hidden group cursor-pointer">
+
+                  <img
+                    class="rounded-full   !w-[80px] !h-[80px] sm:!w-[120px] sm:!h-[120px]   lg:!w-[190px] lg:!h-[190px] md:!w-[160px] md:!h-[160px]"
+                    src="./public/img/beautiful.jpg" alt="">
+                  <div
+                    class="absolute h-0 w-0 opacity-0 group-hover:opacity-100  text-white  rounded-full bottom-0 bg-[#0000007a] backdrop:blur-2xl group-hover:!w-[80px] group-hover:!h-[80px] group-hover:sm:!w-[120px] group-hover:sm:!h-[120px]   group-hover:lg:!w-[190px] group-hover:lg:!h-[190px] group-hover:md:!w-[160px] group-hover:md:!h-[160px] flex flex-col justify-center items-center">
+                    <p class="text-[9px] sm:text-[14px] md:text-[16px] lg:text-[20px] font-bold">Shiva Raj Badu</p>
+                    <p class="text-[9px] sm:text-[10px] md:text-[12px] lg:text-[16px] font-normal py-1">External</p>
+                    <ul class="flex gap-2 md:my-2">
+                      <li><a href="https://www.facebook.com/" target="_blank">
+                          <img
+                            class="hover:scale-[1.08] !w-[14px] !h-[14px]  sm:!w-[20px] sm:!h-[20px] md:!w-[30px] md:!h-[30px]"
+                            src="./public/img/fb.svg" alt="">
+                        </a></li>
+                      <li><a href="https://linkedin.com">
+                          <img
+                            class="hover:scale-[1.08] !w-[14px] !h-[14px]  sm:!w-[20px] sm:!h-[20px] md:!w-[30px] md:!h-[30px]"
+                            src="./public/img/linkedin.svg" alt="">
+                        </a></li>
+                      <li><a href="https://instagram.com">
+                          <img
+                            class="hover:scale-[1.08] !w-[14px] !h-[14px]  sm:!w-[20px] sm:!h-[20px] md:!w-[30px] md:!h-[30px]"
+                            src="./public/img/instagram.svg" alt="">
+                        </a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="relative rounded-full overflow-hidden group cursor-pointer">
+
+                  <img
+                    class="rounded-full   !w-[80px] !h-[80px] sm:!w-[120px] sm:!h-[120px]   lg:!w-[190px] lg:!h-[190px] md:!w-[160px] md:!h-[160px]"
+                    src="./public/img/beautiful.jpg" alt="">
+                  <div
+                    class="absolute h-0 w-0 opacity-0 group-hover:opacity-100  text-white  rounded-full bottom-0 bg-[#0000007a] backdrop:blur-2xl group-hover:!w-[80px] group-hover:!h-[80px] group-hover:sm:!w-[120px] group-hover:sm:!h-[120px]   group-hover:lg:!w-[190px] group-hover:lg:!h-[190px] group-hover:md:!w-[160px] group-hover:md:!h-[160px] flex flex-col justify-center items-center">
+                    <p class="text-[9px] sm:text-[14px] md:text-[16px] lg:text-[20px] font-bold">Shiva Raj Badu</p>
+                    <p class="text-[9px] sm:text-[10px] md:text-[12px] lg:text-[16px] font-normal py-1">External</p>
+                    <ul class="flex gap-2 md:my-2">
+                      <li><a href="https://www.facebook.com/" target="_blank">
+                          <img
+                            class="hover:scale-[1.08] !w-[14px] !h-[14px]  sm:!w-[20px] sm:!h-[20px] md:!w-[30px] md:!h-[30px]"
+                            src="./public/img/fb.svg" alt="">
+                        </a></li>
+                      <li><a href="https://linkedin.com">
+                          <img
+                            class="hover:scale-[1.08] !w-[14px] !h-[14px]  sm:!w-[20px] sm:!h-[20px] md:!w-[30px] md:!h-[30px]"
+                            src="./public/img/linkedin.svg" alt="">
+                        </a></li>
+                      <li><a href="https://instagram.com">
+                          <img
+                            class="hover:scale-[1.08] !w-[14px] !h-[14px]  sm:!w-[20px] sm:!h-[20px] md:!w-[30px] md:!h-[30px]"
+                            src="./public/img/instagram.svg" alt="">
+                        </a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="relative rounded-full overflow-hidden group cursor-pointer">
+
+                  <img
+                    class="rounded-full   !w-[80px] !h-[80px] sm:!w-[120px] sm:!h-[120px]   lg:!w-[190px] lg:!h-[190px] md:!w-[160px] md:!h-[160px]"
+                    src="./public/img/beautiful.jpg" alt="">
+                  <div
+                    class="absolute h-0 w-0 opacity-0 group-hover:opacity-100  text-white  rounded-full bottom-0 bg-[#0000007a] backdrop:blur-2xl group-hover:!w-[80px] group-hover:!h-[80px] group-hover:sm:!w-[120px] group-hover:sm:!h-[120px]   group-hover:lg:!w-[190px] group-hover:lg:!h-[190px] group-hover:md:!w-[160px] group-hover:md:!h-[160px] flex flex-col justify-center items-center">
+                    <p class="text-[9px] sm:text-[14px] md:text-[16px] lg:text-[20px] font-bold">Shiva Raj Badu</p>
+                    <p class="text-[9px] sm:text-[10px] md:text-[12px] lg:text-[16px] font-normal py-1">External</p>
+                    <ul class="flex gap-2 md:my-2">
+                      <li><a href="https://www.facebook.com/" target="_blank">
+                          <img
+                            class="hover:scale-[1.08] !w-[14px] !h-[14px]  sm:!w-[20px] sm:!h-[20px] md:!w-[30px] md:!h-[30px]"
+                            src="./public/img/fb.svg" alt="">
+                        </a></li>
+                      <li><a href="https://linkedin.com">
+                          <img
+                            class="hover:scale-[1.08] !w-[14px] !h-[14px]  sm:!w-[20px] sm:!h-[20px] md:!w-[30px] md:!h-[30px]"
+                            src="./public/img/linkedin.svg" alt="">
+                        </a></li>
+                      <li><a href="https://instagram.com">
+                          <img
+                            class="hover:scale-[1.08] !w-[14px] !h-[14px]  sm:!w-[20px] sm:!h-[20px] md:!w-[30px] md:!h-[30px]"
+                            src="./public/img/instagram.svg" alt="">
+                        </a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="relative rounded-full overflow-hidden group cursor-pointer">
+
+                  <img
+                    class="rounded-full   !w-[80px] !h-[80px] sm:!w-[120px] sm:!h-[120px]   lg:!w-[190px] lg:!h-[190px] md:!w-[160px] md:!h-[160px]"
+                    src="./public/img/beautiful.jpg" alt="">
+                  <div
+                    class="absolute h-0 w-0 opacity-0 group-hover:opacity-100  text-white  rounded-full bottom-0 bg-[#0000007a] backdrop:blur-2xl group-hover:!w-[80px] group-hover:!h-[80px] group-hover:sm:!w-[120px] group-hover:sm:!h-[120px]   group-hover:lg:!w-[190px] group-hover:lg:!h-[190px] group-hover:md:!w-[160px] group-hover:md:!h-[160px] flex flex-col justify-center items-center">
+                    <p class="text-[9px] sm:text-[14px] md:text-[16px] lg:text-[20px] font-bold">Shiva Raj Badu</p>
+                    <p class="text-[9px] sm:text-[10px] md:text-[12px] lg:text-[16px] font-normal py-1">External</p>
+                    <ul class="flex gap-2 md:my-2">
+                      <li><a href="https://www.facebook.com/" target="_blank">
+                          <img
+                            class="hover:scale-[1.08] !w-[14px] !h-[14px]  sm:!w-[20px] sm:!h-[20px] md:!w-[30px] md:!h-[30px]"
+                            src="./public/img/fb.svg" alt="">
+                        </a></li>
+                      <li><a href="https://linkedin.com">
+                          <img
+                            class="hover:scale-[1.08] !w-[14px] !h-[14px]  sm:!w-[20px] sm:!h-[20px] md:!w-[30px] md:!h-[30px]"
+                            src="./public/img/linkedin.svg" alt="">
+                        </a></li>
+                      <li><a href="https://instagram.com">
+                          <img
+                            class="hover:scale-[1.08] !w-[14px] !h-[14px]  sm:!w-[20px] sm:!h-[20px] md:!w-[30px] md:!h-[30px]"
+                            src="./public/img/instagram.svg" alt="">
+                        </a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+            </li>
+          </ul>
+        </div>
+      </section>
+    </div>
+  </div>
+
+
+
+  <!-- gallery -->
+  <div id="gallery" class="my-5 bg-[#e6e6e6] py-6 md:py-16 px-6">
+    <h1 class=" text-center font-delta text-[#141B4E] font-bold text-[40px] md:text-[50px] mt-3 mb-6 md:my-6">Looking
+      Back
+    </h1>
+    <div class="w-full">
+      <section id="main-slider" class="splide" aria-label="My Awesome Gallery">
+        <div class="splide__track ">
+          <ul class="splide__list ">
+            <li class="splide__slide">
+              <img src="https://source.unsplash.com/random/1000x1000?sig=1" alt="" />
+            </li>
+            <li class="splide__slide">
+              <img src="https://source.unsplash.com/random/1000x1000?sig=2" alt="" />
+            </li>
+            <li class="splide__slide">
+              <img src="https://source.unsplash.com/random/1000x1000?sig=3" alt="" />
+            </li>
+            <li class="splide__slide">
+              <img src="https://source.unsplash.com/random/1000x1000?sig=4" alt="" />
+            </li>
+            <li class="splide__slide">
+              <img src="https://source.unsplash.com/random/1000x1000?sig=5" alt="" />
+            </li>
+            <li class="splide__slide">
+              <img src="https://source.unsplash.com/random/1000x1000?sig=6" alt="" />
+            </li>
+            <li class="splide__slide">
+              <img src="https://source.unsplash.com/random/1000x1000?sig=7" alt="" />
+            </li>
+            <li class="splide__slide">
+              <img src="https://source.unsplash.com/random/1000x1000?sig=8" alt="" />
+            </li>
+          </ul>
+        </div>
+      </section>
+      <ul id="thumbnails" class="thumbnails">
+        <li class="thumbnail">
+          <img src="https://source.unsplash.com/random/1000x1000?sig=1" alt="" />
         </li>
-        <li
-          class="cursor-pointer text-[18px] font-semibold text_effect  max-[900px]:border-b max-[900px]:py-2 max-[900px]:w-full">
-          <a href="#events">Events</a>
+        <li class="thumbnail">
+          <img src="https://source.unsplash.com/random/1000x1000?sig=2" alt="" />
         </li>
-        <li
-          class="cursor-pointer text-[18px] font-semibold text_effect max-[900px]:border-b max-[900px]:py-2 max-[900px]:w-full">
-          <a href="#sponser"> Sponser</a>
+        <li class="thumbnail">
+          <img src="https://source.unsplash.com/random/1000x1000?sig=3" alt="" />
         </li>
-        <li
-          class="cursor-pointer text-[18px] font-semibold text_effect max-[900px]:border-b max-[900px]:py-2 max-[900px]:w-full">
-          <a href="#gallery"> Gallery</a>
+        <li class="thumbnail">
+          <img src="https://source.unsplash.com/random/1000x1000?sig=4" alt="" />
         </li>
-        <li
-          class="cursor-pointer text-[18px] font-semibold text_effect max-[900px]:border-b max-[900px]:py-2 max-[900px]:w-full">
-          <a href="#contact_us">Contacts US</a>
+        <li class="thumbnail">
+          <img src="https://source.unsplash.com/random/1000x1000?sig=5" alt="" />
         </li>
+        <li class="thumbnail">
+          <img src="https://source.unsplash.com/random/1000x1000?sig=6" alt="" />
+        </li>
+        <li class="thumbnail">
+          <img src="https://source.unsplash.com/random/1000x1000?sig=7" alt="" />
+        </li>
+        <li class="thumbnail">
+          <img src="https://source.unsplash.com/random/1000x1000?sig=8" alt="" />
+        </li>
+
 
       </ul>
-      <button
-        class=" w-[180px] mx-auto h-[50px] hover:opacity-90 font-body font-semibold text-[16px] max-[900px]:mt-6 hover:scale-[1.02]  text-navbar bg-regBg rounded-[45px] ">
-        Register Project
-      </button>
-
-    </div>
-
-
-
-
-  </div>
-</div>
-
-<!-- hero page -->
-<!-- delta traingle -->
-<div id="home" class=" bg-[#141B4E] font-['Montserrat'] pb-4 sm:pb-10">
-  <div class=" max-w-[1440px]  mx-auto  text-center text-white py-6 px-8">
-    <div
-      class=" max-w-[100%]  xl:max-w-[90%]  mx-auto flex flex-col min-[1080px]:flex-row  items-center justify-between">
-      <div class="min-[1080px]:text-start text-center w-full min-[1080px]:w-[35%]">
-        <h1 class="font-delta text-navbar text-[50px] sm:text-[45px] md:text-[60px]  font-bold">DELTA 3.0
-        </h1>
-        <p class="font-delta text-navbar  text-[16px] font-semibold sm:text-[18px] md:text-[30px] ">TRIANGLE FOR CHANGE
-        </p>
-        <p class="text-[16px] md:text-[24px] max-w-[362px] font-normal text-[#fff]/80 max-[1080px]:mx-auto">Delta is a 3
-          day
-          technical event
-          held on
-          Purwanchal Campus,
-          Dharan.</p>
-      </div>
-
-      <div class="min-[1080px]:w-[65%] w-[80%] overflow-hidden max-[930px]:mt-4 ">
-        <div class="hidden max-[930px]:block   my-6">
-          <img class="mx-auto w-[100%] h-full  object-cover " src="./public/img/hero_img.svg" alt="">
-        </div>
-        <div class="hidden min-[930px]:block  w-full  h-[500px] mx-auto">
-          <div class="relative  h-full ">
-            <div class=" w-[240px] h-[224px] xl:w-[286px] xl:h-[264px] mx-auto relative top-[47%]">
-              <img class="mx-auto w-full h-full" src="./public/img/main.svg" alt="">
-            </div>
-            <div
-              class="img_load absolute w-[100px] h-[110px] xl:w-[119px] xl:h-[131px]   animation-first bottom-[4.7rem]  left-[5rem] xl:left-[3.5rem] ">
-              <img class="mx-auto w-full h-full" src="./public/img/first.svg" alt="">
-            </div>
-            <div
-              class=" img_load absolute w-[95px] h-[75px]  xl:w-[106px] xl:h-[82px]  animation-second  bottom-[16rem]   left-[7rem] ">
-              <img class="mx-auto w-full h-full" src="./public/img/second.svg" alt="">
-            </div>
-            <div
-              class=" img_load w-[60px] h-[80px] xl:w-[80px] xl:h-[96px] absolute animation-third  top-[5.5rem] xl:top-[5rem] left-[35%] xl:left-[30%]">
-              <img class="mx-auto w-full h-full" src="./public/img/third.svg" alt="">
-            </div>
-            <div
-              class="img_load absolute h-[95px] w-[80px] xl:h-[115px] xl:w-[101px] top-[5rem] xl:top-[4.5rem]  animation-four   right-[36%] xl:right-[35%]">
-              <img class="mx-auto w-full h-full" src="./public/img/four.svg" alt="">
-            </div>
-            <div
-              class="img_load absolute w-[80px] h-[80px] xl:w-[99px] xl:h-[101px] animation-five right-[8rem] xl:right-[7rem] bottom-[16rem]">
-              <img class="mx-auto w-full h-full" src="./public/img/five.svg" alt="">
-            </div>
-            <div
-              class="img_load absolute w-[120px] h-[100px] xl:w-[150px] xl:h-[127px]  animation-six right-[5rem] xl:right-[1rem] bottom-[4.7rem]">
-              <img class="mx-auto w-full h-full" src="./public/img/six.svg" alt="">
-            </div>
-
-          </div>
-        </div>
-
-        <div class="font-delta font-bold text-[18px] sm:text-[25px] py-4 md:text-[36px] text-center ">
-          <p class="text-center "><span class="text-teal-600">"</span> SUSTAINABLE MODERN <span class="block">AGRICULTRE
-              <span class="text-teal-600">"</span></span></p>
-
-        </div>
-      </div>
-    </div>
-
-
-  </div>
-  <div class="max-w-[1440px] mx-auto mt-[5rem] mb-14">
-    <div class="max-w-[95%] md:max-w-[90%] lg:max-w-[80%] xl:max-w-[70%] mx-auto">
-      <h1 class="text-[18px] sm:text-[25px] md:text-[32px] font-semibold tracking-[0.5em] text-white text-center ">
-        LAUNCHING SOON</h1>
-      <div class="my-10 sm:my-16 flex sm:gap-6   justify-between items-center">
-        <p
-          class="text-[45px] sm:text-[70px] md:text-[80px] lg:text-[100px] font-[800] min-w-[80px] sm:min-w-[120px] overflow-hidden leading-[40px] sm:leading-[50px] md:leading-[70px] text-white text-center">
-          <span id="day">16</span>
-
-          <span class="block text-[14px] sm:text-[25px] md:text-[30px] lg:text-[36px] font-[500]">DAYS </span>
-        </p>
-        <p
-          class="text-[45px] sm:text-[70px] md:text-[80px] lg:text-[100px] font-[800] min-w-[80px] sm:min-w-[120px] overflow-hidden leading-[40px] sm:leading-[50px] md:leading-[70px] text-white text-center">
-          <span id="hours"></span>
-          <span class="block text-[14px] sm:text-[25px] md:text-[30px] lg:text-[36px] font-[500]">HOURS </span>
-        </p>
-        <p
-          class="text-[45px] sm:text-[70px] md:text-[80px] lg:text-[100px] font-[800] min-w-[80px] sm:min-w-[120px] overflow-hidden leading-[40px] sm:leading-[50px] md:leading-[70px] text-white text-center">
-          <span id="minute"></span>
-          <span class="block text-[14px] sm:text-[25px] md:text-[30px] lg:text-[36px] font-[500]">MINUTES </span>
-        </p>
-        <p
-          class="text-[45px] sm:text-[70px] md:text-[80px] lg:text-[100px] font-[800] min-w-[80px] sm:min-w-[120px] overflow-hidden leading-[40px] sm:leading-[50px] md:leading-[70px] text-white text-center">
-          <span id="second"></span>
-          <span class="block text-[14px] sm:text-[25px] md:text-[30px] lg:text-[36px] font-[500]">SECONDS </span>
-        </p>
-      </div>
     </div>
   </div>
-</div>
-
-<!-- event section -->
-<section id="events" class="bg-[#17171d] py-16 text-white">
-  <div class=" max-w-[1400px]  mx-auto">
-    <h1
-      class="max-w-[200px] mx-auto text-[34px] font-semibold relative before:content-[' '] before:absolute before:w-[90%]  before:h-1 before:bg-green-400 before:bottom-2 before:left-0 py-4">
-      Our Events</h1>
-    <div style="grid-template-columns:  repeat(auto-fill,minmax(320px,1fr));"
-      class="my-10 grid gap-10  h-[380px] overflow-hidden ">
-
-      <div class="w-[320px] bg-slate-800 rounded-xl  py-4 px-4">
-        <div
-          class="h-[150px] w-[150px] rounded-full border overflow-hidden p-4  flex justify-center items-center  mx-auto">
-          <img class=" block w-[90%] h-[90%] object-contain" src="./public/img/drone.svg" alt="">
-        </div>
-
-        <h2 class="text-center text-[26px] tracking-widest py-1 font-bold"> Deltathon</h2>
-        <p class="text-center my-2 max-w-[300px]  line_clamp overflow-hidden text-[#fff]/70">Lorem ipsum dolor sit amet
-          consectetur
-          adipisicing
-          elit.
-          Magni libero assumenda
-          debitis
-          est
-          blanditiis voluptas
-
-          quibusdam reiciendis!</p>
-        <div class="flex justify-between px-2 mt-6">
-          <button
-            class="bg-[#1d2779] px-6 py-1 rounded-sm text-sm font-medium tracking-wider hover:bg-[#1d2879b1] duration-150 hover:opacity-80">Register</button>
-          <a href="./src/event.html"
-            class="text-sm underline underline-offset-4 decoration-dotted hover:scale-[1.02] hover:text-green-400">View
-            More</a>
-        </div>
-      </div>
-      <div class="w-[320px] bg-slate-800 rounded-xl  py-4 px-4">
-        <div class="h-[150px] w-[150px] rounded-full border flex justify-center items-center p-4  mx-auto">
-          <img class="block w-[90%] h-[90%] object-contain" src="./public/img/flower.svg" alt="">
-        </div>
-
-        <h2 class="text-center text-[26px] tracking-widest py-1 font-bold"> Deltathon</h2>
-        <p class="text-center my-2 max-w-[300px]  line_clamp overflow-hidden text-[#fff]/70">Lorem ipsum dolor sit amet
-          consectetur
-          adipisicing
-          elit.
-          Magni libero assumenda
-          debitis
-          est
-          blanditiis voluptas
-
-          quibusdam reiciendis!</p>
-        <div class="flex justify-between px-2 mt-6">
-          <button
-            class="bg-[#1d2779] px-6 py-1 rounded-sm text-sm font-medium tracking-wider hover:bg-[#1d2879b1] duration-150 hover:opacity-80">Register</button>
-          <a href="./src/event.html"
-            class="text-sm underline underline-offset-4 decoration-dotted hover:scale-[1.02] hover:text-green-400">View
-            More</a>
-        </div>
-      </div>
-      <div class="w-[320px] bg-slate-800 rounded-xl  py-4 px-4">
-        <div class="h-[150px] w-[150px] rounded-full bg-gray-500  mx-auto">
-
-        </div>
-
-        <h2 class="text-center text-[26px] tracking-widest py-1 font-bold"> Deltathon</h2>
-        <p class="text-center my-2 max-w-[300px]  line_clamp overflow-hidden text-[#fff]/70">Lorem ipsum dolor sit amet
-          consectetur
-          adipisicing
-          elit.
-          Magni libero assumenda
-          debitis
-          est
-          blanditiis voluptas
-
-          quibusdam reiciendis!</p>
-        <div class="flex justify-between px-2 mt-6">
-          <button
-            class="bg-[#1d2779] px-6 py-1 rounded-sm text-sm font-medium tracking-wider hover:bg-[#1d2879b1] duration-150 hover:opacity-80">Register</button>
-          <a href="./src/event.html"
-            class="text-sm underline underline-offset-4 decoration-dotted hover:scale-[1.02] hover:text-green-400">View
-            More</a>
-        </div>
-      </div>
-      <div class="w-[320px] bg-slate-800 rounded-xl  py-4 px-4">
-        <div class="h-[150px] w-[150px] rounded-full bg-gray-500  mx-auto">
-
-        </div>
-
-        <h2 class="text-center text-[26px] tracking-widest py-1 font-bold"> Deltathon</h2>
-        <p class="text-center my-2 max-w-[300px]  line_clamp overflow-hidden text-[#fff]/70">Lorem ipsum dolor sit amet
-          consectetur
-          adipisicing
-          elit.
-          Magni libero assumenda
-          debitis
-          est
-          blanditiis voluptas
-
-          quibusdam reiciendis!</p>
-        <div class="flex justify-between px-2 mt-6">
-          <button
-            class="bg-[#1d2779] px-6 py-1 rounded-sm text-sm font-medium tracking-wider hover:bg-[#1d2879b1] duration-150 hover:opacity-80">Register</button>
-          <a href="./src/event.html"
-            class="text-sm underline underline-offset-4 decoration-dotted hover:scale-[1.02] hover:text-green-400">View
-            More</a>
-        </div>
-      </div>
-      <div class="w-[320px] bg-slate-800 rounded-xl  py-4 px-4">
-        <div class="h-[150px] w-[150px] rounded-full bg-gray-500  mx-auto">
-
-        </div>
-
-        <h2 class="text-center text-[26px] tracking-widest py-1"> Deltathon</h2>
-        <p class="text-center my-2 max-w-[300px]  line_clamp overflow-hidden">Lorem ipsum dolor sit amet
-          consectetur
-          adipisicing
-          elit.
-          Magni libero assumenda
-          debitis
-          est
-          blanditiis voluptas
-
-          quibusdam reiciendis!</p>
-        <div class="flex justify-between px-2 mt-6">
-          <button
-            class="bg-[#1d2779] px-6 py-1 rounded-sm text-sm font-medium tracking-wider hover:bg-[#1d2879b1] duration-150 hover:opacity-80">Register</button>
-          <a href="./src/event.html"
-            class="text-sm underline underline-offset-4 decoration-dotted hover:scale-[1.02] hover:text-green-400">View
-            More</a>
-        </div>
-      </div>
-
-    </div>
-  </div>
-  <div class="text-center">
-    <a href="/src/events.html"
-      class="text-center text-green-400 underline underline-offset-8 decoration-dashed hover:decoration-solid duration-200 hover:scale-[1.015] p-2">View
-      All
-      Events</a>
-  </div>
-
-</section>
-
-<!-- core functionalities starts here -->
-<div class="max-w-[90%] mx-auto">
-
-  <h1 class="text-[#141B4E] font-delta text-[40px] md:text-[50px] font-bold text-center my-12 md:my-20 ">Core
-    Functionalities</h1>
-  <div class="flex gap-16 2xl:max-w-[70%] xl:max-w-[90%] max-w-[100%] mx-auto items-center justify-center   flex-wrap">
-    <!-- first item -->
-    <div class=" text-center">
-      <img class="fill-[#141B4E]  mx-auto" src="./public/img/Urban Agriculture.svg" alt=""></img>
-      <h1 class="text-[22px] font-semibold text-center my-3">Urban Agriculture</h1>
-      <p class="text-[16px] font-normal text-center mx-auto w-[265px] ">DELTA 3.0 urges you to tackle the
-        difficulties of urban
-        agriculture
-        and progress it in the country. It aims to modernize agriculture by carrying it to urban areas while advocating
-        sustainability.</p>
-    </div>
-    <div class=" text-center">
-      <img class="fill-[#141B4E]  mx-auto" src="./public/img/Vector.svg" alt=""></img>
-      <h1 class="text-[22px] font-semibold text-center my-3">Energy in Agriculture</h1>
-      <p class="text-[16px] font-normal text-center mx-auto w-[265px] ">DELTA 3.0 urges you to tackle the
-        difficulties of urban
-        agriculture
-        and progress it in the country. It aims to modernize agriculture by carrying it to urban areas while advocating
-        sustainability.</p>
-    </div>
-    <div class=" text-center">
-      <img class="fill-[#141B4E]  mx-auto" src="./public/img/Modern Agriculture.svg" alt=""></img>
-      <h1 class="text-[22px] font-semibold text-center my-3">Mechanization in Agriculture</h1>
-      <p class="text-[16px] font-normal text-center mx-auto w-[265px] ">DELTA 3.0 urges you to tackle the
-        difficulties of urban
-        agriculture
-        and progress it in the country. It aims to modernize agriculture by carrying it to urban areas while advocating
-        sustainability.</p>
-    </div>
-    <div class=" text-center">
-      <img class="fill-[#141B4E]  mx-auto" src="./public/img/Food Production & Processing 1.svg" alt=""></img>
-      <h1 class="text-[22px] font-semibold text-center my-3">Food Production & Processing</h1>
-      <p class="text-[16px] font-normal text-center mx-auto w-[265px] ">DELTA 3.0 urges you to tackle the
-        difficulties of urban
-        agriculture
-        and progress it in the country. It aims to modernize agriculture by carrying it to urban areas while advocating
-        sustainability.</p>
-    </div>
-    <div class=" text-center">
-      <img class="fill-[#141B4E]  mx-auto" src="./public/img/IOT.svg" alt=""></img>
-      <h1 class="text-[22px] font-semibold text-center my-3">IOT & Automation</h1>
-      <p class="text-[16px] font-normal text-center mx-auto w-[265px] ">DELTA 3.0 urges you to tackle the
-        difficulties of urban
-        agriculture
-        and progress it in the country. It aims to modernize agriculture by carrying it to urban areas while advocating
-        sustainability.</p>
-    </div>
 
 
-
-  </div>
-</div>
-
-<!-- people supporting us -->
-
-<div class="bg-[#EDEDED] py-14 my-8  ">
-  <div class="max-w-[90%] md:max-w-[80%] mx-auto text-center">
-    <h1 class="w-full font-delta text-delta_traingle font-bold text-center py-2 text-[40px] md:text-[50px]">People
-      Supporting Us
+  <!-- logos of supporting faculties -->
+  <div class="py-6 max-w-[1440px] mx-auto px-4 pb-12">
+    <h1 class="text-[#141B4E] font-delta text-[40px] md:text-[50px] font-bold text-center  px-4 my-6">People
+      making it
+      happen
     </h1>
-
-    <div class=" flex gap-6 py-6 justify-center flex-wrap">
-
-      <div class="">
-        <img class="rounded-full border border-gray-100 shadow-sm h-32 w-32" src="./public/img/beautiful.jpg" alt="">
-      </div>
-      <div>
-        <img class="rounded-full border border-gray-100 shadow-sm h-32 w-32" src="./public/img/happy.jpg" alt="">
+    <div class="flex gap-8 max-w-[70%] mx-auto  lg:max-w-[70%]  2xl:gap-12 flex-wrap justify-center">
+      <div class=" w-[180px] h-[180px]">
+        <img class="w-full h-full object-cover" src="./public/img/EXCESS.jpg" alt="">
       </div>
 
-      <div>
-        <img class="rounded-full border border-gray-100 shadow-sm h-32 w-32" src="./public/img/john.jpg" alt="">
+      <div class="w-[180px] h-[180px] overflow-hidden">
+        <img class="w-full h-full object-contain" src="./public/img/ACES.jpg" alt="">
       </div>
 
-      <div>
-        <img class="rounded-full border border-gray-100 shadow-sm h-32 w-32" src="./public/img/kalu.jpg" alt="">
+      <div class="w-[180px] h-[180px]">
+        <img class="w-full h-full object-contain" src="./public/img/SOAS LOGO 1.jpg" alt="">
       </div>
 
-      <div>
-        <img class="rounded-full border border-gray-100 shadow-sm h-32 w-32" src="./public/img/smith.jpg" alt="">
+      <div class="w-[180px] h-[180px]">
+        <img class="w-full h-full object-contain" src="./public/img/SOMES 1.jpg" alt="">
       </div>
-      <div class="rounded-full border border-gray-100 shadow-sm h-32 w-32 bg-gray-800">
+      <div class="w-[180px] h-[180px]">
+        <img class="w-full h-full object-contain" src="./public/img/NAESS 1.jpg" alt="">
       </div>
-      <div class="rounded-full border border-gray-100 shadow-sm h-32 w-32 bg-gray-800">
-      </div>
-      <div class="rounded-full border border-gray-100 shadow-sm h-32 w-32 bg-gray-800">
-      </div>
-      <div class="rounded-full border border-gray-100 shadow-sm h-32 w-32 bg-gray-800">
+      <div class="w-[180px] h-[180px]">
+        <img class="w-full h-full object-contain" src="./public/img/CESS 1.jpg" alt="">
       </div>
 
+      <div class="w-[180px] h-[180px]">
+        <img class="w-full h-full object-contain" src="./public/img/ELESS 1.jpg" alt="">
+      </div>
     </div>
   </div>
-
-
-</div>
-
-<!-- slider  -->
-<div class="max-w-[1440px] mx-auto">
-  <div class="md:max-w-[90%] max-w-[90%]  mx-auto py-12">
-    <section id="image-carousel" class="splide min-[640px]:!h-[300px]" aria-label="Beautiful Images">
-      <!-- custom arrows -->
-      <div class="splide__arrows">
-        <button class="splide__arrow splide__arrow--prev">
-          <img class="h-4 w-4 sm:h-5 sm:w-5 md:w-8 md:h-8 lg:w-10 lg:h-10"
-            src="./public/img/left-arrow-back-svgrepo-com.svg" alt="">
-
-        </button>
-        <button class="splide__arrow splide__arrow--next ">
-          <img class="h-4 w-4 sm:h-6 sm:w-6 md:w-8 md:h-8 lg:w-10 lg:h-10"
-            src="./public/img/right-arrow-svgrepo-com.svg" alt="">
-        </button>
-      </div>
-      <div class="splide__track">
-        <ul class="splide__list">
-          <li class="splide__slide">
-            <div
-              class="flex xl:!max-w-[55%]  lg:!max-w-[70%] md:!max-w-[76%] sm:max-w-[74%] max-w-[85%] min-[460px]:max-w-[81%] min-[500px]:max-w-[60%] gap-3 md:gap-5 lg:gap-8 2xl:gap-10 justify-center mx-auto flex-wrap">
-              <div class="relative rounded-full overflow-hidden group cursor-pointer">
-
-                <img
-                  class="rounded-full   !w-[80px] !h-[80px] sm:!w-[120px] sm:!h-[120px]   lg:!w-[190px] lg:!h-[190px] md:!w-[160px] md:!h-[160px]"
-                  src="./public/img/beautiful.jpg" alt="">
-                <div
-                  class="absolute h-0 w-0 opacity-0 group-hover:opacity-100  text-white  rounded-full bottom-0 bg-[#0000007a] backdrop:blur-2xl group-hover:!w-[80px] group-hover:!h-[80px] group-hover:sm:!w-[120px] group-hover:sm:!h-[120px]   group-hover:lg:!w-[190px] group-hover:lg:!h-[190px] group-hover:md:!w-[160px] group-hover:md:!h-[160px] flex flex-col justify-center items-center">
-                  <p class="text-[20px] font-bold">Shiva Raj Badu</p>
-                  <p class="text-[16px] font-semibold">External</p>
-                  <ul class="flex gap-2 my-2">
-                    <li><a href="https://www.facebook.com/" target="_blank">
-                        <img class="hover:scale-[1.08]" src="./public/img/fb.svg" alt="">
-                      </a></li>
-                    <li><a href="https://linkedin.com">
-                        <img class="hover:scale-[1.08]" src="./public/img/linkedin.svg" alt="">
-                      </a></li>
-                    <li><a href="https://instagram.com">
-                        <img class="hover:scale-[1.08]" src="./public/img/instagram.svg" alt="">
-                      </a></li>
-                  </ul>
-                </div>
-              </div>
-
-              <div class="relative rounded-full overflow-hidden group cursor-pointer">
-
-                <img
-                  class="rounded-full   !w-[80px] !h-[80px] sm:!w-[120px] sm:!h-[120px]   lg:!w-[190px] lg:!h-[190px] md:!w-[160px] md:!h-[160px]"
-                  src="./public/img/beautiful.jpg" alt="">
-                <div
-                  class="absolute h-0 w-0 opacity-0 group-hover:opacity-100  text-white  rounded-full bottom-0 bg-[#0000007a] backdrop:blur-2xl group-hover:!w-[80px] group-hover:!h-[80px] group-hover:sm:!w-[120px] group-hover:sm:!h-[120px]   group-hover:lg:!w-[190px] group-hover:lg:!h-[190px] group-hover:md:!w-[160px] group-hover:md:!h-[160px] flex flex-col justify-center items-center">
-                  <p class="text-[20px] font-bold max-w-[140px] text-center">Shiva Raj Badu</p>
-                  <p class="text-[16px] font-normal">External</p>
-                  <ul class="flex gap-2 my-2">
-                    <li><a href="https://www.facebook.com/" target="_blank">
-                        <img class="hover:scale-[1.08]" src="./public/img/fb.svg" alt="">
-                      </a></li>
-                    <li><a href="https://linkedin.com">
-                        <img class="hover:scale-[1.08]" src="./public/img/linkedin.svg" alt="">
-                      </a></li>
-                    <li><a href="https://instagram.com">
-                        <img class="hover:scale-[1.08]" src="./public/img/instagram.svg" alt="">
-                      </a></li>
-                  </ul>
-                </div>
-              </div>
-              <div class="relative rounded-full overflow-hidden group cursor-pointer">
-
-                <img
-                  class="rounded-full   !w-[80px] !h-[80px] sm:!w-[120px] sm:!h-[120px]   lg:!w-[190px] lg:!h-[190px] md:!w-[160px] md:!h-[160px]"
-                  src="./public/img/beautiful.jpg" alt="">
-                <div
-                  class="absolute h-0 w-0 opacity-0 group-hover:opacity-100  text-white  rounded-full bottom-0 bg-[#0000007a] backdrop:blur-2xl group-hover:!w-[80px] group-hover:!h-[80px] group-hover:sm:!w-[120px] group-hover:sm:!h-[120px]   group-hover:lg:!w-[190px] group-hover:lg:!h-[190px] group-hover:md:!w-[160px] group-hover:md:!h-[160px] flex flex-col justify-center items-center">
-                  <p class="text-[20px] font-bold">Shiva Raj Badu</p>
-                  <p class="text-[16px] font-semibold">External</p>
-                  <ul class="flex gap-2 my-2">
-                    <li><a href="https://www.facebook.com/" target="_blank">
-                        <img class="hover:scale-[1.08]" src="./public/img/fb.svg" alt="">
-                      </a></li>
-                    <li><a href="https://linkedin.com">
-                        <img class="hover:scale-[1.08]" src="./public/img/linkedin.svg" alt="">
-                      </a></li>
-                    <li><a href="https://instagram.com">
-                        <img class="hover:scale-[1.08]" src="./public/img/instagram.svg" alt="">
-                      </a></li>
-                  </ul>
-                </div>
-              </div>
-              <div class="relative rounded-full overflow-hidden group cursor-pointer">
-
-                <img
-                  class="rounded-full   !w-[80px] !h-[80px] sm:!w-[120px] sm:!h-[120px]   lg:!w-[190px] lg:!h-[190px] md:!w-[160px] md:!h-[160px]"
-                  src="./public/img/beautiful.jpg" alt="">
-                <div
-                  class="absolute h-0 w-0 opacity-0 group-hover:opacity-100  text-white  rounded-full bottom-0 bg-[#0000007a] backdrop:blur-2xl group-hover:!w-[80px] group-hover:!h-[80px] group-hover:sm:!w-[120px] group-hover:sm:!h-[120px]   group-hover:lg:!w-[190px] group-hover:lg:!h-[190px] group-hover:md:!w-[160px] group-hover:md:!h-[160px] flex flex-col justify-center items-center">
-                  <p class="text-[20px] font-bold">Shiva Raj Badu</p>
-                  <p class="text-[16px] font-semibold">External</p>
-                  <ul class="flex gap-2 my-2">
-                    <li><a href="https://www.facebook.com/" target="_blank">
-                        <img class="hover:scale-[1.08]" src="./public/img/fb.svg" alt="">
-                      </a></li>
-                    <li><a href="https://linkedin.com">
-                        <img class="hover:scale-[1.08]" src="./public/img/linkedin.svg" alt="">
-                      </a></li>
-                    <li><a href="https://instagram.com">
-                        <img class="hover:scale-[1.08]" src="./public/img/instagram.svg" alt="">
-                      </a></li>
-                  </ul>
-                </div>
-              </div>
-              <div class="relative rounded-full overflow-hidden group cursor-pointer">
-
-                <img
-                  class="rounded-full   !w-[80px] !h-[80px] sm:!w-[120px] sm:!h-[120px]   lg:!w-[190px] lg:!h-[190px] md:!w-[160px] md:!h-[160px]"
-                  src="./public/img/beautiful.jpg" alt="">
-                <div
-                  class="absolute h-0 w-0 opacity-0 group-hover:opacity-100  text-white  rounded-full bottom-0 bg-[#0000007a] backdrop:blur-2xl group-hover:!w-[80px] group-hover:!h-[80px] group-hover:sm:!w-[120px] group-hover:sm:!h-[120px]   group-hover:lg:!w-[190px] group-hover:lg:!h-[190px] group-hover:md:!w-[160px] group-hover:md:!h-[160px] flex flex-col justify-center items-center">
-                  <p class="text-[20px] font-bold">Shiva Raj Badu</p>
-                  <p class="text-[16px] font-semibold">External</p>
-                  <ul class="flex gap-2 my-2">
-                    <li><a href="https://www.facebook.com/" target="_blank">
-                        <img class="hover:scale-[1.08]" src="./public/img/fb.svg" alt="">
-                      </a></li>
-                    <li><a href="https://linkedin.com">
-                        <img class="hover:scale-[1.08]" src="./public/img/linkedin.svg" alt="">
-                      </a></li>
-                    <li><a href="https://instagram.com">
-                        <img class="hover:scale-[1.08]" src="./public/img/instagram.svg" alt="">
-                      </a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-
-          </li>
-          <li class="splide__slide">
-            <div
-              class="flex xl:!max-w-[55%]  lg:!max-w-[70%] md:!max-w-[76%] sm:max-w-[74%] max-w-[85%] min-[460px]:max-w-[81%] min-[500px]:max-w-[60%] gap-3 md:gap-5 lg:gap-8 2xl:gap-10 justify-center mx-auto flex-wrap">
-              <div class="relative rounded-full overflow-hidden group cursor-pointer">
-
-                <img
-                  class="rounded-full   !w-[80px] !h-[80px] sm:!w-[120px] sm:!h-[120px]   lg:!w-[190px] lg:!h-[190px] md:!w-[160px] md:!h-[160px]"
-                  src="./public/img/beautiful.jpg" alt="">
-                <div
-                  class="absolute h-0 w-0 opacity-0 group-hover:opacity-100  text-white  rounded-full bottom-0 bg-[#0000007a] backdrop:blur-2xl group-hover:!w-[80px] group-hover:!h-[80px] group-hover:sm:!w-[120px] group-hover:sm:!h-[120px]   group-hover:lg:!w-[190px] group-hover:lg:!h-[190px] group-hover:md:!w-[160px] group-hover:md:!h-[160px] flex flex-col justify-center items-center">
-                  <p class="text-[20px] font-bold">Shiva Raj Badu</p>
-                  <p class="text-[16px] font-semibold">External</p>
-                  <ul class="flex gap-2 my-2">
-                    <li><a href="https://www.facebook.com/" target="_blank">
-                        <img class="hover:scale-[1.08]" src="./public/img/fb.svg" alt="">
-                      </a></li>
-                    <li><a href="https://linkedin.com">
-                        <img class="hover:scale-[1.08]" src="./public/img/linkedin.svg" alt="">
-                      </a></li>
-                    <li><a href="https://instagram.com">
-                        <img class="hover:scale-[1.08]" src="./public/img/instagram.svg" alt="">
-                      </a></li>
-                  </ul>
-                </div>
-              </div>
-
-              <div class="relative rounded-full overflow-hidden group cursor-pointer">
-
-                <img
-                  class="rounded-full   !w-[80px] !h-[80px] sm:!w-[120px] sm:!h-[120px]   lg:!w-[190px] lg:!h-[190px] md:!w-[160px] md:!h-[160px]"
-                  src="./public/img/beautiful.jpg" alt="">
-                <div
-                  class="absolute h-0 w-0 opacity-0 group-hover:opacity-100  text-white  rounded-full bottom-0 bg-[#0000007a] backdrop:blur-2xl group-hover:!w-[80px] group-hover:!h-[80px] group-hover:sm:!w-[120px] group-hover:sm:!h-[120px]   group-hover:lg:!w-[190px] group-hover:lg:!h-[190px] group-hover:md:!w-[160px] group-hover:md:!h-[160px] flex flex-col justify-center items-center">
-                  <p class="text-[20px] font-bold">Shiva Raj Badu</p>
-                  <p class="text-[16px] font-semibold">External</p>
-                  <ul class="flex gap-2 my-2">
-                    <li><a href="https://www.facebook.com/" target="_blank">
-                        <img class="hover:scale-[1.08]" src="./public/img/fb.svg" alt="">
-                      </a></li>
-                    <li><a href="https://linkedin.com">
-                        <img class="hover:scale-[1.08]" src="./public/img/linkedin.svg" alt="">
-                      </a></li>
-                    <li><a href="https://instagram.com">
-                        <img class="hover:scale-[1.08]" src="./public/img/instagram.svg" alt="">
-                      </a></li>
-                  </ul>
-                </div>
-              </div>
-              <div class="relative rounded-full overflow-hidden group cursor-pointer">
-
-                <img
-                  class="rounded-full   !w-[80px] !h-[80px] sm:!w-[120px] sm:!h-[120px]   lg:!w-[190px] lg:!h-[190px] md:!w-[160px] md:!h-[160px]"
-                  src="./public/img/beautiful.jpg" alt="">
-                <div
-                  class="absolute h-0 w-0 opacity-0 group-hover:opacity-100  text-white  rounded-full bottom-0 bg-[#0000007a] backdrop:blur-2xl group-hover:!w-[80px] group-hover:!h-[80px] group-hover:sm:!w-[120px] group-hover:sm:!h-[120px]   group-hover:lg:!w-[190px] group-hover:lg:!h-[190px] group-hover:md:!w-[160px] group-hover:md:!h-[160px] flex flex-col justify-center items-center">
-                  <p class="text-[20px] font-bold">Shiva Raj Badu</p>
-                  <p class="text-[16px] font-semibold">External</p>
-                  <ul class="flex gap-2 my-2">
-                    <li><a href="https://www.facebook.com/" target="_blank">
-                        <img class="hover:scale-[1.08]" src="./public/img/fb.svg" alt="">
-                      </a></li>
-                    <li><a href="https://linkedin.com">
-                        <img class="hover:scale-[1.08]" src="./public/img/linkedin.svg" alt="">
-                      </a></li>
-                    <li><a href="https://instagram.com">
-                        <img class="hover:scale-[1.08]" src="./public/img/instagram.svg" alt="">
-                      </a></li>
-                  </ul>
-                </div>
-              </div>
-              <div class="relative rounded-full overflow-hidden group cursor-pointer">
-
-                <img
-                  class="rounded-full   !w-[80px] !h-[80px] sm:!w-[120px] sm:!h-[120px]   lg:!w-[190px] lg:!h-[190px] md:!w-[160px] md:!h-[160px]"
-                  src="./public/img/beautiful.jpg" alt="">
-                <div
-                  class="absolute h-0 w-0 opacity-0 group-hover:opacity-100  text-white  rounded-full bottom-0 bg-[#0000007a] backdrop:blur-2xl group-hover:!w-[80px] group-hover:!h-[80px] group-hover:sm:!w-[120px] group-hover:sm:!h-[120px]   group-hover:lg:!w-[190px] group-hover:lg:!h-[190px] group-hover:md:!w-[160px] group-hover:md:!h-[160px] flex flex-col justify-center items-center">
-                  <p class="text-[20px] font-bold">Shiva Raj Badu</p>
-                  <p class="text-[16px] font-semibold">External</p>
-                  <ul class="flex gap-2 my-2">
-                    <li><a href="https://www.facebook.com/" target="_blank">
-                        <img class="hover:scale-[1.08]" src="./public/img/fb.svg" alt="">
-                      </a></li>
-                    <li><a href="https://linkedin.com">
-                        <img class="hover:scale-[1.08]" src="./public/img/linkedin.svg" alt="">
-                      </a></li>
-                    <li><a href="https://instagram.com">
-                        <img class="hover:scale-[1.08]" src="./public/img/instagram.svg" alt="">
-                      </a></li>
-                  </ul>
-                </div>
-              </div>
-              <div class="relative rounded-full overflow-hidden group cursor-pointer">
-
-                <img
-                  class="rounded-full   !w-[80px] !h-[80px] sm:!w-[120px] sm:!h-[120px]   lg:!w-[190px] lg:!h-[190px] md:!w-[160px] md:!h-[160px]"
-                  src="./public/img/beautiful.jpg" alt="">
-                <div
-                  class="absolute h-0 w-0 opacity-0 group-hover:opacity-100  text-white  rounded-full bottom-0 bg-[#0000007a] backdrop:blur-2xl group-hover:!w-[80px] group-hover:!h-[80px] group-hover:sm:!w-[120px] group-hover:sm:!h-[120px]   group-hover:lg:!w-[190px] group-hover:lg:!h-[190px] group-hover:md:!w-[160px] group-hover:md:!h-[160px] flex flex-col justify-center items-center">
-                  <p class="text-[20px] font-bold">Shiva Raj Badu</p>
-                  <p class="text-[16px] font-semibold">External</p>
-                  <ul class="flex gap-2 my-2">
-                    <li><a href="https://www.facebook.com/" target="_blank">
-                        <img class="hover:scale-[1.08]" src="./public/img/fb.svg" alt="">
-                      </a></li>
-                    <li><a href="https://linkedin.com">
-                        <img class="hover:scale-[1.08]" src="./public/img/linkedin.svg" alt="">
-                      </a></li>
-                    <li><a href="https://instagram.com">
-                        <img class="hover:scale-[1.08]" src="./public/img/instagram.svg" alt="">
-                      </a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-
-          </li>
-          <li class="splide__slide">
-            <div
-              class="flex xl:!max-w-[55%]  lg:!max-w-[70%] md:!max-w-[76%] sm:max-w-[74%] max-w-[85%] min-[460px]:max-w-[81%] min-[500px]:max-w-[60%] gap-3 md:gap-5 lg:gap-8 2xl:gap-10 justify-center mx-auto flex-wrap">
-              <div class="relative rounded-full overflow-hidden group cursor-pointer">
-
-                <img
-                  class="rounded-full   !w-[80px] !h-[80px] sm:!w-[120px] sm:!h-[120px]   lg:!w-[190px] lg:!h-[190px] md:!w-[160px] md:!h-[160px]"
-                  src="./public/img/beautiful.jpg" alt="">
-                <div
-                  class="absolute h-0 w-0 opacity-0 group-hover:opacity-100  text-white  rounded-full bottom-0 bg-[#0000007a] backdrop:blur-2xl group-hover:!w-[80px] group-hover:!h-[80px] group-hover:sm:!w-[120px] group-hover:sm:!h-[120px]   group-hover:lg:!w-[190px] group-hover:lg:!h-[190px] group-hover:md:!w-[160px] group-hover:md:!h-[160px] flex flex-col justify-center items-center">
-                  <p class="text-[20px] font-bold">Shiva Raj Badu</p>
-                  <p class="text-[16px] font-semibold">External</p>
-                  <ul class="flex gap-2 my-2">
-                    <li><a href="https://www.facebook.com/" target="_blank">
-                        <img class="hover:scale-[1.08]" src="./public/img/fb.svg" alt="">
-                      </a></li>
-                    <li><a href="https://linkedin.com">
-                        <img class="hover:scale-[1.08]" src="./public/img/linkedin.svg" alt="">
-                      </a></li>
-                    <li><a href="https://instagram.com">
-                        <img class="hover:scale-[1.08]" src="./public/img/instagram.svg" alt="">
-                      </a></li>
-                  </ul>
-                </div>
-              </div>
-
-              <div class="relative rounded-full overflow-hidden group cursor-pointer">
-
-                <img
-                  class="rounded-full   !w-[80px] !h-[80px] sm:!w-[120px] sm:!h-[120px]   lg:!w-[190px] lg:!h-[190px] md:!w-[160px] md:!h-[160px]"
-                  src="./public/img/beautiful.jpg" alt="">
-                <div
-                  class="absolute h-0 w-0 opacity-0 group-hover:opacity-100  text-white  rounded-full bottom-0 bg-[#0000007a] backdrop:blur-2xl group-hover:!w-[80px] group-hover:!h-[80px] group-hover:sm:!w-[120px] group-hover:sm:!h-[120px]   group-hover:lg:!w-[190px] group-hover:lg:!h-[190px] group-hover:md:!w-[160px] group-hover:md:!h-[160px] flex flex-col justify-center items-center">
-                  <p class="text-[20px] font-bold">Shiva Raj Badu</p>
-                  <p class="text-[16px] font-semibold">External</p>
-                  <ul class="flex gap-2 my-2">
-                    <li><a href="https://www.facebook.com/" target="_blank">
-                        <img class="hover:scale-[1.08]" src="./public/img/fb.svg" alt="">
-                      </a></li>
-                    <li><a href="https://linkedin.com">
-                        <img class="hover:scale-[1.08]" src="./public/img/linkedin.svg" alt="">
-                      </a></li>
-                    <li><a href="https://instagram.com">
-                        <img class="hover:scale-[1.08]" src="./public/img/instagram.svg" alt="">
-                      </a></li>
-                  </ul>
-                </div>
-              </div>
-              <div class="relative rounded-full overflow-hidden group cursor-pointer">
-
-                <img
-                  class="rounded-full   !w-[80px] !h-[80px] sm:!w-[120px] sm:!h-[120px]   lg:!w-[190px] lg:!h-[190px] md:!w-[160px] md:!h-[160px]"
-                  src="./public/img/beautiful.jpg" alt="">
-                <div
-                  class="absolute h-0 w-0 opacity-0 group-hover:opacity-100  text-white  rounded-full bottom-0 bg-[#0000007a] backdrop:blur-2xl group-hover:!w-[80px] group-hover:!h-[80px] group-hover:sm:!w-[120px] group-hover:sm:!h-[120px]   group-hover:lg:!w-[190px] group-hover:lg:!h-[190px] group-hover:md:!w-[160px] group-hover:md:!h-[160px] flex flex-col justify-center items-center">
-                  <p class="text-[20px] font-bold">Shiva Raj Badu</p>
-                  <p class="text-[16px] font-semibold">External</p>
-                  <ul class="flex gap-2 my-2">
-                    <li><a href="https://www.facebook.com/" target="_blank">
-                        <img class="hover:scale-[1.08]" src="./public/img/fb.svg" alt="">
-                      </a></li>
-                    <li><a href="https://linkedin.com">
-                        <img class="hover:scale-[1.08]" src="./public/img/linkedin.svg" alt="">
-                      </a></li>
-                    <li><a href="https://instagram.com">
-                        <img class="hover:scale-[1.08]" src="./public/img/instagram.svg" alt="">
-                      </a></li>
-                  </ul>
-                </div>
-              </div>
-              <div class="relative rounded-full overflow-hidden group cursor-pointer">
-
-                <img
-                  class="rounded-full   !w-[80px] !h-[80px] sm:!w-[120px] sm:!h-[120px]   lg:!w-[190px] lg:!h-[190px] md:!w-[160px] md:!h-[160px]"
-                  src="./public/img/beautiful.jpg" alt="">
-                <div
-                  class="absolute h-0 w-0 opacity-0 group-hover:opacity-100  text-white  rounded-full bottom-0 bg-[#0000007a] backdrop:blur-2xl group-hover:!w-[80px] group-hover:!h-[80px] group-hover:sm:!w-[120px] group-hover:sm:!h-[120px]   group-hover:lg:!w-[190px] group-hover:lg:!h-[190px] group-hover:md:!w-[160px] group-hover:md:!h-[160px] flex flex-col justify-center items-center">
-                  <p class="text-[20px] font-bold">Shiva Raj Badu</p>
-                  <p class="text-[16px] font-semibold">External</p>
-                  <ul class="flex gap-2 my-2">
-                    <li><a href="https://www.facebook.com/" target="_blank">
-                        <img class="hover:scale-[1.08]" src="./public/img/fb.svg" alt="">
-                      </a></li>
-                    <li><a href="https://linkedin.com">
-                        <img class="hover:scale-[1.08]" src="./public/img/linkedin.svg" alt="">
-                      </a></li>
-                    <li><a href="https://instagram.com">
-                        <img class="hover:scale-[1.08]" src="./public/img/instagram.svg" alt="">
-                      </a></li>
-                  </ul>
-                </div>
-              </div>
-              <div class="relative rounded-full overflow-hidden group cursor-pointer">
-
-                <img
-                  class="rounded-full   !w-[80px] !h-[80px] sm:!w-[120px] sm:!h-[120px]   lg:!w-[190px] lg:!h-[190px] md:!w-[160px] md:!h-[160px]"
-                  src="./public/img/beautiful.jpg" alt="">
-                <div
-                  class="absolute h-0 w-0 opacity-0 group-hover:opacity-100  text-white  rounded-full bottom-0 bg-[#0000007a] backdrop:blur-2xl group-hover:!w-[80px] group-hover:!h-[80px] group-hover:sm:!w-[120px] group-hover:sm:!h-[120px]   group-hover:lg:!w-[190px] group-hover:lg:!h-[190px] group-hover:md:!w-[160px] group-hover:md:!h-[160px] flex flex-col justify-center items-center">
-                  <p class="text-[20px] font-bold">Shiva Raj kumar Badu</p>
-                  <p class="text-[16px] font-semibold">External</p>
-                  <ul class="flex gap-2 my-2">
-                    <li><a href="https://www.facebook.com/" target="_blank">
-                        <img class="hover:scale-[1.08]" src="./public/img/fb.svg" alt="">
-                      </a></li>
-                    <li><a href="https://linkedin.com">
-                        <img class="hover:scale-[1.08]" src="./public/img/linkedin.svg" alt="">
-                      </a></li>
-                    <li><a href="https://instagram.com">
-                        <img class="hover:scale-[1.08]" src="./public/img/instagram.svg" alt="">
-                      </a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-
-          </li>
-        </ul>
-      </div>
-    </section>
-  </div>
-</div>
-
-
-
-<!-- gallery -->
-<div id="gallery" class="my-5 bg-[#e6e6e6] py-6 md:py-16 px-6">
-  <h1 class=" text-center font-delta text-[#141B4E] font-bold text-[40px] md:text-[50px] mt-3 mb-6 md:my-6">Looking Back
-  </h1>
-  <div class="w-full">
-    <section id="main-slider" class="splide" aria-label="My Awesome Gallery">
-      <div class="splide__track ">
-        <ul class="splide__list ">
-          <li class="splide__slide">
-            <img src="https://source.unsplash.com/random/1000x1000?sig=1" alt="" />
-          </li>
-          <li class="splide__slide">
-            <img src="https://source.unsplash.com/random/1000x1000?sig=2" alt="" />
-          </li>
-          <li class="splide__slide">
-            <img src="https://source.unsplash.com/random/1000x1000?sig=3" alt="" />
-          </li>
-          <li class="splide__slide">
-            <img src="https://source.unsplash.com/random/1000x1000?sig=4" alt="" />
-          </li>
-          <li class="splide__slide">
-            <img src="https://source.unsplash.com/random/1000x1000?sig=5" alt="" />
-          </li>
-          <li class="splide__slide">
-            <img src="https://source.unsplash.com/random/1000x1000?sig=6" alt="" />
-          </li>
-          <li class="splide__slide">
-            <img src="https://source.unsplash.com/random/1000x1000?sig=7" alt="" />
-          </li>
-          <li class="splide__slide">
-            <img src="https://source.unsplash.com/random/1000x1000?sig=8" alt="" />
-          </li>
-        </ul>
-      </div>
-    </section>
-    <ul id="thumbnails" class="thumbnails">
-      <li class="thumbnail">
-        <img src="https://source.unsplash.com/random/1000x1000?sig=1" alt="" />
-      </li>
-      <li class="thumbnail">
-        <img src="https://source.unsplash.com/random/1000x1000?sig=2" alt="" />
-      </li>
-      <li class="thumbnail">
-        <img src="https://source.unsplash.com/random/1000x1000?sig=3" alt="" />
-      </li>
-      <li class="thumbnail">
-        <img src="https://source.unsplash.com/random/1000x1000?sig=4" alt="" />
-      </li>
-      <li class="thumbnail">
-        <img src="https://source.unsplash.com/random/1000x1000?sig=5" alt="" />
-      </li>
-      <li class="thumbnail">
-        <img src="https://source.unsplash.com/random/1000x1000?sig=6" alt="" />
-      </li>
-      <li class="thumbnail">
-        <img src="https://source.unsplash.com/random/1000x1000?sig=7" alt="" />
-      </li>
-      <li class="thumbnail">
-        <img src="https://source.unsplash.com/random/1000x1000?sig=8" alt="" />
-      </li>
-
-
-    </ul>
-  </div>
-</div>
-
-
-<!-- logos of supporting faculties -->
-<div class="py-6 max-w-[1440px] mx-auto px-4 pb-12">
-  <h1 class="text-[#141B4E] font-delta text-[40px] md:text-[50px] font-bold text-center  px-4 my-6">People
-    making it
-    happen
-  </h1>
-  <div class="flex gap-8 max-w-[70%] mx-auto  lg:max-w-[70%]  2xl:gap-12 flex-wrap justify-center">
-    <div class=" w-[180px] h-[180px]">
-      <img class="w-full h-full object-cover" src="./public/img/EXCESS.jpg" alt="">
-    </div>
-
-    <div class="w-[180px] h-[180px] overflow-hidden">
-      <img class="w-full h-full object-contain" src="./public/img/ACES.jpg" alt="">
-    </div>
-
-    <div class="w-[180px] h-[180px]">
-      <img class="w-full h-full object-contain" src="./public/img/SOAS LOGO 1.jpg" alt="">
-    </div>
-
-    <div class="w-[180px] h-[180px]">
-      <img class="w-full h-full object-contain" src="./public/img/SOMES 1.jpg" alt="">
-    </div>
-    <div class="w-[180px] h-[180px]">
-      <img class="w-full h-full object-contain" src="./public/img/NAESS 1.jpg" alt="">
-    </div>
-    <div class="w-[180px] h-[180px]">
-      <img class="w-full h-full object-contain" src="./public/img/CESS 1.jpg" alt="">
-    </div>
-
-    <div class="w-[180px] h-[180px]">
-      <img class="w-full h-full object-contain" src="./public/img/ELESS 1.jpg" alt="">
-    </div>
-  </div>
-</div>
-<!-- sponsers section -->
-<section class="bg-[#205295] text-white py-8">
-  <div class="max-w-[1440px] mx-auto">
-    <div class="max-w-[90%] mx-auto">
-      <h1
-        class="max-w-[380px] mx-auto text-[45px] font-semibold relative before:content-[' '] before:absolute before:w-[90%]  before:h-1 before:bg-green-400 before:bottom-2 before:left-0 py-4 ">
-        Our Sponsers <span class="
+  <!-- sponsers section -->
+  <section id="sponsors" class="bg-[#205295] text-white py-8">
+    <div class="max-w-[1440px] mx-auto">
+      <div class="max-w-[90%] mx-auto">
+        <h1
+          class="max-w-[380px] mx-auto text-[45px] font-semibold relative before:content-[' '] before:absolute before:w-[90%]  before:h-1 before:bg-green-400 before:bottom-2 before:left-0 py-4 ">
+          Our Sponsers <span class="
         text-[25px] font-medium">2023</span>
-      </h1>
-      <div class="text-center mx-auto my-6 mt-[4rem]">
-        <h2
-          class="text-[33px] py-6 my-6 font-semibold tracking-wider underline underline-offset-8 decoration-[#ffd700] decoration-dashed">
-          Title Sponsor</h2>
-        <div
-          class="h-[250px] w-[350px] mx-auto border-[6px] flex justify-center items-center border-t-[#ceb10a] rounded-2xl border-r-[#ffd700] border-l-[#ffd700] border-b-[#e3c208] shadow-2xl">
-          <img class="max-w-[210px] w-[170px] hover:scale-[1.05] cursor-pointer" src="./public/img/IOT.svg" alt="">
-        </div>
-      </div>
-      <!-- co-sponsors -->
-      <div class="my-5 !mt-[6rem]">
-        <h2
-          class="text-[30px] py-4 my-6 font-semibold tracking-wider text-center underline underline-offset-8 decoration-[#E5E4E2] decoration-dashed">
-          Co-Sponsors</h2>
-        <div style="grid-template-columns: repeat(auto-fill,minmax(300px,1fr));" class=" grid gap-6">
+        </h1>
+        <div class="text-center mx-auto my-6 mt-[4rem]">
+          <h2
+            class="text-[33px] py-6 my-6 font-semibold tracking-wider underline underline-offset-8 decoration-[#ffd700] decoration-dashed">
+            Title Sponsor</h2>
           <div
-            class="h-[220px] w-[310px] mx-auto border-[6px] flex justify-center items-center border-t-[#E5E4E2] rounded-2xl border-r-[#d5d4d2] border-l-[#cfcdcb] border-b-[#E5E4E2] shadow-2xl">
-            <img class="max-w-[200px] w-[150px] hover:scale-[1.05] cursor-pointer" src="./public/img/IOT.svg" alt="">
-          </div>
-          <div
-            class="h-[220px] w-[310px] mx-auto border-[6px] flex justify-center items-center border-t-[#E5E4E2] rounded-2xl border-r-[#d1d0cd] border-l-[#c8c7c5] border-b-[#E5E4E2] shadow-2xl">
-            <img class="max-w-[200px] w-[150px] hover:scale-[1.05] cursor-pointer" src="./public/img/IOT.svg" alt="">
-          </div>
-          <div
-            class="h-[220px] w-[310px] mx-auto border-[6px] flex justify-center items-center border-t-[#E5E4E2] rounded-2xl border-r-[#d4d3d0] border-l-[#d2d1cf] border-b-[#E5E4E2] shadow-2xl">
-            <img class="max-w-[200px] w-[150px] hover:scale-[1.05] cursor-pointer" src="./public/img/IOT.svg" alt="">
-          </div>
-          <div
-            class="h-[220px] w-[310px] mx-auto border-[6px] flex justify-center items-center border-t-[#E5E4E2] rounded-2xl border-r-[#d0cecb] border-l-[#ceccc9] border-b-[#E5E4E2] shadow-2xl">
-            <img class="max-w-[200px] w-[150px] hover:scale-[1.05] cursor-pointer" src="./public/img/IOT.svg" alt="">
-          </div>
-          <div
-            class="h-[220px] w-[310px] mx-auto border-[6px] flex justify-center items-center border-t-[#E5E4E2] rounded-2xl border-r-[#cfcdca] border-l-[#ceccc9] border-b-[#E5E4E2] shadow-2xl">
-            <img class="max-w-[200px] w-[150px] hover:scale-[1.05] cursor-pointer" src="./public/img/IOT.svg" alt="">
+            class="w-[310px] h-[220px] md:h-[250px] md:w-[350px] mx-auto border-[6px] flex justify-center items-center border-t-[#ceb10a] rounded-2xl border-r-[#ffd700] border-l-[#ffd700] border-b-[#e3c208] shadow-2xl">
+            <img class="max-w-[210px] w-[170px] hover:scale-[1.05] cursor-pointer" src="./public/img/IOT.svg" alt="">
           </div>
         </div>
-      </div>
-      <div class="my-5">
-        <h2
-          class="text-[30px] my-6 py-6 font-semibold tracking-wider text-center underline underline-offset-8 decoration-[#bc742c] decoration-dashed">
-          Partners
-        </h2>
-        <div style="grid-template-columns: repeat(auto-fill,minmax(300px,1fr));" class=" grid gap-6">
-          <div
-            class="h-[200px] w-[300px] mx-auto border-[6px] flex justify-center items-center border-t-[#bc742c] rounded-2xl border-r-[#CD7F32] border-l-[#CD7F32] border-b-[#ad6b28] shadow-2xl">
-            <img class="max-w-[200px] w-[150px] hover:scale-[1.05] cursor-pointer" src="./public/img/IOT.svg" alt="">
+        <!-- co-sponsors -->
+        <div class="my-5 !mt-[6rem]">
+          <h2
+            class="text-[30px] py-4 my-6 font-semibold tracking-wider text-center underline underline-offset-8 decoration-[#E5E4E2] decoration-dashed">
+            Co-Sponsors</h2>
+          <div style="grid-template-columns: repeat(auto-fill,minmax(300px,1fr));" class=" grid gap-6">
+            <div
+              class="h-[220px] w-[310px] mx-auto border-[6px] flex justify-center items-center border-t-[#E5E4E2] rounded-2xl border-r-[#d5d4d2] border-l-[#cfcdcb] border-b-[#E5E4E2] shadow-2xl">
+              <img class="max-w-[200px] w-[150px] hover:scale-[1.05] cursor-pointer" src="./public/img/IOT.svg" alt="">
+            </div>
+            <div
+              class="h-[220px] w-[310px] mx-auto border-[6px] flex justify-center items-center border-t-[#E5E4E2] rounded-2xl border-r-[#d1d0cd] border-l-[#c8c7c5] border-b-[#E5E4E2] shadow-2xl">
+              <img class="max-w-[200px] w-[150px] hover:scale-[1.05] cursor-pointer" src="./public/img/IOT.svg" alt="">
+            </div>
+            <div
+              class="h-[220px] w-[310px] mx-auto border-[6px] flex justify-center items-center border-t-[#E5E4E2] rounded-2xl border-r-[#d4d3d0] border-l-[#d2d1cf] border-b-[#E5E4E2] shadow-2xl">
+              <img class="max-w-[200px] w-[150px] hover:scale-[1.05] cursor-pointer" src="./public/img/IOT.svg" alt="">
+            </div>
+            <div
+              class="h-[220px] w-[310px] mx-auto border-[6px] flex justify-center items-center border-t-[#E5E4E2] rounded-2xl border-r-[#d0cecb] border-l-[#ceccc9] border-b-[#E5E4E2] shadow-2xl">
+              <img class="max-w-[200px] w-[150px] hover:scale-[1.05] cursor-pointer" src="./public/img/IOT.svg" alt="">
+            </div>
+            <div
+              class="h-[220px] w-[310px] mx-auto border-[6px] flex justify-center items-center border-t-[#E5E4E2] rounded-2xl border-r-[#cfcdca] border-l-[#ceccc9] border-b-[#E5E4E2] shadow-2xl">
+              <img class="max-w-[200px] w-[150px] hover:scale-[1.05] cursor-pointer" src="./public/img/IOT.svg" alt="">
+            </div>
           </div>
-          <div
-            class="h-[200px] w-[300px] mx-auto border-[6px] flex justify-center items-center border-t-[#bc742c] rounded-2xl border-r-[#CD7F32] border-l-[#CD7F32] border-b-[#ad6b28] shadow-2xl">
-            <img class="max-w-[200px] w-[150px] hover:scale-[1.05] cursor-pointer" src="./public/img/IOT.svg" alt="">
-          </div>
-          <div
-            class="h-[200px] w-[300px] mx-auto border-[6px] flex justify-center items-center border-t-[#bc742c] rounded-2xl border-r-[#CD7F32] border-l-[#CD7F32] border-b-[#ad6b28] shadow-2xl">
-            <img class="max-w-[200px] w-[150px] hover:scale-[1.05] cursor-pointer" src="./public/img/IOT.svg" alt="">
-          </div>
-          <div
-            class="h-[200px] w-[300px] mx-auto border-[6px] flex justify-center items-center border-t-[#bc742c] rounded-2xl border-r-[#CD7F32] border-l-[#CD7F32] border-b-[#ad6b28] shadow-2xl">
-            <img class="max-w-[200px] w-[150px] hover:scale-[1.05] cursor-pointer" src="./public/img/IOT.svg" alt="">
-          </div>
-          <div
-            class="h-[200px] w-[300px] mx-auto border-[6px] flex justify-center items-center border-t-[#bc742c] rounded-2xl border-r-[#CD7F32] border-l-[#CD7F32] border-b-[#ad6b28] shadow-2xl">
-            <img class="max-w-[200px] w-[150px] hover:scale-[1.05] cursor-pointer" src="./public/img/IOT.svg" alt="">
+        </div>
+        <div class="my-5">
+          <h2
+            class="text-[30px] my-6 py-6 font-semibold tracking-wider text-center underline underline-offset-8 decoration-[#bc742c] decoration-dashed">
+            Partners
+          </h2>
+          <div style="grid-template-columns: repeat(auto-fill,minmax(300px,1fr));" class=" grid gap-6">
+            <div
+              class="h-[200px] w-[300px] mx-auto border-[6px] flex justify-center items-center border-t-[#bc742c] rounded-2xl border-r-[#CD7F32] border-l-[#CD7F32] border-b-[#ad6b28] shadow-2xl">
+              <img class="max-w-[200px] w-[150px] hover:scale-[1.05] cursor-pointer" src="./public/img/IOT.svg" alt="">
+            </div>
+            <div
+              class="h-[200px] w-[300px] mx-auto border-[6px] flex justify-center items-center border-t-[#bc742c] rounded-2xl border-r-[#CD7F32] border-l-[#CD7F32] border-b-[#ad6b28] shadow-2xl">
+              <img class="max-w-[200px] w-[150px] hover:scale-[1.05] cursor-pointer" src="./public/img/IOT.svg" alt="">
+            </div>
+            <div
+              class="h-[200px] w-[300px] mx-auto border-[6px] flex justify-center items-center border-t-[#bc742c] rounded-2xl border-r-[#CD7F32] border-l-[#CD7F32] border-b-[#ad6b28] shadow-2xl">
+              <img class="max-w-[200px] w-[150px] hover:scale-[1.05] cursor-pointer" src="./public/img/IOT.svg" alt="">
+            </div>
+            <div
+              class="h-[200px] w-[300px] mx-auto border-[6px] flex justify-center items-center border-t-[#bc742c] rounded-2xl border-r-[#CD7F32] border-l-[#CD7F32] border-b-[#ad6b28] shadow-2xl">
+              <img class="max-w-[200px] w-[150px] hover:scale-[1.05] cursor-pointer" src="./public/img/IOT.svg" alt="">
+            </div>
+            <div
+              class="h-[200px] w-[300px] mx-auto border-[6px] flex justify-center items-center border-t-[#bc742c] rounded-2xl border-r-[#CD7F32] border-l-[#CD7F32] border-b-[#ad6b28] shadow-2xl">
+              <img class="max-w-[200px] w-[150px] hover:scale-[1.05] cursor-pointer" src="./public/img/IOT.svg" alt="">
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
 
 
-<!-- contact us -->
-<section id="contact_us" class=" bg-[#141B4E]  py-14 lg:py-20">
-  <div class="max-w-[1440px] mx-auto">
+  <!-- contact us -->
+  <section id="contact_us" class=" bg-[#141B4E]  py-14 lg:py-20">
+    <div class="max-w-[1440px] mx-auto">
+      <div
+        class=" lg:max-w-[90%] max-w-[90%]  gap-4  mx-auto flex flex-col md:flex-row justify-center  md:justify-between  items-center ">
+        <div class="order-2 md:order-1   text-[#ffffff] py-8 md:py-3">
+          <ul class=" ">
+            <li class="font-bold font-delta text-[36px] mb-4">
+
+              Contact Us
+            </li>
+            <li class="font-body font-medium text-[15px] py-6 flex gap-4 ">
+              <img class="w-[45px] h-[45px]" src="./public/img/Adress Icon.png" alt="">
+              <p>Dharan-8 Sunsari<br>
+                56700 Gangalal Marga, Tinkune</p>
+
+            </li>
+
+            <li class="font-body font-medium text-[15px] pb-6 flex gap-4 items-center ">
+              <img class="w-[45px] h-[45px]" src="./public/img/phone icon.png" alt="">
+              <p>+977 98XXXXXXX</p>
+            </li>
+
+            <li class="font-body font-medium text-[15px]  flex items-center gap-4">
+              <img class="w-[45px] h-[45px]" src="./public/img/Email icon.png" alt="">
+              <p>dummyemail@gamil.com</p>
+            </li>
+          </ul>
+
+        </div>
+
+        <div id="map"
+          class="rounded-[10px] w-[80%] md:w-[60%] h-[300px] lg:h-[388px] lg:w-[645px]  md:mt-0  order-1 md:order-2">
+
+        </div>
+      </div>
+    </div>
+
+
+  </section>
+  <!-- footer part -->
+  <footer class=" max-w-[1440px] mx-auto pt-10 pb-14">
     <div
-      class=" lg:max-w-[90%] max-w-[90%]  gap-4  mx-auto flex flex-col md:flex-row justify-center  md:justify-between  items-center ">
-      <div class="order-2 md:order-1   text-[#ffffff] py-8 md:py-3">
-        <ul class=" ">
-          <li class="font-bold font-delta text-[36px] mb-4">
+      class="flex max-w-[90%] justify-between items-center md:items-start  flex-col md:flex-row max-sm:max-w-[100%] gap-4 mx-auto">
+      <ul class=" w-[80%] md:w-[35%]">
+        <li class="flex gap-2  justify-center items-center md:justify-start my-1">
+          <img class="h-[55.61px] w-[55px]" src="./public/img/Delta logo 2.png" logo 2.png" alt="">
+          <h1 class="font-delta font-bold text-[25px] text-[#0F133A]">Delta 3.0</h1>
+        </li>
+        <p class="font-delta text-center md:text-start text-[16px] text-[#000000] font-semibold text-[#000]/60 ">Lorem
+          ipsum
+          dolor sit amet consectetur, adipisicing elit. Aut sit iusto harum consequuntur temporibus. Cumque veniam eius,
+          culpa quidem voluptatem accusantium quam, molestiae minus quos est assumenda vitae aspernatur numquam.</p>
+      </ul>
 
-            Contact Us
-          </li>
-          <li class="font-body font-medium text-[15px] py-6 flex gap-4 ">
-            <img class="w-[45px] h-[45px]" src="./public/img/Adress Icon.png" alt="">
-            <p>Dharan-8 Sunsari<br>
-              56700 Gangalal Marga, Tinkune</p>
+      <ul class="my-3 space-y-2">
+        <li><a class="text-[16px] font-semibold font-['Montserrat']" href="#Home">Home</a></li>
+        <li><a class="text-[16px] font-semibold font-['Montserrat']" href="#sponsors">Sponsors</a></li>
+        <li><a class="text-[16px] font-semibold font-['Montserrat']" href="#event">Event</a></li>
+        <li><a class="text-[16px] font-semibold font-['Montserrat']" href="#gallery">Gallery</a></li>
+        <li><a class="text-[16px] font-semibold font-['Montserrat']" href="#about">About</a></li>
+        <li><a class="text-[16px] font-semibold font-['Montserrat']" href="#contact">Contact Us</a></li>
+      </ul>
 
-          </li>
-
-          <li class="font-body font-medium text-[15px] pb-6 flex gap-4 items-center ">
-            <img class="w-[45px] h-[45px]" src="./public/img/phone icon.png" alt="">
-            <p>+977 98XXXXXXX</p>
-          </li>
-
-          <li class="font-body font-medium text-[15px]  flex items-center gap-4">
-            <img class="w-[45px] h-[45px]" src="./public/img/Email icon.png" alt="">
-            <p>dummyemail@gamil.com</p>
-          </li>
-        </ul>
-
+      <div class="my-2">
+        <p class="font-delta  font-semibold text-[20px] text-[#000000]">Follow Us</p>
+        <div class="flex  items-center my-1 gap-2">
+          <a href="#">
+            <img class="h-[29.05px] w-[30px]" src="./public/img/facebook 2.png" alt="">
+          </a>
+          <a href="#">
+            <img class="h-[29.05px] w-[30px]" src="./public/img/instagram.svg" alt="">
+          </a>
+        </div>
+        <p class="font-delta font-semibold text-[18px]     text-[#000000] my-3">Subscribe to our
+          newsletter</p>
+        <form action="https://formbold.com/s/67Ad3" method="POST"
+          class="relative flex items-center h-[42.61px] w-[275px]">
+          <input autocomplete="false"
+            class="bg-[#D9D9D9]/60  rounded-[5px] h-full w-full  outline-none  font-delta font-semibold text-[13px] indent-5"
+            type="email" placeholder="Your Email..." name="email">
+          <button type="submit"
+            class="bg-[#141B4E] text-[#FFFFFF] outline-none text-[11px] font-delta font-semibold rounded-[8px] w-[65px] h-full absolute right-0">Send</button>
+        </form>
       </div>
 
-      <div id="map"
-        class="rounded-[10px] w-[80%] md:w-[60%] h-[300px] lg:h-[388px] lg:w-[645px]  md:mt-0  order-1 md:order-2">
-
-      </div>
     </div>
-  </div>
+  </footer>
 
+  <script>
+    const day = document.getElementById( 'day' );
+    const hour = document.getElementById( 'hours' );
+    const minute = document.getElementById( 'minute' );
+    const second = document.getElementById( 'second' );
+    const img_load = document.querySelectorAll( '.img_load' )
 
-</section>
-<!-- footer part -->
-<footer class=" max-w-[1440px] mx-auto pt-10 pb-14">
-  <div
-    class="flex max-w-[90%] justify-between items-center md:items-start  flex-col md:flex-row max-sm:max-w-[100%] gap-4 mx-auto">
-    <ul class=" w-[80%] md:w-[35%]">
-      <li class="flex gap-2  justify-center items-center md:justify-start my-1">
-        <img class="h-[55.61px] w-[55px]" src="./public/img/Delta logo 2.png" logo 2.png" alt="">
-        <h1 class="font-delta font-bold text-[25px] text-[#0F133A]">Delta 3.0</h1>
-      </li>
-      <p class="font-delta text-center md:text-start text-[16px] text-[#000000] font-semibold text-[#000]/60 ">Lorem
-        ipsum
-        dolor sit amet consectetur, adipisicing elit. Aut sit iusto harum consequuntur temporibus. Cumque veniam eius,
-        culpa quidem voluptatem accusantium quam, molestiae minus quos est assumenda vitae aspernatur numquam.</p>
-    </ul>
-
-    <ul class="my-3 space-y-2">
-      <li><a class="text-[16px] font-semibold font-['Montserrat']" href="#Home">Home</a></li>
-      <li><a class="text-[16px] font-semibold font-['Montserrat']" href="#sponsors">Sponsors</a></li>
-      <li><a class="text-[16px] font-semibold font-['Montserrat']" href="#event">Event</a></li>
-      <li><a class="text-[16px] font-semibold font-['Montserrat']" href="#gallery">Gallery</a></li>
-      <li><a class="text-[16px] font-semibold font-['Montserrat']" href="#about">About</a></li>
-      <li><a class="text-[16px] font-semibold font-['Montserrat']" href="#contact">Contact Us</a></li>
-    </ul>
-
-    <div class="my-2">
-      <p class="font-delta  font-semibold text-[20px] text-[#000000]">Follow Us</p>
-      <div class="flex  items-center my-1 gap-2">
-        <a href="#">
-          <img class="h-[29.05px] w-[30px]" src="./public/img/facebook 2.png" alt="">
-        </a>
-        <a href="#">
-          <img class="h-[29.05px] w-[30px]" src="./public/img/instagram 1.png" alt="">
-        </a>
-      </div>
-      <p class="font-delta font-semibold text-[18px]     text-[#000000] my-3">Subscribe to our
-        newsletter</p>
-      <form action="https://formbold.com/s/67Ad3" method="POST"
-        class="relative flex items-center h-[42.61px] w-[275px]">
-        <input autocomplete="false"
-          class="bg-[#D9D9D9]/60  rounded-[5px] h-full w-full  outline-none  font-delta font-semibold text-[13px] indent-5"
-          type="email" placeholder="Your Email..." name="email">
-        <button type="submit"
-          class="bg-[#141B4E] text-[#FFFFFF] outline-none text-[11px] font-delta font-semibold rounded-[8px] w-[65px] h-full absolute right-0">Send</button>
-      </form>
-    </div>
-
-  </div>
-</footer>
-
-<script>
-  const day = document.getElementById( 'day' );
-  const hour = document.getElementById( 'hours' );
-  const minute = document.getElementById( 'minute' );
-  const second = document.getElementById( 'second' );
-  const img_load = document.querySelectorAll( '.img_load' )
-
-  const interval = setInterval( () =>
-  {
-    // now time
-    const nowTime = new Date().getTime();
-    // difference between times
-    const difference = countDownTime - nowTime;
-    // time calculation for days hours minutes and second
-    const days = Math.floor( difference / ( 1000 * 60 * 60 * 24 ) )
-    const hours = Math.floor( ( difference % ( 1000 * 60 * 60 * 24 ) ) / ( 1000 * 60 * 60 ) );
-    const minutes = Math.floor( ( difference % ( 1000 * 60 * 60 ) ) / ( 1000 * 60 ) );
-    const seconds = Math.floor( ( difference % ( 1000 * 60 ) ) / 1000 );
-    // setting to dom
-    day.innerHTML = days;
-    hour.innerHTML = hours;
-    minute.innerHTML = minutes;
-    second.innerHTML = seconds;
-    if ( difference < 0 )
+    const interval = setInterval( () =>
     {
-      clearInterval( interval );
-      // Time out next time
-    }
-  }, 1000 );
-
-  window.addEventListener( 'load', () =>
-  {
-    img_load.forEach( img =>
-    {
-
-      img.classList.add( 'animation' )
-    } )
-  } )
-  // timer
-
-  const countDownTime = new Date( "Jan 19, 2023 9: 00: 00 " ).getTime();
-
-
-  const toggleButton = document.getElementById( 'toggleButton' )
-
-  const navContent = document.getElementById( 'navContent' )
-  toggleButton.addEventListener( 'click', () =>
-  {
-    if ( !navContent.classList.contains( 'translate' ) )
-    {
-
-      window.onscroll = function () { window.scrollTo( 0, 0 ) }
-    }
-    else
-    {
-      window.onscroll = function () { }
-
-    }
-    navContent.classList.toggle( 'translate' )
-  } )
-
-  var map = L.map( 'map' ).setView( [ 26.791704, 87.292446 ], 17 );
-  L.tileLayer( 'https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    maxZoom: 19,
-    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-  } ).addTo( map );
-  var marker = L.marker( [ 26.791704, 87.292446 ] ).addTo( map );
-
-
-  new Splide( '#image-carousel', {
-    pagination: false
-  } ).mount();
-
-
-</script>
-<script>
-  var splide = new Splide( "#main-slider", {
-    pagination: false,
-    cover: true,
-    arrows: false,
-  } );
-
-  var thumbnails = document.getElementsByClassName( "thumbnail" );
-  var current;
-
-  for ( var i = 0; i < thumbnails.length; i++ )
-  {
-    initThumbnail( thumbnails[ i ], i );
-  }
-
-  function initThumbnail ( thumbnail, index )
-  {
-    thumbnail.addEventListener( "click", function ()
-    {
-      splide.go( index );
-    } );
-  }
-
-  splide.on( "mounted move", function ()
-  {
-    var thumbnail = thumbnails[ splide.index ];
-
-    if ( thumbnail )
-    {
-      if ( current )
+      // now time
+      const nowTime = new Date().getTime();
+      // difference between times
+      const difference = countDownTime - nowTime;
+      // time calculation for days hours minutes and second
+      const days = Math.floor( difference / ( 1000 * 60 * 60 * 24 ) )
+      const hours = Math.floor( ( difference % ( 1000 * 60 * 60 * 24 ) ) / ( 1000 * 60 * 60 ) );
+      const minutes = Math.floor( ( difference % ( 1000 * 60 * 60 ) ) / ( 1000 * 60 ) );
+      const seconds = Math.floor( ( difference % ( 1000 * 60 ) ) / 1000 );
+      // setting to dom
+      day.innerHTML = days;
+      hour.innerHTML = hours;
+      minute.innerHTML = minutes;
+      second.innerHTML = seconds;
+      if ( difference < 0 )
       {
-        current.classList.remove( "is-active" );
+        clearInterval( interval );
+        // Time out next time
       }
+    }, 1000 );
 
-      thumbnail.classList.add( "is-active" );
-      current = thumbnail;
+    window.addEventListener( 'load', () =>
+    {
+      img_load.forEach( img =>
+      {
+
+        img.classList.add( 'animation' )
+      } )
+    } )
+    // timer
+
+    const countDownTime = new Date( "Jan 19, 2023 9: 00: 00 " ).getTime();
+
+    // tuggle navbar for mobile
+    const toggleButton = document.getElementById( 'toggleButton' )
+
+    const navContent = document.getElementById( 'navContent' )
+    toggleButton.addEventListener( 'click', () =>
+    {
+      if ( !navContent.classList.contains( 'translate' ) )
+      {
+        document.body.style.overflow = 'hidden'
+        window.onscroll = function () { window.scrollTo( 0, 0 ) }
+      }
+      else
+      {
+        document.body.style.overflow = 'auto'
+
+        window.onscroll = function () { }
+
+      }
+      navContent.classList.toggle( 'translate' )
+    } )
+
+    // url setter for mobile and web
+    function refreshPage ( url )
+    {
+      document.body.style.overflow = 'auto'
+      navContent.classList.toggle( 'translate' )
+      window.onscroll = function () { scroll() }
+      mybutton.style.display = "block";
+      const currentUrl = window.location.origin
+      window.location.href = `${ currentUrl }/${ url }`
     }
-  } );
+    // to the top button 
 
-  splide.mount();
+    let mybutton = document.getElementById( "myBtn" );
+    window.onscroll = function ()
+    {
+      scroll()
+    };
+    function scroll ()
+    {
+      if ( document.body.scrollTop > 20 || document.documentElement.scrollTop > 20 )
+      {
 
-</script>
+        mybutton.style.display = "block";
+      } else
+      {
+
+        mybutton.style.display = "none";
+      }
+    }
+    function topFunction ()
+    {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+      mybutton.style.display = "none";
+    }
+
+    var map = L.map( 'map' ).setView( [ 26.791704, 87.292446 ], 17 );
+    L.tileLayer( 'https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 19,
+      attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    } ).addTo( map );
+    var marker = L.marker( [ 26.791704, 87.292446 ] ).addTo( map );
+
+
+    new Splide( '#image-carousel', {
+      pagination: false
+    } ).mount();
+
+
+  </script>
+  <script>
+    var splide = new Splide( "#main-slider", {
+      pagination: false,
+      cover: true,
+      arrows: false,
+    } );
+
+    var thumbnails = document.getElementsByClassName( "thumbnail" );
+    var current;
+
+    for ( var i = 0; i < thumbnails.length; i++ )
+    {
+      initThumbnail( thumbnails[ i ], i );
+    }
+
+    function initThumbnail ( thumbnail, index )
+    {
+      thumbnail.addEventListener( "click", function ()
+      {
+        splide.go( index );
+      } );
+    }
+
+    splide.on( "mounted move", function ()
+    {
+      var thumbnail = thumbnails[ splide.index ];
+
+      if ( thumbnail )
+      {
+        if ( current )
+        {
+          current.classList.remove( "is-active" );
+        }
+
+        thumbnail.classList.add( "is-active" );
+        current = thumbnail;
+      }
+    } );
+
+    splide.mount();
+
+  </script>
 </body>
 
 </html>
