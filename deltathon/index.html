@@ -12,7 +12,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="./dist/output.css">
-  <link rel="stylesheet" href="index.css">
+
   <title>Deltathon: Hackthon in east</title>
 
   <meta name="description"
@@ -168,7 +168,7 @@
       <p class="absolute top-[6rem]  text-white z-[1] right-2 text-[18px]">Sound <span id="sound"
           class="text-teal-700 cursor-pointer w-[15px]">OFF</span></p>
       <!-- video -->
-      <div id="home" class="h-[70vh] sm:h-[90vh] md:h-screen  bg-[#64646b]  ">
+      <div id="home" class="h-[85.5vh] sm:h-[90vh] md:h-screen  bg-[#64646b]  ">
         <video id="video" loop autoplay muted="true" class="bg-gray-200 mix-blend-multiply  w-full h-full object-cover"
           src="./src/assets/Project Name (3).mp4"></video>
       </div>
@@ -188,20 +188,23 @@
           var txt = 'Biggest Hackathon in East!'; /* The text */
           var speed = 50; /* The speed/duration of the effect in milliseconds */
 
-          function typeWriter() {
-            if (i < txt.length) {
-              document.getElementById("subtext").innerHTML += txt.charAt(i);
+          function typeWriter ()
+          {
+            if ( i < txt.length )
+            {
+              document.getElementById( "subtext" ).innerHTML += txt.charAt( i );
               i++;
-              setTimeout(typeWriter, speed);
+              setTimeout( typeWriter, speed );
             }
           }
           typeWriter()
         </script>
-        <p class="text-[20px] text-center text-white font-[Poppins] font-bold bg-blue-900">
+        <p class="text-[20px] text-center text-white font-[Poppins] font-bold ">
           [With prize pool of more than 2 Lakhs.]</p>
         <div class="text-center">
-          <button
-            class=" bg-[#02577a] hover:bg-[#02577fc4] px-14 mt-8 rounded-md py-2 text-white font-medium "><a href="https://docs.google.com/forms/d/e/1FAIpQLSc6Y7HFxKBdP6kFVWMdEDROrFTbh-TJV0SlfXjF0EfmAemaew/formResponse" target="_blank"> Register </a></button>
+          <button class=" bg-[#02577a] hover:bg-[#02577fc4] px-14 mt-8 rounded-md py-2 text-white font-medium "><a
+              href="https://docs.google.com/forms/d/e/1FAIpQLSc6Y7HFxKBdP6kFVWMdEDROrFTbh-TJV0SlfXjF0EfmAemaew/formResponse"
+              target="_blank"> Register </a></button>
         </div>
 
       </div>
@@ -251,7 +254,9 @@
             <h1 class="font-[600] text-[28px] sm:text-[35px] md:text-[45px] border-b-2 my-4  border-white">About
               Deltathon 2023</h1>
             <p class="text-[14px] sm:text-[16px] text-[#fff]/90 md:text-[18px] tracking-wide max-w-[600px]" id="event">
-              Deltathon is a national level 24 hours long software hackathon with attractive prizes, valuable mentorship, and must-have learning experiences. Deltathon aims to inspire programmers, developers, and tech-enthusiast to collaborate and pitch their ideas on projects.
+              Deltathon is a national level 24 hours long software hackathon with attractive prizes, valuable
+              mentorship, and must-have learning experiences. Deltathon aims to inspire programmers, developers, and
+              tech-enthusiast to collaborate and pitch their ideas on projects.
             </p>
 
           </div>
@@ -294,102 +299,104 @@
           </div>
         </div>
         <!-- event schedule -->
-    <div class="w-full ">
-      <h1 class="text-[40px] tracking-widest  font-light text-[#ffffff5f]">Agenda</h1>
-      <div class="flex flex-col lg:flex-row justify-between max-md:gap-10 items-start w-full ">
-        <div class=" w-full lg:w-[50%] flex  gap-6">
-          <div class="relative">
-            <p class="text-[25px] font-normal tracking-wider mb-2 relative pb-1 line_after">05</p>
-            <p
-              class="uppercase absolute top-28 -left-12 rotate-90 transform origin-center tracking-[0.2em] leading-10 text-[20px]">
-              Wednesday
-            </p>
+        <div class="w-full ">
+          <h1 class="text-[40px] tracking-widest  font-light text-[#ffffff5f]">Agenda</h1>
+          <div class="flex flex-col lg:flex-row justify-between max-md:gap-10 items-start w-full ">
+            <div class=" w-full lg:w-[50%] flex  gap-6">
+              <div class="relative">
+                <p class="text-[25px] font-normal tracking-wider mb-2 relative pb-1 line_after">05</p>
+                <p
+                  class="uppercase absolute top-28 -left-12 rotate-90 transform origin-center tracking-[0.2em] leading-10 text-[20px]">
+                  Wednesday
+                </p>
+              </div>
+              <ul class="mt-10 ml-4 space-y-3">
+                <li class="text-[20px]    items-start flex  w-full">
+                  <p class="font-normal tracking-[0.105em]  w-[35%] ">11:00 - 11:30
+                  </p>
+                  <p class="font-thin text-[18px] w-[70%]">Orientation</p>
+
+                </li>
+                <li class="text-[20px]   items-start flex w-full">
+                  <p class="font-normal w-[35%] tracking-[0.095em] ">11:30 - 12:15
+                  </p>
+                  <p class="font-thin text-[18px] w-[70%]">Idea
+                    Brainstorming</p>
+
+                </li>
+                <li class="text-[20px]    items-start flex w-full">
+                  <p class="font-normal w-[35%] tracking-[0.09em] ">12:15 -
+                  </p>
+                  <p class="font-thin text-[18px]  w-[70%]">Hacking Starts</p>
+                </li>
+                <li class="text-[20px]    items-start flex w-full">
+                  <p class="font-normal w-[35%] tracking-[0.065em] ">12:30 - 01:30
+                  </p>
+                  <p class="font-thin text-[18px]  w-[70%]">Github Workshop</p>
+                </li>
+                <li class="text-[20px]    items-start flex w-full">
+                  <p class="font-normal w-[35%] tracking-[0.05em] ">02:30 - 03:00
+                  </p>
+                  <p class="font-thin text-[18px]  w-[70%]">Snacks</p>
+                </li>
+                <li class="text-[20px]    items-start flex w-full">
+                  <p class="font-normal w-[35%] tracking-[0.05em] ">03:00 - 07:00
+                  </p>
+                  <p class="font-thin text-[18px]  w-[70%] ">Hacking Continue &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+                    &nbsp;</p>
+                </li>
+                <li class="text-[20px]    items-start flex w-full">
+                  <p class="font-normal w-[35%] tracking-[0.05em] ">07:30 - 08:30
+                  </p>
+                  <p class="font-thin text-[18px]  w-[70%]">Dinner</p>
+                </li>
+                <li class="text-[20px]    items-start flex w-full">
+                  <p class="font-normal w-[35%] tracking-[0.05em] ">08:30 - 09:30
+                  </p>
+                  <p class="font-thin text-[18px]  w-[70%]" id="sponsors">Fun Event</p>
+                </li>
+              </ul>
+
+
+
+            </div>
+            <div class=" w-full lg:w-[50%] flex lg:justify-end gap-6 ">
+              <div class="relative">
+                <p class="text-[25px] font-normal tracking-wider mb-2 relative pb-1 line_after">06</p>
+                <p
+                  class="uppercase absolute top-24 -left-8 rotate-90 transform origin-center tracking-[0.2em] leading-10 text-[20px]">
+                  Thursday
+                </p>
+              </div>
+              <ul class="mt-10 ml-4 space-y-3 ">
+                <li class="text-[20px]    items-start flex  w-full">
+                  <p class="font-normal tracking-[0.04em]  w-[35%] ">08:00 - 09:00
+                  </p>
+                  <p class="font-thin text-[18px] w-[60%] parawidth">BreakFast</p>
+
+                </li>
+                <li class="text-[20px]   items-start flex w-full">
+                  <p class="font-normal w-[35%] tracking-[0.075em] ">11:00 -
+                  </p>
+                  <p class="font-thin text-[18px] parawidth">Project Submission</p>
+
+                </li>
+                <li class="text-[20px]    items-start flex w-full">
+                  <p class="font-normal w-[45%] tracking-[0.12em] ">11:00 - 02:00
+                  </p>
+                  <p class="font-thin text-[18px] parawidth">Judging and Announcement</p>
+                </li>
+
+
+              </ul>
+            </div>
           </div>
-          <ul class="mt-10 ml-4 space-y-3">
-            <li class="text-[20px]    items-start flex  w-full">
-              <p class="font-normal tracking-[0.105em]  w-[35%] ">11:00 - 11:30
-              </p>
-              <p class="font-thin text-[18px] w-[70%]">Orientation</p>
-
-            </li>
-            <li class="text-[20px]   items-start flex w-full">
-              <p class="font-normal w-[35%] tracking-[0.095em] ">11:30 - 12:15
-              </p>
-              <p class="font-thin text-[18px] w-[70%]">Idea
-                Brainstorming</p>
-
-            </li>
-            <li class="text-[20px]    items-start flex w-full">
-              <p class="font-normal w-[35%] tracking-[0.09em] ">12:15 -  
-              </p>
-              <p class="font-thin text-[18px]  w-[70%]">Hacking Starts</p>
-            </li>
-            <li class="text-[20px]    items-start flex w-full">
-              <p class="font-normal w-[35%] tracking-[0.065em] ">12:30 - 01:30
-              </p>
-              <p class="font-thin text-[18px]  w-[70%]">Github Workshop</p>
-            </li>
-            <li class="text-[20px]    items-start flex w-full">
-              <p class="font-normal w-[35%] tracking-[0.05em] ">02:30 - 03:00
-              </p>
-              <p class="font-thin text-[18px]  w-[70%]">Snacks</p>
-            </li>
-            <li class="text-[20px]    items-start flex w-full">
-              <p class="font-normal w-[35%] tracking-[0.05em] ">03:00 - 07:00
-              </p>
-              <p class="font-thin text-[18px]  w-[70%] ">Hacking Continue &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;</p>
-            </li>
-            <li class="text-[20px]    items-start flex w-full">
-              <p class="font-normal w-[35%] tracking-[0.05em] ">07:30 - 08:30
-              </p>
-              <p class="font-thin text-[18px]  w-[70%]">Dinner</p>
-            </li>
-            <li class="text-[20px]    items-start flex w-full">
-              <p class="font-normal w-[35%] tracking-[0.05em] ">08:30 - 09:30
-              </p>
-              <p class="font-thin text-[18px]  w-[70%]" id="sponsors">Fun Event</p>
-            </li>
-          </ul>
-
-
-
         </div>
-        <div class=" w-full lg:w-[50%] flex lg:justify-end gap-6 ">
-          <div class="relative">
-            <p class="text-[25px] font-normal tracking-wider mb-2 relative pb-1 line_after">06</p>
-            <p
-              class="uppercase absolute top-24 -left-8 rotate-90 transform origin-center tracking-[0.2em] leading-10 text-[20px]">
-              Thursday
-            </p>
-          </div>
-          <ul class="mt-10 ml-4 space-y-3 ">
-            <li class="text-[20px]    items-start flex  w-full">
-              <p class="font-normal tracking-[0.04em]  w-[35%] ">08:00 - 09:00
-              </p>
-              <p class="font-thin text-[18px] w-[60%] parawidth" >BreakFast</p>
 
-            </li>
-            <li class="text-[20px]   items-start flex w-full">
-              <p class="font-normal w-[35%] tracking-[0.075em] ">11:00  - 
-              </p>
-              <p class="font-thin text-[18px] parawidth">Project Submission</p>
-
-            </li>
-            <li class="text-[20px]    items-start flex w-full">
-              <p class="font-normal w-[45%] tracking-[0.12em] ">11:00 - 02:00
-              </p>
-              <p class="font-thin text-[18px] parawidth" >Judging and Announcement</p>
-            </li>
-            
-           
-          </ul>
-        </div>
       </div>
+
     </div>
-
-  </div>
-
-</div>
     <!-- sponsors -->
     <div class="bg-[#17171d] text-white py-10">
       <div class="max-w-[90%] md:max-w-[80%] mx-auto">
@@ -405,9 +412,9 @@
             We are truly blessed and genuinely thank you for your opportunity.</p>
         </div>
 
-        <div class="max-w-[70%] mx-auto">
+        <div class="max-w-[95%] md:max-w-[70%] mx-auto">
           <!-- vip sponsors -->
-          <div class="border-[4px]  border-[#ebb722] relative my-8  p-6">
+          <div class="border-[4px]  border-[#ebb722] relative my-8 p-3  md:p-6">
             <h2 class="absolute -top-[0.9rem]  bg-[#17171d] left-[45%] translate-x-[-45%] text-[18px] px-8 ">
               Sponsors
             </h2>
@@ -520,7 +527,7 @@
             <h3 class="text-[25px] capitalize text-center ">interested in Sponsoring?</h3>
             <p class="capitalize text-center py-2">email us at
             </p>
-            <p class="flex gap-2 items-center justify-center" >
+            <p class="flex gap-2 items-center justify-center">
               <img class="w-6 h-6" src="./src/assets/email.png" alt="">
               <a class="text-[#179bd3]" href="gmail.com"> delta@ioepc.edu.np</a>
 
@@ -529,12 +536,14 @@
         </div>
       </div>
     </div>
-     <!-- Mentors -->
-     <div class="bg-[#17171d] text-white py-10">
-     <div class="mentorbox">
-      <h1 class="font-[600] text-[28px] sm:text-[35px] md:text-[45px] " >Our Mentors</h1>
-    <div class="mentor">
-    <!-- <div class="card">
+    <!-- Mentors -->
+    <div class="bg-[#17171d] text-white py-10">
+      <div class="mentorbox">
+        <h1
+          class="relative font-[600] text-[28px] sm:text-[35px] md:text-[45px] underline underline-offset-[10px] decoration-[#ebb722] my-8 ">
+          Our Mentors</h1>
+        <div class="mentor">
+          <!-- <div class="card">
       <div class="imgcenter">
           <img class=" imgborder" src="../public/Mentors Name/mentors/bishwaraj_poudel.png" alt=""/>
         <div class="textpy">
@@ -545,150 +554,178 @@
         </div>
       </div>
     </div> -->
-    <div class="card">
-      <div class="mentorimg">
-          <img class="imgborder" src="../public/Mentors Name/mentors/aasish_bhatt.png" alt=""/>
-        <div class="textpy">
-          <h5 class="  text-[#fff]/50">Aasish Bhatt</h5>
-          <p class="py-2 text-[#fff]/50">
-            Web Development(React Js)
-          </p>
-        </div>
-      </div>
-    </div>
-    <div class="card">
-      <div class="">
-          <img class="imgborder" src="../public/Mentors Name/mentors/lakshyadeep.png" alt=""/>
-        <div class="textpy">
-          <h5 class="  text-[#fff]/50">Lakshyadeep Vikram Shah</h5>
-          <p class="py-2  text-[#fff]/50">
-            Flutter
-          </p>
-        </div>
-      </div>
-    </div>
-    <div class="card">
-      <div class="">
-          <img class="imgborder" src="../public/Mentors Name/mentors/manoj_nepali.png" alt=""/>
-        <div class="textpy">
-          <h5 class="  text-[#fff]/50">Manoj Nepal</h5>
-          <p class=" py-2 text-[#fff]/50">
-            Web Development(React Js)
-          </p>
-        </div>
-      </div>
-    </div>
-    <div class="card">
-      <div class="">
-          <img class="imgborder" src="../public/Mentors Name/mentors/nischal_joshi.png" alt=""/>
-        <div class="textpy">
-          <h5 class=" text-[#fff]/50">Nischal Joshi</h5>
-          <p class="py-2 text-[#fff]/50">
-            C#(Unity)
-          </p>
-        </div>
-      </div>
-    </div>
-    <div class="card">
-      <div class="">
-          <img class="imgborder" src="../public/Mentors Name/mentors/sachin_parajuli.jpg" alt=""/>
-        <div class="textpy">
-          <h5 class="  text-[#fff]/50">Sachin Parajuli</h5>
-          <p class="py-2 text-[#fff]/50">
-            Artificial Intelligence
-          </p>
-        </div>
-      </div>
-    </div>
-    <div class="card">
-      <div class="">
-          <img class="imgborder" src="../public/Mentors Name/mentors/saurav_niraula.png" alt=""/>
-        <div class="textpy">
-          <h5 class="  text-[#fff]/50">Saurav Niraula</h5>
-          <p class="py-2  text-[#fff]/50">
-            Web Development (Vue Js)
-          </p>
-        </div>
-      </div>
-    </div>
-    <div class="card">
-      <div class="">
-          <img class="imgborder" src="../public/Mentors Name/mentors/sujan_adhikari.png" alt=""/>
-        <div class="textpy">
-          <h5 class="  text-[#fff]/50">Sujan Adhikari</h5>
-          <p class="py-2 text-[#fff]/50">
-            Blockchain
-          </p>
-        </div>
-      </div>
-    </div>
-    <div class="card">
-      <div class="">
-          <img class="imgborder" src="../public/Mentors Name/mentors/aashishkarna.jpg" alt=""/>
-        <div class="textpy">
-          <h5 class=" text-[#fff]/50">Aashish Karna</h5>
-          <p class="py-2 text-[#fff]/50">
-            Artificial Intelligence
-          </p>
-        </div>
-      </div>
-    </div>
-    <div class="card">
-      <div class="">
-          <img class="imgborder" src="../public/Mentors Name/mentors/surajjha.jpg" alt=""/>
-        <div class="textpy">
-          <h5 class=" text-[#fff]/50">Suraj Jha</h5>
-          <p class="py-2 text-[#fff]/50" id="rulebook">
-             Web Development (Vue Js)
-          </p>
-        </div>
-      </div>
-    </div>
+          <div class="card ">
+            <div class="w-full">
+              <div class="w-full h-[280px]"> <img class="imgborder"
+                  src="../public/Mentors Name/mentors/aasish_bhatt.png" alt="" /></div>
 
-  </div>
-</div>
-</div>
+              <div class="textpy">
+                <h5 class="  text-[#fff] font-semibold text-[20px]">Aasish Bhatt</h5>
+                <p class="py-2 text-[#fff]/50 text-[16px]">
+                  Web Development(React Js)
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="w-full">
+              <div class="w-full h-[280px]"><img class="imgborder" src="../public/Mentors Name/mentors/lakshyadeep.png"
+                  alt="" /></div>
+
+              <div class="textpy">
+                <h5 class="  text-[#fff] font-semibold text-[18px] ">Lakshyadeep Vikram Shah</h5>
+                <p class="py-2  text-[#fff]/50 text-[16px]">
+                  Flutter
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="w-full">
+              <div class="w-full h-[280px]"> <img class="imgborder"
+                  src="../public/Mentors Name/mentors/manoj_nepali.png" alt="" /></div>
+
+              <div class="textpy">
+                <h5 class="  text-[#fff] font-semibold text-[20px]">Manoj Nepal</h5>
+                <p class=" py-2 text-[#fff]/50 text-[16px]">
+                  Web Development(React Js)
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class=" w-full ">
+              <div class="w-full h-[280px]"> <img class="imgborder"
+                  src="../public/Mentors Name/mentors/nischal_joshi.png" alt="" /></div>
+
+              <div class="textpy">
+                <h5 class=" text-[#fff] font-semibold text-[20px]">Nischal Joshi</h5>
+                <p class="py-2 text-[#fff]/50 text-[16px]">
+                  C#(Unity)
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="w-full">
+              <div class="w-full h-[280px]">
+                <img class="imgborder" src="../public/Mentors Name/mentors/sachin_parajuli.jpg" alt="" />
+              </div>
+
+              <div class="textpy">
+                <h5 class="  text-[#fff] font-semibold text-[20px]">Sachin Parajuli</h5>
+                <p class="py-2 text-[#fff]/50 text-[16px]">
+                  Artificial Intelligence
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="w-full">
+              <div class="w-full h-[280px]"> <img class="imgborder"
+                  src="../public/Mentors Name/mentors/saurav_niraula.png" alt="" /></div>
+
+              <div class="textpy">
+                <h5 class="  text-[#fff] font-semibold text-[20px]">Saurav Niraula</h5>
+                <p class="py-2  text-[#fff]/50 text-[16px]">
+                  Web Development (Vue Js)
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="w-full">
+              <div class="w-full h-[280px]"> <img class="imgborder"
+                  src="../public/Mentors Name/mentors/sujan_adhikari.png" alt="" /></div>
+
+              <div class="textpy">
+                <h5 class="  text-[#fff] font-semibold text-[20px]">Sujan Adhikari</h5>
+                <p class="py-2 text-[#fff]/50 text-[16px]">
+                  Blockchain
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="w-full">
+              <div class="w-full h-[280px]">
+                <img class="imgborder" src="../public/Mentors Name/mentors/aashishkarna.jpg" alt="" />
+              </div>
+
+              <div class="textpy">
+                <h5 class=" text-[#fff] font-semibold text-[20px]">Aashish Karna</h5>
+                <p class="py-2 text-[#fff]/50 text-[16px]">
+                  Artificial Intelligence
+                </p>
+              </div>
+            </div>
+          </div>
+
+
+
+        </div>
+      </div>
+    </div>
     <!-- Rulebook -->
     <div class="bg-[#17171d] text-white py-10">
-    <div class="w-full mx-auto">
-      <h1 class="text-[45px] max-w-[90%] sm:max-w-[80%] md:max-w-[70%] mx-auto font-medium rule">Rules</h1>
-      <ol class="max-w-[90%] sm:max-w-[80%] md:max-w-[70%] mx-auto  text-[#fff]/50 rulelist">
-        <li>Teams can consist of at least 2 team members to a maximum of 4 members.</li>
-        <li>Teams should be made up exclusively of students or who are not organizers, volunteers, judges, sponsors, or in any other privileged position at the event.</li>
-        <li>Participants must bring their school/college identity card with them.</li>
-        <li>All team members should be present at the event. Leaving the prescribed venue will disqualify the entire team from Hackathon.</li>
-        <li>Teams can gain advice and support from organizers, volunteers, sponsors and mentors.</li>
-        <li>All work on a project should be done during the hackathon. </li>
-        <li>Teams can use an idea they had before the event.</li>
-        <li>No development may start before the actual date and time of the event. Any teams that violate this rule will be automatically disqualified.</li>
-        <li>Teams can use libraries, frameworks, or open-source code in their projects with proper references mentioned.</li>
-        <li>Teams must stop hacking once the time is up. </li>
-        <li>You must treat all team members, competitors, judges, coaches, volunteers, etc, with respect and courtesy.</li>
-        <li>All team members should be a regular student studying at +2, Bacholer or Master's level in any discipline.</li>
-        <li>All prizes are to be shared between all team members.</li>
-        <li>Participants can consult to mentor only if they are stuck implementing core code of their field not for nourishing their idea.</li>
-        <li>In case of any conflict or ambiguity, the organizing committee takes the final decision.</li>
-      </ol>
+      <div class="w-full mx-auto">
+        <h1 class="text-[45px] max-w-[90%] sm:max-w-[80%] md:max-w-[70%] mx-auto font-medium rule">Rules</h1>
+        <ol
+          class="max-w-[90%] sm:max-w-[80%] md:max-w-[70%] mx-auto  text-[#fff]/50 text-[16px] md:text-[20px] space-y-3 rulelist">
+          <li>Teams can consist of at least 2 team members to a maximum of 4 members.</li>
+          <li>Teams should be made up exclusively of students or who are not organizers, volunteers, judges, sponsors,
+            or in any other privileged position at the event.</li>
+          <li>Participants must bring their school/college identity card with them.</li>
+          <li>All team members should be present at the event. Leaving the prescribed venue will disqualify the entire
+            team from Hackathon.</li>
+          <li>Teams can gain advice and support from organizers, volunteers, sponsors and mentors.</li>
+          <li>All work on a project should be done during the hackathon. </li>
+          <li>Teams can use an idea they had before the event.</li>
+          <li>No development may start before the actual date and time of the event. Any teams that violate this rule
+            will be automatically disqualified.</li>
+          <li>Teams can use libraries, frameworks, or open-source code in their projects with proper references
+            mentioned.</li>
+          <li>Teams must stop hacking once the time is up. </li>
+          <li>You must treat all team members, competitors, judges, coaches, volunteers, etc, with respect and courtesy.
+          </li>
+          <li>All team members should be a regular student studying at +2, Bacholer or Master's level in any discipline.
+          </li>
+          <li>All prizes are to be shared between all team members.</li>
+          <li>Participants can consult to mentor only if they are stuck implementing core code of their field not for
+            nourishing their idea.</li>
+          <li>In case of any conflict or ambiguity, the organizing committee takes the final decision.</li>
+        </ol>
       </div>
     </div>
     <!-- Code of Conduct -->
     <div class="bg-[#17171d] text-white py-10">
-    <div class="w-full mx-auto">
-      <h1 class="text-[45px] max-w-[90%] sm:max-w-[80%] md:max-w-[70%] mx-auto font-medium coc">Code of Conduct</h1>
-      <ol class="max-w-[90%] sm:max-w-[80%] md:max-w-[70%] mx-auto  text-[#fff]/50 coclist">
-        <li>Our hackathon is dedicated to providing a harassment-free experience for everyone, regardless of gender, gender identity and expression, age, sexual orientation, disability, physical appearance, body size, race, ethnicity, nationality, religion, previous hackathon attendance or computing experience (or lack of any of the aforementioned).We do not tolerate harassment of hackathon participants in any form.Hackathon participants violating these rules may be sanctioned or expelled from the hackathon at the discretion of the hackathon organizers.</li>
-        <li>This includes warning the offender, expulsion from the hackathon with no refund (if applicable), or reporting their behavior to local law enforcement. We expect participants to follow these rules at hackathon and workshop venues and hackathon related social events.
-        </li>
-        <li class="coclast">Participants must not smoke, drink or perform any unethical behavior like quarrelling that will harm the integrity of this event. In case of encounter, strict action will be taken.</li>
-      </ol>
+      <div class="w-full mx-auto">
+        <h1 class="text-[30px] md:text-[45px] max-w-[90%] sm:max-w-[80%] md:max-w-[70%] mx-auto font-medium coc">Code of
+          Conduct</h1>
+        <ol
+          class="max-w-[90%] sm:max-w-[80%] md:max-w-[70%] mx-auto  text-[#fff]/50 coclist text-[16px] md:text-[20px] space-y-3">
+          <li>Our hackathon is dedicated to providing a harassment-free experience for everyone, regardless of gender,
+            gender identity and expression, age, sexual orientation, disability, physical appearance, body size, race,
+            ethnicity, nationality, religion, previous hackathon attendance or computing experience (or lack of any of
+            the aforementioned).We do not tolerate harassment of hackathon participants in any form.Hackathon
+            participants violating these rules may be sanctioned or expelled from the hackathon at the discretion of the
+            hackathon organizers.</li>
+          <li>This includes warning the offender, expulsion from the hackathon with no refund (if applicable), or
+            reporting their behavior to local law enforcement. We expect participants to follow these rules at hackathon
+            and workshop venues and hackathon related social events.
+          </li>
+          <li class="coclast">Participants must not smoke, drink or perform any unethical behavior like quarrelling that
+            will harm the integrity of this event. In case of encounter, strict action will be taken.</li>
+        </ol>
       </div>
-      </div>
+    </div>
     <!-- contact -->
     <div class="py-12 bg-[#141B4E] text-white" id="contact">
       <div class="max-w-[90%] md:max-w-[95%] lg:max-w-[80%] mx-auto flex flex-col md:flex-row justify-between">
         <div class="bg-[#272a34] flex-1 text-center py-8">
           <h1 class="text-[26px] my-6">Write Us</h1>
-          <form class="max-w-[80%] md:max-w-[60%] mx-auto" action="https://formsubmit.co/4e12b8980169b65a061d7921248aa4ae" method="POST">
+          <form class="max-w-[80%] md:max-w-[60%] mx-auto"
+            action="https://formsubmit.co/4e12b8980169b65a061d7921248aa4ae" method="POST">
             <input autocomplete="off" class="block bg-inherit border-b outline-none w-full  mx-auto py-2  my-6"
               type="text" name="name" placeholder="Name">
             <input autocomplete="off" class="block bg-inherit  border-b outline-none w-full  mx-auto py-2  my-6"
@@ -730,68 +767,77 @@
 
 </body>
 <script>
-  const header = document.getElementById('header');
-  const navLinks = document.getElementById('navLinks');
-  const navButton = document.getElementById('navButton')
-  const video = document.getElementById('video');
-  const day = document.getElementById('day');
-  const hour = document.getElementById('hours');
-  const minute = document.getElementById('minute');
-  const second = document.getElementById('second');
-  const date = document.getElementById('date');
-  const sound = document.getElementById('sound')
+  const header = document.getElementById( 'header' );
+  const navLinks = document.getElementById( 'navLinks' );
+  const navButton = document.getElementById( 'navButton' )
+  const video = document.getElementById( 'video' );
+  const day = document.getElementById( 'day' );
+  const hour = document.getElementById( 'hours' );
+  const minute = document.getElementById( 'minute' );
+  const second = document.getElementById( 'second' );
+  const date = document.getElementById( 'date' );
+  const sound = document.getElementById( 'sound' )
   video.currentTime = 5;
-  sound.addEventListener('click', () => {
-    if (video.muted === true) {
+  sound.addEventListener( 'click', () =>
+  {
+    if ( video.muted === true )
+    {
       sound.innerHTML = "ON"
       video.muted = false;
 
-    } else {
+    } else
+    {
       sound.innerHTML = "OFF"
       video.muted = true;
     }
-  })
-  navButton.addEventListener('click', () => {
-    navLinks.classList.toggle('max-md:hidden')
-  })
+  } )
+  navButton.addEventListener( 'click', () =>
+  {
+    navLinks.classList.toggle( 'max-md:hidden' )
+  } )
   window.onscroll = function () { scrollHander() }
-  function scrollHander() {
+  function scrollHander ()
+  {
 
-    if (window.pageYOffset > 20) {
-      header.classList.add("bg-[#02577a]")
+    if ( window.pageYOffset > 20 )
+    {
+      header.classList.add( "bg-[#02577a]" )
       navLinks.style.top = "5.5rem"
     }
-    else {
+    else
+    {
 
       navLinks.style.top = "7rem"
     }
 
   }
   // timer code
-  const countDownTime = new Date("Jan 19, 2023 15: 37: 25 ").getTime();
-  const eventDate = new Date("Jan 19, 2023 15: 37: 25 ")
-  date.innerHTML = (eventDate.getMonth() + 1) + ' / ' + eventDate.getDate() + ' / ' + eventDate.getFullYear()
+  const countDownTime = new Date( "Jan 19, 2023 15: 37: 25 " ).getTime();
+  const eventDate = new Date( "Jan 19, 2023 15: 37: 25 " )
+  date.innerHTML = ( eventDate.getMonth() + 1 ) + ' / ' + eventDate.getDate() + ' / ' + eventDate.getFullYear()
 
-  const interval = setInterval(() => {
+  const interval = setInterval( () =>
+  {
     // now time
     const nowTime = new Date().getTime();
     // difference between times
     const difference = countDownTime - nowTime;
     // time calculation for days hours minutes and second
-    const days = Math.floor(difference / (1000 * 60 * 60 * 24))
-    const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+    const days = Math.floor( difference / ( 1000 * 60 * 60 * 24 ) )
+    const hours = Math.floor( ( difference % ( 1000 * 60 * 60 * 24 ) ) / ( 1000 * 60 * 60 ) );
+    const minutes = Math.floor( ( difference % ( 1000 * 60 * 60 ) ) / ( 1000 * 60 ) );
+    const seconds = Math.floor( ( difference % ( 1000 * 60 ) ) / 1000 );
     // setting to dom
     day.innerHTML = days;
     hour.innerHTML = hours;
     minute.innerHTML = minutes;
     second.innerHTML = seconds;
-    if (difference < 0) {
-      clearInterval(interval);
+    if ( difference < 0 )
+    {
+      clearInterval( interval );
       // Time out next time
     }
-  }, 1000);
+  }, 1000 );
 </script>
 
 </html>
