@@ -685,6 +685,10 @@ video {
   top: 0px;
 }
 
+.top-\[5\.8rem\]{
+  top: 5.8rem;
+}
+
 .top-\[6rem\]{
   top: 6rem;
 }
@@ -865,6 +869,10 @@ video {
   margin-bottom: 2.5rem;
 }
 
+.mb-5{
+  margin-bottom: 1.25rem;
+}
+
 .mt-3{
   margin-top: 0.75rem;
 }
@@ -927,10 +935,6 @@ video {
 
 .mt-2{
   margin-top: 0.5rem;
-}
-
-.mb-5{
-  margin-bottom: 1.25rem;
 }
 
 .box-border{
@@ -1129,8 +1133,8 @@ video {
   height: 0.25rem;
 }
 
-.h-\[70vh\]{
-  height: 70vh;
+.h-\[85\.5vh\]{
+  height: 85.5vh;
 }
 
 .h-\[120px\]{
@@ -1139,6 +1143,10 @@ video {
 
 .h-6{
   height: 1.5rem;
+}
+
+.h-\[280px\]{
+  height: 280px;
 }
 
 .h-5{
@@ -2585,9 +2593,9 @@ video {
   background-color: rgb(31 41 55 / var(--tw-bg-opacity));
 }
 
-.bg-slate-300{
+.bg-slate-200{
   --tw-bg-opacity: 1;
-  background-color: rgb(203 213 225 / var(--tw-bg-opacity));
+  background-color: rgb(226 232 240 / var(--tw-bg-opacity));
 }
 
 .bg-\[\#0000007a\]{
@@ -2633,11 +2641,6 @@ video {
   background-color: rgb(100 100 107 / var(--tw-bg-opacity));
 }
 
-.bg-blue-900{
-  --tw-bg-opacity: 1;
-  background-color: rgb(30 58 138 / var(--tw-bg-opacity));
-}
-
 .bg-\[\#0ba5e7\]{
   --tw-bg-opacity: 1;
   background-color: rgb(11 165 231 / var(--tw-bg-opacity));
@@ -2670,11 +2673,6 @@ video {
 .bg-\[rgb\(255\2c 0\2c 0\)\]{
   --tw-bg-opacity: 1;
   background-color: rgb(255 0 0 / var(--tw-bg-opacity));
-}
-
-.bg-slate-200{
-  --tw-bg-opacity: 1;
-  background-color: rgb(226 232 240 / var(--tw-bg-opacity));
 }
 
 .bg-\[url\(\'\.\.\/src\/assets\/bg_pattern\.png\'\)\]{
@@ -3431,6 +3429,10 @@ video {
   text-decoration-color: #bc742c;
 }
 
+.decoration-\[\#ebb722\]{
+  text-decoration-color: #ebb722;
+}
+
 .decoration-solid{
   text-decoration-style: solid;
 }
@@ -3457,6 +3459,10 @@ video {
 
 .underline-offset-8{
   text-underline-offset: 8px;
+}
+
+.underline-offset-\[10px\]{
+  text-underline-offset: 10px;
 }
 
 .antialiased{
@@ -4341,6 +4347,10 @@ video {
     background-color: transparent;
   }
 
+  .md\:p-6{
+    padding: 1.5rem;
+  }
+
   .md\:py-16{
     padding-top: 4rem;
     padding-bottom: 4rem;
@@ -4409,6 +4419,10 @@ video {
 
   .md\:text-\[40px\]{
     font-size: 40px;
+  }
+
+  .md\:text-\[20px\]{
+    font-size: 20px;
   }
 
   .md\:leading-\[70px\]{
