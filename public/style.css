@@ -3206,6 +3206,22 @@ video {
   font-size: 17px;
 }
 
+.text-\[8px\]{
+  font-size: 8px;
+}
+
+.text-\[6px\]{
+  font-size: 6px;
+}
+
+.text-\[7px\]{
+  font-size: 7px;
+}
+
+.text-\[5px\]{
+  font-size: 5px;
+}
+
 .font-semibold{
   font-weight: 600;
 }
@@ -3546,6 +3562,14 @@ video {
 
 .decoration-wavy{
   text-decoration-style: wavy;
+}
+
+.decoration-4{
+  text-decoration-thickness: 4px;
+}
+
+.decoration-2{
+  text-decoration-thickness: 2px;
 }
 
 .underline-offset-4{
@@ -3999,6 +4023,10 @@ video {
 .hover\:text-green-400:hover{
   --tw-text-opacity: 1;
   color: rgb(74 222 128 / var(--tw-text-opacity));
+}
+
+.hover\:underline:hover{
+  text-decoration-line: underline;
 }
 
 .hover\:decoration-solid:hover{
