@@ -2683,6 +2683,11 @@ video {
   background-color: #0000007a;
 }
 
+.bg-gray-400{
+  --tw-bg-opacity: 1;
+  background-color: rgb(156 163 175 / var(--tw-bg-opacity));
+}
+
 .bg-\[\#e6e6e6\]{
   --tw-bg-opacity: 1;
   background-color: rgb(230 230 230 / var(--tw-bg-opacity));
@@ -2700,11 +2705,6 @@ video {
 .bg-\[\#02577a\]{
   --tw-bg-opacity: 1;
   background-color: rgb(2 87 122 / var(--tw-bg-opacity));
-}
-
-.bg-gray-400{
-  --tw-bg-opacity: 1;
-  background-color: rgb(156 163 175 / var(--tw-bg-opacity));
 }
 
 .bg-slate-700{
@@ -3109,6 +3109,10 @@ video {
   font-size: 50px;
 }
 
+.text-\[22px\]{
+  font-size: 22px;
+}
+
 .text-\[45px\]{
   font-size: 45px;
 }
@@ -3144,10 +3148,6 @@ video {
 
 .text-\[40px\]{
   font-size: 40px;
-}
-
-.text-\[22px\]{
-  font-size: 22px;
 }
 
 .text-\[9px\]{
@@ -3326,8 +3326,8 @@ video {
   line-height: 2.5rem;
 }
 
-.tracking-\[0\.5em\]{
-  letter-spacing: 0.5em;
+.tracking-\[0\.2em\]{
+  letter-spacing: 0.2em;
 }
 
 .tracking-widest{
@@ -3340,10 +3340,6 @@ video {
 
 .tracking-wide{
   letter-spacing: 0.025em;
-}
-
-.tracking-\[0\.2em\]{
-  letter-spacing: 0.2em;
 }
 
 .tracking-\[0\.105em\]{
@@ -3378,14 +3374,6 @@ video {
   letter-spacing: 0.12em;
 }
 
-.tracking-\[0\.4em\]{
-  letter-spacing: 0.4em;
-}
-
-.tracking-\[0\.3em\]{
-  letter-spacing: 0.3em;
-}
-
 .text-white{
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
@@ -3405,13 +3393,13 @@ video {
   color: rgb(13 148 136 / var(--tw-text-opacity));
 }
 
-.text-\[\#fff\]\/70{
-  color: rgb(255 255 255 / 0.7);
-}
-
 .text-green-400{
   --tw-text-opacity: 1;
   color: rgb(74 222 128 / var(--tw-text-opacity));
+}
+
+.text-\[\#fff\]\/70{
+  color: rgb(255 255 255 / 0.7);
 }
 
 .text-\[\#141B4E\]{
@@ -3506,11 +3494,6 @@ video {
 .text-blue-500{
   --tw-text-opacity: 1;
   color: rgb(59 130 246 / var(--tw-text-opacity));
-}
-
-.text-green-500{
-  --tw-text-opacity: 1;
-  color: rgb(34 197 94 / var(--tw-text-opacity));
 }
 
 .underline{
@@ -4263,6 +4246,10 @@ video {
     font-size: 25px;
   }
 
+  .sm\:text-\[35px\]{
+    font-size: 35px;
+  }
+
   .sm\:text-\[70px\]{
     font-size: 70px;
   }
@@ -4283,10 +4270,6 @@ video {
     font-size: 30px;
   }
 
-  .sm\:text-\[35px\]{
-    font-size: 35px;
-  }
-
   .sm\:text-\[16px\]{
     font-size: 16px;
   }
@@ -4297,10 +4280,6 @@ video {
 
   .sm\:text-\[50px\]{
     font-size: 50px;
-  }
-
-  .sm\:text-\[28px\]{
-    font-size: 28px;
   }
 
   .sm\:leading-\[50px\]{
