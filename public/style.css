@@ -1193,6 +1193,14 @@ video {
   height: 30px;
 }
 
+.h-\[60px\]{
+  height: 60px;
+}
+
+.h-auto{
+  height: auto;
+}
+
 .max-h-\[110px\]{
   max-height: 110px;
 }
@@ -1215,6 +1223,10 @@ video {
 
 .min-h-\[119px\]{
   min-height: 119px;
+}
+
+.min-h-\[60px\]{
+  min-height: 60px;
 }
 
 .w-\[20\%\]{
@@ -1371,6 +1383,14 @@ video {
 
 .w-\[40\%\]{
   width: 40%;
+}
+
+.w-\[200px\]{
+  width: 200px;
+}
+
+.w-\[250px\]{
+  width: 250px;
 }
 
 .min-w-\[80px\]{
@@ -2028,6 +2048,10 @@ video {
 
 .gap-1{
   gap: 0.25rem;
+}
+
+.gap-y-6{
+  row-gap: 1.5rem;
 }
 
 .space-y-2 > :not([hidden]) ~ :not([hidden]){

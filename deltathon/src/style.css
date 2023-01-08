@@ -16,19 +16,7 @@
 .coclast {
   margin-bottom: 70px;
 }
-.sponsorlogo {
-  padding-right: 20px;
-  height: auto;
-  width: 400px;
-}
-/* .codeit img{
-    height: 100px;
-} */
-.sponsorcenter {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+
 .card {
   width: 100%;
   background-color: rgb(23, 23, 29);
@@ -78,5 +66,4 @@
 }
 .parawidth {
   margin-left: 5px;
- 
 }

@@ -2,6 +2,15 @@
 <html lang="en">
 
 <head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JFSSY7HTGZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag () { dataLayer.push( arguments ); }
+    gtag( 'js', new Date() );
+
+    gtag( 'config', 'G-JFSSY7HTGZ' );
+  </script>
   <meta charset="UTF-8">
   <link rel="icon" href="../public/img/delta_logo.png" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -418,22 +427,28 @@
             <h2 class="absolute -top-[0.9rem]  bg-[#17171d] left-[45%] translate-x-[-45%] text-[18px] px-8 ">
               Sponsors
             </h2>
-            <div style="grid-template-columns: repeat(auto-fill,minmax(150px,1fr));" class="grid  gap-8 sponsorcenter">
-              <div class="sponsorlogo">
-                <img src="../public/img/worldlink_logo.png" alt="worldlinklogo">
-              </div>
-              <div class="sponsorlogo codeit">
-                <img src="../public/img/codeit_logo.png" alt="codeitlogo">
-              </div>
-              <div class="sponsorlogo">
-                <img src="../public/img/sikkai_logo.png" alt="sikkailogo">
-              </div>
-              <div class="sponsorlogo">
-                <img src="../public/img/Zebec.png" alt="sikkailogo">
-              </div>
-              <div class="sponsorlogo">
-                <img src="../public/img/redchillies_logo.png" alt="sikkailogo">
-              </div>
+            <div style="grid-template-columns: repeat(auto-fill,minmax(200px,1fr));"
+              class="grid  gap-10 gap-y-10 justify-center  h-auto  py-10">
+
+              <img class="max-w-[100%] w-[200px]  m-3 justify-self-center self-center"
+                src="../public/img/worldlink_logo.png" alt="worldlinklogo">
+
+
+              <img class="max-w-[100%] w-[200px] m-3 justify-self-center self-center "
+                src="../public/img/codeit_logo.png" alt="codeitlogo">
+
+
+              <img class="max-w-[100%]  w-[200px] m-3 justify-self-center self-center"
+                src="../public/img/sikkai_logo.png" alt="sikkailogo">
+
+
+              <img class="max-w-[100%] w-[200px] m-3 justify-self-center self-center " src="../public/img/Zebec.png"
+                alt="sikkailogo">
+
+
+              <img class="max-w-[100%] w-[200px] m-3 justify-self-center self-center "
+                src="../public/img/redchillies_logo.png" alt="sikkailogo">
+
             </div>
           </div>
           <!-- gold sponsor -->
@@ -546,12 +561,12 @@
           class="relative font-[600] text-[28px] sm:text-[35px] md:text-[45px] underline underline-offset-[10px] decoration-[#ebb722] my-8 ">
           Our Mentors</h1>
         <div class="py-4 my-4">
-          <h2 class=" font-[600] text-[18px] sm:text-[25px] md:text-[35px]  text-center my-8 ">
+          <h2 class=" font-[600] text-[18px] sm:text-[30px] md:text-[35px]  text-center my-8 ">
             Lead Mentors :</h2>
           <div class="my-4  flex gap-8 flex-wrap">
             <div class=" ">
               <div
-                class="h-[370px] w-[350px]  cursor-pointer border-[#ebb722] border-4 rounded-[20px] overflow-hidden relative group duration-500">
+                class="h-[370px] w-[260px] sm:w-[350px]  cursor-pointer border-[#ebb722] border-4 rounded-[20px] overflow-hidden relative group duration-500">
                 <img class="h-full  w-full object-cover object-center" src="../public/img/bibek.jpg" alt="">
                 <!-- social links -->
                 <div
@@ -582,7 +597,7 @@
             </div>
             <div class="">
               <div
-                class="h-[370px] w-[350px] border-[#ebb722] cursor-pointer border-4 rounded-[20px] overflow-hidden  relative group duration-500">
+                class="h-[370px] w-[260px] sm:w-[350px] border-[#ebb722] cursor-pointer border-4 rounded-[20px] overflow-hidden  relative group duration-500">
                 <img class="h-full  w-full object-cover object-center" src="../public/img/pukar.jpg" alt="">
                 <!-- social links -->
                 <div
@@ -614,7 +629,7 @@
             </div>
             <div class="  ">
               <div
-                class="h-[370px] w-[350px] border-[#ebb722]  cursor-pointer border-4 rounded-[20px] overflow-hidden relative group duration-500">
+                class="h-[370px] w-[260px] sm:w-[350px] border-[#ebb722]  cursor-pointer border-4 rounded-[20px] overflow-hidden relative group duration-500">
                 <img class="h-full  w-full object-cover object-center" src="../public/img/saja.jpeg" alt="">
                 <!-- social links -->
                 <div
@@ -649,8 +664,9 @@
 
           </div>
         </div>
-
-        <div class="mentor py-8">
+        <h2 class=" font-[600] text-[18px] sm:text-[30px] md:text-[35px]  text-center  ">
+          Other Mentors :</h2>
+        <div class="mentor pb-8 pt-4">
           <div class="card">
             <div class="w-full">
               <div class="w-full h-[280px]">
@@ -767,14 +783,15 @@
       </div>
     </div>
     <!-- Rulebook -->
-    <div  id="rulebook"></div>
+    <div id="rulebook"></div>
     <div class="bg-[#17171d] text-white py-10">
       <div class="w-full mx-auto">
         <h1 class="text-[45px] max-w-[90%] sm:max-w-[80%] md:max-w-[70%] mx-auto font-medium rule">Rules</h1>
         <ol
           class="max-w-[90%] sm:max-w-[80%] md:max-w-[70%] mx-auto  text-[#fff]/50 text-[16px] md:text-[20px] space-y-3 rulelist">
           <li>Teams can involve at least 2 team members and a maximum of 4 members.</li>
-          <li>Teams should be made up exclusively of students who are not organizers, volunteers, judges, sponsors, or in any other privileged position at the event.</li>
+          <li>Teams should be made up exclusively of students who are not organizers, volunteers, judges, sponsors, or
+            in any other privileged position at the event.</li>
           <li>Participants must bring their school or college identity card with them.</li>
           <li>All team members should be present at the event. Leaving the prescribed venue will disqualify the entire
             team from Deltathon.</li>
@@ -783,15 +800,18 @@
           <li>Teams can use an idea they had before the event.</li>
           <li>No development may start before the actual date and time of the event. Any teams that violates this rule
             will be automatically disqualified.</li>
-          <li>Teams can use libraries, frameworks, or open-source code in their projects with proper references mentioned.
+          <li>Teams can use libraries, frameworks, or open-source code in their projects with proper references
+            mentioned.
           </li>
           <li>Teams must stop hacking once the time is up. </li>
-          <li>You must treat all team members, including competitors, judges, coaches, volunteers, etc., with respect and courtesy.
+          <li>You must treat all team members, including competitors, judges, coaches, volunteers, etc., with respect
+            and courtesy.
           </li>
           <li>All team members should be a regular student studying at +2, Bacholer or Master's level in any discipline.
           </li>
           <li>All prizes are to be shared between all team members.</li>
-          <li>Participants can consult with a mentor only if they are stuck implementing the core code of their field, not to nurture their ideas.
+          <li>Participants can consult with a mentor only if they are stuck implementing the core code of their field,
+            not to nurture their ideas.
           </li>
           <li>Participants must face the consequences if any suspected activities occur.</li>
           <li>In the event of a disagreement, the organizing committee makes the final decision.</li>
@@ -805,10 +825,18 @@
           Conduct</h1>
         <ol
           class="max-w-[90%] sm:max-w-[80%] md:max-w-[70%] mx-auto  text-[#fff]/50 coclist text-[16px] md:text-[20px] space-y-3">
-          <li>Our hackathon is dedicated to providing a harassment-free experience for everyone, regardless of gender, gender identity and expression, age, sexual orientation, disability, physical appearance, body size, race, ethnicity, nationality, religion, previous hackathon attendance, computing experience (or lack of any of the aforementioned). We do not tolerate harassment of hackathon participants in any form. Hackathon participants violating these rules may be sanctioned or expelled from the hackathon at the discretion of the organizers</li>
-          <li>This includes warning the offender, expulsion from the hackathon with no refund (if applicable), or reporting their behavior to local law enforcement. We expect participants to follow these rules at hackathon and workshop venues and hackathon related social events.
+          <li>Our hackathon is dedicated to providing a harassment-free experience for everyone, regardless of gender,
+            gender identity and expression, age, sexual orientation, disability, physical appearance, body size, race,
+            ethnicity, nationality, religion, previous hackathon attendance, computing experience (or lack of any of the
+            aforementioned). We do not tolerate harassment of hackathon participants in any form. Hackathon participants
+            violating these rules may be sanctioned or expelled from the hackathon at the discretion of the organizers
           </li>
-          <li class="coclast">Participants must not smoke, drink, or perform any unethical behavior like quarreling that will harm the integrity of this event. In the event of an encounter, strict action will be taken.</li>
+          <li>This includes warning the offender, expulsion from the hackathon with no refund (if applicable), or
+            reporting their behavior to local law enforcement. We expect participants to follow these rules at hackathon
+            and workshop venues and hackathon related social events.
+          </li>
+          <li class="coclast">Participants must not smoke, drink, or perform any unethical behavior like quarreling that
+            will harm the integrity of this event. In the event of an encounter, strict action will be taken.</li>
         </ol>
       </div>
     </div>
