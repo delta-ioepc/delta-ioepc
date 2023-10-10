@@ -5029,7 +5029,7 @@ video {
     gap: 3rem;
   }
 }
-
+/* added while updating for Delta 4.0 */
  #sponsors {
-   background: #1f1b4e;
+   background: #ffffff;
  }
