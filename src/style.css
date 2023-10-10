@@ -39,4 +39,7 @@
   .text_effect:hover::before {
     width: 100%;
   }
+  #sponsors{
+    background: #1f1b4e;
+  }
 }
